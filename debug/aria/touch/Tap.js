@@ -1,0 +1,108 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+/**
+ * Contains delegated handler for a tap event
+ */
+Aria.classDefinition({
+    $singleton : true,
+    $classpath : "aria.touch.Tap",
+    $extends : "aria.touch.Gesture",
+    $statics : {
+        /**
+         * The move tolerance to validate the gesture.
+         * @type Integer
+         */
+        MARGIN : 10
+    },
+    $prototype : {
+        /**
+         * Initial listeners for the Tap gesture.
+         * @protected
+         */
+        _getInitialListenersList : function () {
+            return [{
+                        evt : this.touchEventMap.touchstart,
+                        cb : {
+                            fn : this._tapStart,
+                            scope : this
+                        }
+                    }];
+        },
+
+        /**
+         * Additional listeners for the Tap gesture.
+         * @protected
+         */
+        _getAdditionalListenersList : function () {
+            return [{
+                        evt : this.touchEventMap.touchmove,
+                        cb : {
+                            fn : this._tapMove,
+                            scope : this
+                        }
+                    }, {
+                        evt : this.touchEventMap.touchend,
+                        cb : {
+                            fn : this._tapEnd,
+                            scope : this
+                        }
+                    }];
+        },
+
+        /**
+         * The fake events raised during the Tap lifecycle.
+         * @protected
+         */
+        _getFakeEventsMap : function () {
+            return {
+                start : "tapstart",
+                end : "tap",
+                cancel : "tapcancel"
+            };
+        },
+
+        /**
+         * Tap start mgmt: gesture is started if only one touch.
+         * @param {Object} event the original event
+         * @protected
+         * @return {Boolean} false if preventDefault is true
+         */
+        _tapStart : function (event) {
+            var status = this._gestureStart(event);
+            return (status == null)
+                    ? ((event.returnValue != null) ? event.returnValue : !event.defaultPrevented)
+                    : status;
+        },
+
+        /**
+         * Tap move mgmt: gesture continues if only one touch and if the move is within margins.
+         * @param {Object} event the original event
+         * @protected
+         * @return {Boolean} false if preventDefault is true
+         */
+        _tapMove : function (event) {
+            var position = aria.touch.Event.getPositions(event);
+            if (this.MARGIN >= this._calculateDistance(this.startData.positions[0].x, this.startData.positions[0].y, position[0].x, position[0].y)) {
+                var status = this._gestureMove(event);
+                return (status == null) ? this._gestureCancel(event) : status;
+            } else {
+                return this._gestureCancel(event);
+            }
+        },
+
+        /**
+         * Tap end mgmt: gesture ends if only one touch.
+         * @param {Object} event the original event
+         * @protected
+         * @return {Boolean} false if preventDefault is true
+         */
+        _tapEnd : function (event) {
+            var status = this._gestureEnd(event);
+            return (status == null) ? this._gestureCancel(event) : (event.returnValue != null)
+                    ? event.returnValue
+                    : !event.defaultPrevented;
+        }
+    }
+});

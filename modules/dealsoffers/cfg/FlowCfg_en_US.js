@@ -1,0 +1,1 @@
+Aria.resourcesDefinition({$classpath:"modules.dealsoffers.cfg.FlowCfg",$resources:{"dealoffers/home":["checkin","Title","","CheckIn"],"dealoffers/deals":["dealsoffers","Title","","Deals"],"dealoffers/SMS":["SendSMS","Title","","SendSMS"],"seatmap/page":["seatmap","Title","","SeatMap"]}});

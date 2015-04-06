@@ -1,0 +1,47 @@
+{CSSTemplate {
+  $classpath : "modules.view.merci.common.templates.MMenuStyle"
+}}
+{macro main()}
+div#navbar-div nav.navigation a.navigation {
+    color: #ffffff;
+    background:none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-style:solid;
+    border-width:1px 0px 1px 0px;
+    margin:0px;
+    padding:6px;
+    padding-left:50px;
+    border-radius:0px;
+    box-shadow: none;
+	text-transform: capitalize;
+    padding-bottom:52px;
+}
+
+div#navbar-div nav.navigation a.navigation:after{
+    content:none;
+}
+
+div#navbar-div nav.navigation a.navigation:before{
+    content:none;    
+}
+
+div#navbar-div nav.navigation a.navigation:before {
+    content:"";
+    -webkit-filter: invert(100%);  
+}
+
+ul.sandwich {
+	cursor:pointer;
+}
+
+ul.sandwich > li {
+	background-color:white;
+	height:4px;
+	width:22px;
+	margin:3px;
+}
+
+{/macro}
+
+{/CSSTemplate}

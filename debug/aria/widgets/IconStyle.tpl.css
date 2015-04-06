@@ -1,0 +1,48 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.IconStyle",
+    $extends : "aria.widgets.WidgetStyle",
+    $dependencies : ["aria.widgets.environment.WidgetSettings"]
+}}
+    {var skinnableClassName="Icon"/}
+
+    {macro writeSkinClass(info)}
+        {var widgetSettings = aria.widgets.environment.WidgetSettings.getWidgetSettings() /}
+
+        /* Icon class: ${info.skinClassName} */
+        .xICN${info.skinClassName} {
+            {if !widgetSettings.middleAlignment}vertical-align:top;{/if}
+            font-size:1px;
+            width:${info.skinClass.iconWidth}px;
+            height:${info.skinClass.iconHeight}px;
+            {call background(info.skinClass.backgroundColor,info.skinClass.spriteURL,"no-repeat top left") /}
+            {if info.skinClass.backgroundSize}
+                background-size:${info.skinClass.backgroundSize}%;
+            {/if}
+            border-top: ${info.skinClass.borderTop}px;
+            border-right: ${info.skinClass.borderRight}px;
+            border-bottom: ${info.skinClass.borderBottom}px;
+            border-left: ${info.skinClass.borderLeft}px;
+            border-top-right-radius: ${info.skinClass.borderTopRightRadius}px;
+            border-top-left-radius: ${info.skinClass.borderTopLeftRadius}px;
+            border-bottom-right-radius: ${info.skinClass.borderBottomRightRadius}px;
+            border-bottom-left-radius: ${info.skinClass.borderBottomLeftRadius}px;
+            {if info.skinClass.borderStyle}
+              border-style: ${info.skinClass.borderStyle};
+            {/if}
+            {if info.skinClass.borderColor}
+              border-color: ${info.skinClass.borderColor};
+            {/if}
+        }
+
+        {if info.skinClassName == "checkBoxes" && !widgetSettings.middleAlignment}
+            .xICN${info.skinClassName} {
+                vertical-align:middle;
+            }
+        {/if}
+    {/macro}
+
+{/CSSTemplate}

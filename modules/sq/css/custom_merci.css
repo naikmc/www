@@ -1,0 +1,6249 @@
+/* FOR SHOWING GREDIENT WHOLE SCREEN */
+html {
+	min-height: 100%
+}
+body, #sb-site.sb-site-layout {
+	background-color: #093a83;
+	/*background: -moz-linear-gradient(bottom, #b1ceef, #093a83 70%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#b1ceef), color-stop(100%, #093a83));*/
+	background: rgb(9,58,131); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(9,58,131,1) 0%, rgba(177,206,239,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(9,58,131,1)), color-stop(100%,rgba(177,206,239,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(9,58,131,1) 0%,rgba(177,206,239,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(9,58,131,1) 0%,rgba(177,206,239,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(9,58,131,1) 0%,rgba(177,206,239,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(9,58,131,1) 0%,rgba(177,206,239,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093a83', endColorstr='#b1ceef',GradientType=0 ); /* IE6-9 */
+	color: #000;
+	font-family: arial, helvetica;
+	background-size: 100% !important;/* FOR SHOWING GREDIENT WHOLE SCREEN
+	height: 100%;
+	*/
+}
+@font-face {
+	font-family: PhilosopherRegular;
+	src: url(Philosopher.ttf);
+}
+header.banner {
+	border-top: 2px solid #ff9800;
+	position: relative;
+}
+header.banner {
+	background-color: #002669;
+	background: -moz-linear-gradient(bottom, #002669, #0c368f 100%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#002669), color-stop(100%, #0c368f));
+	color: #ffffff;
+}
+header.banner.custom {
+	background: none;
+	box-shadow: none;
+}
+header.banner.custom h1 {
+	background: url(../img/client/singapore-banner.png) no-repeat scroll 100% 50% transparent;
+	background-clip: border-box;
+	background-color: transparent;
+	background-size: 287px 43px;
+	background-position: 50% 100%;
+	height: 60px;
+	margin: 0px;
+}
+header.banner h1 {
+	background: url(../img/client/singapore-banner.png) no-repeat scroll 100% 50% transparent;
+	background-clip: border-box;
+	background-color: transparent;
+	background-size: 201px 30px;
+	background-position: 50% 50%;
+	height: 50px;
+	margin: 0px;
+	text-indent: -9999px;
+}
+header.banner {
+	height: 4.2em;
+}
+a.navigation.book-flight:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -336px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.deals:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -500px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.my-trip:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -288px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.contact:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px 1px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.flight-status:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -167px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.timetable:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -385px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.more:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -336px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation.faq:before {
+	background: url(../img/client/icons_main_nav_custom.PNG)1px -336px no-repeat;
+	background-size: 30px 539px!important;
+}
+a.navigation {
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+aside.user, button > span, nav.navigation li a.krisflyer {
+	display: block;
+}
+button.bookmarkHeader span {
+	display:none;
+}
+body.daof.favour button.delete span, button.back span, button.share span, button.favorite span, button.bookmark span, header.banner a.home span, header.banner button.refresh span, nav.tabs a.navigation:after, button.toggle span, button.increase span, button.decrease span, button.search span, button.datepicker span {
+	display: none !important;
+}
+aside.user h1 {
+	font-size: 1.2em;
+	margin-top: 13px;
+	margin-left: 3.9em;
+}
+aside.user {
+	min-height: 3em;
+}
+aside.user button.login {
+	width: auto;
+	height: auto;
+	top: -3px;
+}
+aside.user button.toggle {
+	height: 2em;
+	width: 30px
+}
+aside.user button.toggle:after {
+	top: 0.45em;
+	right: .20em;
+}
+aside.user section div {
+	border: 2px solid #fff;
+}
+aside.user button.toggle, aside.user button.login, article.panel {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+h1 {
+	font-weight: normal;
+}
+aside section:last-of-type p em {
+	font-style: normal;
+}
+h1, article.panel section div.list.type {
+	margin: 0px;
+}
+a.navigation:after {
+	background: url(../img/client/homeNav_arrow.png) 100% 50% no-repeat;
+	background-size: 1em 1.1em;
+}
+a.navigation {
+	text-transform: none;
+	height: 2.8em;
+}
+a.navigation, aside section:last-of-type p em {
+	font-size: 1.33em;
+}
+nav.navigation a.navigation {
+	margin: .2em 0 .2em 0;
+}
+a.navigation.krisflyer:before {
+	background: url(../img/client/icon-krisflyer.png) 50% no-repeat;
+}
+div.message.info:before {
+	background: url(../img/client/icon_info_small.png);
+	background-size: 100% auto!important;
+}
+div.message p {
+	font-weight: normal;
+}
+aside.user section th {
+	background-color: #bebebe;
+	background: -moz-linear-gradient(bottom, #bebebe, #ffffff 70%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#bebebe), color-stop(70%, #ffffff));
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#bebebe), color-stop(70%, #ffffff));
+	color: #333333;
+}
+aside.user section td {
+	background-color: rgba(0, 38, 105, 0.2);
+	color: #ffffff;
+}
+aside section:first-of-type p, label, .popup footer li span, .agenda header time {
+	font-size: 1.167em;
+}
+aside section:first-of-type p:nth-of-type(2), nav.breadcrumbs li {
+	font-family: PhilosopherRegular, "Times New Roman", Times, serif;
+}
+aside.user {
+	color: #414042;
+}
+aside.user section th {
+	font-size: .786em;
+}
+aside.user section th, div.cale h2.return, div.cale h2.departure span, div.cale li span.miles {
+	text-transform: uppercase;
+}
+div.message {
+	box-shadow: none;
+	background-color: transparent;
+	border: none!important;
+}
+div.message p {
+	padding: .4em;
+	padding-left: 3em;
+	margin: .4em;
+	margin-left: .6em;
+}
+div.message:before {
+	left: 0;
+}
+aside.user button.login:hover {
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+aside.user button.login {
+	background: rgba(0,0,0,0.5) !important;
+}
+.fare-deals {
+	left: 0;
+	top: 0;
+}
+a.navigation.fare-deals:before {
+	background-image: url(../img/client/icon-fare-deals.png);
+}
+a.navigation {
+	border: none;
+}
+aside.user .userfooter div:last-child {
+	text-align: right;
+	background: url(../img/client/pbkbLeftBorder.jpg) repeat-y left center;
+	vertical-align: bottom;
+}
+aside.user .userfooter div {
+	width: 49%;
+	display: inline-block;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 1.5em 0 1.5em 0;
+}
+header.banner:before, header.banner:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	bottom: 6px;
+	height: 30px;
+	width: 100%;
+	-webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+}
+div.message p:last-of-type {
+	padding-bottom: 3px;
+}
+div.message p:first-of-type {
+	padding-top: 3px;
+}
+div.message p {
+	margin: .4em;
+}
+aside.user div.message.info {
+	border: none;
+}
+aside.user section div {
+	border-radius: 4px;
+}
+div.message {
+	position: relative;
+	margin: 1.5em 0 1.5em 0;
+	border: 0;
+	text-align: left;
+}
+h1, ul, p, div, header, section {
+	clear: both;
+}
+aside.user div.message.info:before {
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+	top: -5px;
+}
+aside.user div.message.info p {
+	background: none;
+}
+aside.user section div {
+border-radius: .3rem;
+	border-style: solid;
+}
+header.banner a.home:after {
+	content: "";
+	position: absolute;
+	background: url(../img/client/icon_home.png) 100% 50% no-repeat;
+	width: 2em;
+	height: 1.5em;
+	top: .3em;
+	right: .3em;
+}
+nav.breadcrumbs li {
+	color: #8C8C8C;
+}
+nav.breadcrumbs li.active ~ li {
+	color: #8C8C8C;
+}
+nav.breadcrumbs li {
+	font-size: 1.3em;
+}
+nav.breadcrumbs li {
+	border-color: #8C8C8C;
+}
+div.cale div[role="grid"] li[role="gridcell"] span:last-of-type, .boardpass p.name, div.cabin p, .boardpass section.lounge h1 {
+	font-size: 1.45em;
+}
+nav.breadcrumbs li {
+	font-size: 1.3em;
+}
+article.panel header h1, .popup div.accordion h2, .panel.list div.scrollable-content div.seatmap h2 {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+}
+.panel:after {
+	bottom: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.panel:before {
+	bottom: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+article.panel, footer.panel.price, .dialog {
+	border: 2px solid #ffffff;
+}
+.panel {
+	color: #ffffff;
+	background-color: rgba(0, 38, 105, 0.5);
+	background: rgba(0, 38, 105, 0.5);
+}
+section.trip div.departure {
+	background: url(../img/client/icon-flight-depart.png)0 -5px no-repeat;
+	background-size: 25px 23px;
+}
+section.trip div.return {
+	background: url(../img/client/icon-flight-return.png)0 -3px no-repeat;
+	background-size: 25px 23px;
+}
+article.panel section.trip div.departure, article.panel section.trip div.return {
+	padding-left: 3em;
+}
+h1 button.toggle[data-aria-expanded="true"]:after {
+	background: url(../img/client/icon-close.png) no-repeat transparent;
+}
+h1 button.toggle {
+	width: 1.4em;
+	height: 1.4em;
+	right: 0.9em;
+	top: 1em;
+}
+h1 button.toggle[data-aria-expanded="false"]:after, h1 button.toggle[aria-expanded="false"]:after {
+	background: url(../img/client/icon-open.png) no-repeat transparent;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+article.panel.price {
+	background-color: #dcdbd8;
+}
+article.panel.price table th {
+	color: #414042;
+}
+article.panel.price {
+	color: #414042;
+}
+div.message {
+	position: relative;
+	margin: 1.5em 0 1.5em 0;
+	border: 0;
+	text-align: left;
+}
+div.message.info:before {
+	background: url(gimg/icon-info.png);
+	background-size: 100%;
+}
+div.message.info:before, div.message.error:before {
+	content: '';
+	display: block;
+	width: 43px;
+	height: 43px;
+	position: absolute;
+	left: -10px;
+	top: -8px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-position: top center;
+	background-clip: border-box;
+	background-color: transparent;
+}
+div.message.info p {
+	background: none repeat scroll 0 0 #EADEB9;
+}
+div.message p:before, div.message p:after {
+	height: 10px;
+	width: 45%;
+}
+div.message p:before {
+	left: .7em;
+}
+aside.user:after, aside.user:before, div.message p:after, div.message p:before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	bottom: 6px;
+	height: 30px;
+	width: 50%;
+	-webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+}
+header.banner:before, header.banner:after {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+}
+div.message p:after {
+	right: .7em;
+}
+div.message.info:before {
+	background: url(../img/client/icon-info.png);
+	background-size: 100%;
+}
+.clientElement {
+	display: block !important
+}
+.mandatory, div.trip .date, div.trip .flight-number, article.panel div.trip p.flight-number strong, article.panel div.trip p.departure, article.panel div.trip p.arrival, article.panel div.details span:nth-of-type(2), article.panel section div.details, article.panel section div.details .data a, article.panel section p.pin a {
+	color: #ffffff;
+}
+select.mandatory{
+	border: 0;
+}
+article.panel header h1 {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+/*123*/
+article header h1, button.validation {
+	font-size: 1.3em;
+}
+/*End of 123*/
+footer.buttons {
+	min-height: 3.5em;
+}
+button.validation {
+	background-color: #ff9900;
+	background: -moz-linear-gradient(bottom, #ff9900, #ffc876 100%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#ff9900), color-stop(100%, #ffc876));
+	color: #ffffff;
+}
+button.validation:before {
+	background: none;
+	background: none;
+	background: none;
+}
+button.validation:after {
+	background: none;
+}
+button.validation {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+button.validation {
+	border: 1px solid #ff9e00;
+}
+article.panel.panel, footer.panel.price, .dialog, a.navigation, button.validation, button.validation a.secondary, .dialog button, div.cale div[role="grid"] ul.columnhead li[data-aria-selected="true"], body.list.daof article.panel section button.delete, .popup button.toggle:hover, .popup button.toggle:active, article.facs button.toggle:hover, article.facs button.toggle:active, .favourite, .date-picker .pagination li a, button.datepicker, a.oldDatePicker {
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+article.panel .label {
+	color: #ffffff;
+}
+article.panel section dl .label, dl.card-3ds dt figcaption {
+	color: #000;
+}
+h2 {
+	font-size: 1.33em;
+}
+.panel h2 {
+	font-weight: normal;
+}
+button.validation {
+	text-transform: none;
+}
+button.validation {
+	font-weight: normal;
+}
+/*123*/
+button.validation {
+	height: 33px;
+	padding: 6px 17px;
+}
+/*End of 123*/
+button.validation:after, button.validation:before {
+	content: none;
+}
+div.pax p, section p {
+	margin: 0.7em 0 0.7em 0!important;
+}
+footer.buttons {
+	padding: 0;
+}
+footer.acknowledgement, body > section > form > aside {
+	padding: 0;
+}
+nav.navigation a.navigation, ul.buttons li a.navigation, body.sear a.navigation {
+	line-height: 2.3em;
+	height: 2.3em;
+}
+nav.buttons li a.navigation {
+	height: 35px;
+}
+button.validation:active, button.validation:hover {
+	background: #ff9e00;
+}
+article.panel {
+	padding-bottom: 0;
+}
+body.alpi .panel.price footer {
+	padding-bottom: .7em;
+}
+.panel.price footer {
+	padding-bottom: 0;
+}
+/*123*/
+header.banner h1 span {
+	display: block;
+}
+/*End of 123*/
+button.validation {
+	max-width: 100%;
+}
+nav.breadcrumbs li {
+	border-bottom: 2px solid #8C8C8C;
+}
+nav.breadcrumbs li.active {
+	border-bottom: 2px solid #d8d8d8;
+}
+a.navigation:after {
+	top: 0.6em;
+}
+body.booking.cale nav.pagination {
+	position: absolute;
+	width: 99%;
+	z-index: 5;
+}
+.a {
+	color: #002669;
+}
+body.booking.cale nav.pagination li:first-child {
+	padding-left: 75px;
+}
+body.booking.cale nav.pagination li:last-child {
+	padding-right: 10px;
+}
+div.cale h2.return span {
+	padding-left: 75px;
+}
+div.cale h2.return span {
+	padding-left: 75px;
+}
+div.cale h2.return, div.cale li span.currency, div.cale li span.miles, .panel.list table.grid tbody td.time em {
+	font-size: .833em;
+}
+div.cale h2.departure span, div.cale h2.return {
+	background-color: #dcdbd8;
+	color: #414042;
+}
+body.booking.cale nav.pagination li {
+	position: relative;
+	top: -6px;
+}
+div.cale h2.departure, div.cale h2.departure span, div.cale ul.rowhead li, div.cale ul.rowhead, div.cale div[role="grid"] li[role="rowheader"] div {
+	width: 75px;
+}
+div.cale div[role="grid"] ul[role="row"]:nth-child(odd) {
+	background: rgba(255,255,255,.2);
+}
+.panel.list h3, div.cale div[role="grid"] li[role="rowheader"], div.cale div[role="grid"] ul.columnhead li, .date-picker table th, .panel tr.header th {
+	background-color: #414042;
+	color: #ffffff;
+}
+div.cale div[role="grid"] ul.columnhead li[data-aria-selected="true"] div, div.cale div[role="grid"] li[role="rowheader"][data-aria-selected="true"] div {
+	position: relative;
+	z-index: 20;
+}
+div.cale div[role="grid"] li[role="rowheader"][data-aria-selected="true"] div:before {
+	content: "";
+	position: absolute;
+	right: -1em;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background: url(../img/client/bgrd-cale-arrow-right.png) 100% 50% no-repeat;
+}
+div.cale div[role="grid"] li[role="rowheader"] div, div.cale div[role="grid"] li[role="columnheader"] {
+	overflow: visible;
+}
+button, a.navigation, a.secondary, .slider button, div.tabs li[role='tab'], div.list li[role="option"], header h2, header button.back, body > header:first-child button.back, div.cale div[role="grid"] li[data-aria-selected="true"], div.cale div[role="grid"] ul.columnhead li[data-aria-selected="true"], div.cale div[role="grid"] li[role="rowheader"][data-aria-selected="true"], .panel.list section ul li h2, header.banner a.home, .slide-options div.bassinet, .slide-options div.datepicker, button.datepicker, a.oldDatePicker {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+.panel.sear p {
+	position: relative;
+	margin: 0.8em 0!important;
+}
+button.search {
+	position: absolute;
+	right: 5px;
+	border: none;
+	height: 2.5em;
+	width: 2.5em;
+	top: 18px
+}
+div.cale div[role="grid"] ul.columnhead li[data-aria-selected="true"] div:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1.6em;
+	height: 100%;
+	width: 100%;
+	background: url(../img/client/bgrd-cale-arrow-down.png) 50% 100% no-repeat;
+}
+div.cale div[role="grid"] li[role="gridcell"][data-aria-selected="true"] {
+	-moz-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,1);
+}
+div.cale div[role="grid"] li[role="rowheader"], div.cale ul.columnhead li, div.cale div[role="grid"] li[role="gridcell"] {
+	border: 1px solid rgba(255, 255, 255,.3);
+	border-top: none;
+}
+div.cale div[role="grid"] li[role="gridcell"] span:last-of-type {
+	color: #ff9900;
+}
+body.fava .price.award-alert:before {
+	background-image: none;
+}
+.price.award-alert strong.data.awards {
+	background: url(../img/client/icon-award.png) no-repeat;
+	background-size: 15px 15px;
+	padding-left: 16px
+}
+nav.tabs p {
+	color: #ffffff;
+	margin-bottom: 5px;
+}
+input:focus, select:focus, div.message.info p, div.message.error, div.cale div[role="grid"] li[role="gridcell"][data-aria-selected="true"] div span {
+	color: #000;
+}
+p.booking-number span.data strong, article.panel section div.trip p time.hour, article.panel section div.trip p span.city, body.booking article.panel li span.price strong.data, body.rebo article.panel li p.price.difference strong.data, body.daof article.panel li span.price strong.data, p.booking-number span.data strong {
+	font-size: 1em;
+	color: #ffffff;
+}
+.panel ul[role="listbox"] li {
+	border-bottom: none;
+}
+.terminal {
+	background: none;
+	font-style: normal;
+	font-size: 1em;
+	padding-left: 0;
+}
+div.details {
+	border-top-width: 0;
+	border-top-style: none;
+}
+article.panel div.services {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+div.pax h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+article.panel div.services {
+	border-color: rgba(255,255,255,.5);
+}
+article.panel div.details span.label, article.panel div.services div.pax li span.label, body.booking article.panel li span.price span.label {
+	font-size: 1em;
+}
+article.panel section div.pax li span:last-child {
+	font-weight: bold;
+}
+a.secondary {
+	text-transform: capitalize;
+}
+div.buttons a {
+	font-size: 1.2em;
+}
+a.navigation, a.button, div.services div.buttons li a.secondary {
+	height: 35px;
+}
+div.pax {
+	margin-bottom: 1rem;
+}
+a.secondary.seat:before {
+	background-image: none;
+}
+a.secondary.meal:before {
+	background-image: none;
+}
+a.secondary.baggage:before {
+	background-image: none;
+	background-size: 0;
+}
+a.navigation:after, div.buttons a.secondary:after {
+	content: "";
+	position: absolute;
+	width: 1.2em;
+	height: 100%;
+	background: url(../img/client/homeNav_arrow.png) 100% 50% no-repeat!important;
+	background-position: center;
+	background-clip: border-box;
+	background-color: transparent;
+	background-size: 1em 1.2em!important;
+	-webkit-background-size: 1em 1.2em !important;
+	right: 0.1em;
+	top: 0;
+}
+.services .buttons a.secondary {
+	padding-left: 0.5em;
+}
+article.panel div.services div.buttons li a.secondary {
+	line-height: 2.2em;
+	height: 35px;
+}
+.panel.breakdown.price tfoot td {
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+.panel.breakdown.price td.conjunction {
+	text-transform: lowercase;
+	font-weight: normal;
+}
+.panel.breakdown.price td:not(:first-child), .panel.breakdown.price th:not(:first-child) {
+	text-align: center;
+}
+.awar article.panel.breakdown table td.dash, .awar article.panel.breakdown table th.dash, .awar article.panel.breakdown table td.parLeft, .awar article.panel.breakdown table td.parRight {
+	width: 2%;
+}
+.awar article.panel.breakdown table td, .awar article.panel.breakdown table th {
+	word-wrap: break-word;
+	width: 23.5%;
+}
+.slider .rail, .seatmap .aisle, .panel.breakdown.price tfoot {
+	background-color: #c6c5c2;
+	border-top: 1px solid #8c8c8c;
+	color: #414042;
+}
+a.secondary:hover, button:hover {
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+button.bookmark:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+a.secondary:hover, a.secondary:active, a.navigation:hover, a.navigation:active, .popup article.panel.price, .popup article.panel.facs, .popup article.xbag, .popup article.age, .popup article.farefam, .popup article.baDetails, .popup article.bagAllow, .popup, button.datepicker:hover, button.datepicker:active, a.oldDatePicker:active, a.oldDatePicker:hover {
+	background: #fff;
+}
+body > section > header, header.sum {
+	color: #ffffff;
+}
+ul[role='tablist'] li {
+	color: #000;
+}
+div.tabs li[role="tab"]:hover, div.tabs li[role="tab"]:active, div.tabs li[role="tab"][data-aria-expanded="true"] {
+	color: #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(50%, #4d86e9), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	background: -moz-linear-gradient(top, #6fa3ff 0%, #6fa3ff 25%, #6fa3ff 25%, #4d86e9 50%, #3b76de 75%, #3b76de 100%);
+}
+div.tabs li[role="tab"][data-aria-expanded="true"], nav.tabs a.navigation.active {
+	-moz-box-shadow: inset -1px 0px 5px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset -1px 0px 5px rgba(0,0,0,.5);
+}
+div.tabs li[role='tab'], body > header:first-child button.back, a.map, .slider .rail, select, aside.user, aside.panel section img, .slider button, button.validation.disabled, p.promotion button.secondary, .popup button.toggle {
+	border: 1px solid #b6b5b5;
+}
+body.booking.fava .panel section li span.price span.label {
+	display: inline-block;
+}
+body.fava .panel.list li[role="option"] span.price {
+	right: 0.7em;
+	top: 0.1em;
+	position: absolute;
+}
+body.booking article.panel li span.price strong.data {
+	font-weight: bold
+}
+p.route {
+	color: #ffffff
+}
+p.schedule {
+	font-weight: normal;
+}
+ul[role="listbox"] li[role="option"]::after {
+	background: url(../img/client/arrow-right.png) no-repeat scroll 50% -23% transparent;
+	content: "";
+	height: 2.7em;
+	width: 1.2em;
+	position: absolute;
+	right: .7em;
+	top: 20%;
+}
+li[role="option"], .panel.list section > ul li {
+	display: block;
+	margin: auto;
+	position: relative;
+}
+.row-options {
+	background-color: transparent!important;
+}
+/* Fix for 7400826
+.row-options:nth-child(3n+1) {
+	background-color: rgba(255, 255, 255, 0.2)!important;
+	color: #fff;
+}*/
+.secondary-information, .slide-options button.toggle {
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.slide-options button.toggle {
+	position: absolute;
+	width: 200em;
+	height: 2.2em;
+	left: -2em;
+	top: -4px;
+	background: rgba(255,255,255,.3) !important;
+}
+.slide-options div.datepicker, .slide-options div.bassinet {
+	top: -.3em!important;
+}
+button.toggle {
+	border: none;
+}
+.panel.list section li > span:first-child, .panel.list section li p {
+	margin: 0;
+	vertical-align: top;
+}
+.slide-options div.bassinet, .slide-options div.datepicker {
+	min-width: 2.2em;
+	top: 0;
+	height: 1.8em;
+	padding: 0;
+}
+.slide-options div.datepicker:after {
+	background: url(../img/client/icon-cal-no-border.png) 42% 38% no-repeat;
+	background-size: 59%;
+}
+.slide-options button.toggle:after {
+	height: 1.8em;
+}
+.slide-options.active button.toggle:after {
+	background: url(../img/client/arrow-right-navigation.png) 42% 38% no-repeat;
+}
+.slide-options div span {
+	padding: .4em 1em 0em 0;
+}
+h1 {
+	font-size: 1.4em;
+}
+.panel header h1 {
+	padding: 0.4em .7em;
+}
+.panel.price.static dt {
+	width: 30%;
+}
+.panel.price dd {
+	width: 23.33%;
+}
+.copy-name, .copy-card {
+	border: 1px solid rgba(255,255,255, .3);
+	background: rgba(0,0,0,.2);
+	padding: .7em 1em;
+}
+article.miles {
+	padding: 0;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+}
+article.miles > label {
+	font-size: 1.167em;
+	color: #fff;
+	top: -0.8em;
+}
+article.miles .onoffswitch {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+section table.grid {
+	color: #171717;
+}
+body.ffaccount.miex article.panel table.grid tbody tr td {
+	background: #fff;
+	border-right: 1px solid #aaa9a6;
+	border-top: 1px solid #aaa9a6;
+}
+body.ffaccount.miex article.panel table.grid tbody tr td.unextended, body.ffaccount.miex .support-info ul.legend li.unextendable:before {
+	background: #F3F2EE;
+}
+body.ffaccount article.panel table.grid tbody tr td.extendable, body.ffaccount article.panel table.grid tbody tr td.extended, body.ffaccount.miex .support-info ul.legend li.extendable:before {
+	background-color: #003366;
+	background: -moz-linear-gradient(bottom, #003366, #295798);
+	background: -webkit-linear-gradient(bottom, #003366 0%, #295798 100%);
+	color: #fff;
+}
+body.ffaccount.miex .support-info ul.legend li {
+	position: relative;
+	color: #fff;
+	margin-top: 0;
+}
+input[type="text"], input[type="email"], input[type="tel"], p.location input[type="text"], select, p select, p.cabin select, input[type="radio"].is-tab {
+	height: 2.5em;
+}
+article section span.data.price.total {
+	color: #000;
+	font-weight: bold;
+}
+section .services.add-service.bag>ul>li span.data.price.total, #wrapperServices li p.moreInfo {
+	color: #fff;
+}
+#wrapperServices li a.moreServices.expanded p.label, #wrapperServices li a.moreServices p.label {
+	color: #000;
+}
+button.search:after {
+	top: 0.6em;
+}
+button.datepicker:after {
+	background: url(../img/client/icon-cal-no-border.png) no-repeat 50% 50%;
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: -0.5em;
+	left: 8.8em;
+}
+.popup article.panel h2 {
+	background: #353337;
+	border: none;
+}
+div.list ul.input li {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 1em;
+	margin-top: 0.5em;
+}
+.panel.price dd {
+	float: right;
+	margin-left: 0em;
+	width: 20%;
+	text-align: right;
+}
+div.list ul.input li {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: .7em;
+}
+div.list ul li {
+	position: relative;
+	margin: auto;
+}
+.popup.cost article.panel.price footer dt {
+	text-align: left;
+}
+div.accordion section ul li {
+	margin: 0;
+}
+.sectionDefaultstyle input[type="text"] {
+	padding: 5px !important
+}
+/*Form elemtns*/
+
+p.location input[type="text"] {
+	width: 85%;
+}
+input[type="text"], input[type="email"], input[type="tel"], p.location input[type="text"], button.datepicker, input[type="radio"].is-tab {
+	height: 2.2rem;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 0.3rem;
+	border: 1px solid #000;
+}
+button.datepicker {
+	position: absolute;
+	height: 2.3em;
+	width: 2.3em;
+	-webkit-border-radius: .3em;
+	border-radius: .3em;
+	right: 5px;
+	top: -2px;
+	background-color: #b2b3b3;
+	background: -moz-linear-gradient(bottom, #b2b3b3, #fff 50%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#b2b3b3), color-stop(50%, #fff));
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+input:not([readonly="readonly"]):focus, select:focus, .popup article.panel {
+	-webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+select {
+	background: none;
+}
+input[type="text"], select, button.datepicker, input[type="radio"].is-tab {
+	padding: 0px;
+}
+select, input[type="radio"].is-tab {
+	-webkit-appearance: menulist;
+}
+label.disabled {
+	opacity: 0.2;
+}
+p a {
+	color: #ffffff;
+}
+button.search:after {
+	background: url(../img/client/icon-loop.png) no-repeat;
+	right: -5px;
+}
+div.list {
+	margin: 0;
+}
+/*Fix for 07428349*/
+.sear div.list.date {
+	padding: 10px 0 0 0
+}
+article.panel section p.flexible {
+	margin: 0.7em auto;
+}
+article.panel section div.list.pax {
+	margin: -0.8em 0 0 0;
+}
+div.list.pax label {
+	padding: 0 0 5px 2px;
+}
+body.sear .list.pax ul.input {
+	width: 100%;
+}
+article.panel header h1.nobg {
+	background: none!important;
+background-color::none !important;
+	border-bottom: 1px solid #8c8c8c;
+	color: #414042;
+}
+article.panel.breakdown.price header a {
+	color: #414042;
+	padding-right: 2px;
+}
+aside.panel {
+	background-color: rgba(0, 38, 105, 0.5);
+	color: #ffffff;
+}
+body > section aside.panel {
+	padding: 0;
+}
+section p.question input.width100, section p.pin input.width100, section p.user input.width100, section p.email input.width100, section p.reference input.width100, section p.airline input.width100, section p.location input.width100, div.dialog.extend p.extend input.width100, section p select.width100, div.pax p.name input.width100, div.pax p.label input.width100, section p.country input.width100, section p.list.phone input.width100, section p.mail input.width100, section div.pax p input.width100, div.list.dob li select.width100, section p.name input.width100, section p.card-number input.width100, section p.address input.width100, section p.city input.width100, div.list.state ul.input li input.width100, ul.input li select.width100, section ul li input.width100 {
+	width: 100%
+}
+section form aside.panel {
+	border-radius: 0;
+	border-color: transparent;
+}
+li[aria-selected="true"], input:focus, select:focus {
+	background: #ffffff /*!important*/;
+	color: #000000;
+}
+col.selected {
+	background: rgba(255,255,255,0.3)!important
+}
+div.accordion h2 {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+}
+div.accordion *[role="tab"] {
+	border-radius: 4px;
+}
+div.accordion [role="tab"], div.accordion h2, h2 {
+	border: none;
+}
+div.accordion *[role="tab"][data-aria-expanded='false'], div.accordion *[role="tabpanel"][data-aria-hidden='false'] {
+	margin: 0 0 .7em 0;
+}
+div.accordion *[role=tab] {
+	font-size: 1.167em;
+	font-weight: normal;
+}
+div.accordion *[role="tab"][aria-expanded="false"]:after, button.toggle[aria-expanded="false"]:after {
+	background: url(../img/client/icon-open.png) no-repeat 50% 50%;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+div.accordion *[role="tab"][aria-expanded="false"]:after {
+	height: 1.6rem;
+	top: 0px;
+	left: 88%;
+}
+div.accordion *[role="tab"][aria-expanded="true"]:after {
+	height: 1.6rem;
+	left: 88%;
+}
+body.daof.list .panel.list section li > span {
+	padding-right: .5em;
+}
+.panel.list section li p {
+	display: inline-block;
+}
+/*123*/
+article section {
+	border-top: 0;
+}
+/*End of 123*/
+article.facs div.accordion {
+	background-color: rgba(0, 38, 105, 0.5);
+	color: #ffffff;
+}
+div.accordion *[role="tabpanel"][data-aria-hidden='false'] {
+	padding-bottom: 0.3em;
+}
+h1 button.toggle[data-aria-expanded="true"]:after, button.toggle[data-aria-expanded="true"]:after, div.accordion *[role="tab"][data-aria-expanded="true"]:after, div.accordion *[role="tab"][aria-expanded="true"]:after, button.toggle[aria-expanded="true"]:after, h1 button.toggle[aria-expanded="true"]:after {
+	background: url(../img/client/icon-close.png);
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+.textSmaller {
+	font-size: 0.8em;
+}
+button.close:after {
+	background: url(../img/client/icon_close.png) no-repeat;
+}
+button.close {
+	background-color: none;
+	background: none;
+	box-shadow: none;
+}
+.popup .facs button.toggle {
+	float: right;
+}
+.popup .facs button.toggle {
+	margin: .7em .6em .7em 0;
+}
+section.trip div.departure h2, section.trip div.return h2 {
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 0.01px;
+}
+.trip .return {
+	margin-top: 2em;
+}
+/*123*/
+select, input[type="text"] {
+	font-size: 1.13em;
+}
+/* End of 123*/
+aside p a {
+	color: #000000;
+}
+article.panel section h1 span.label {
+	color: #414042;
+	font-weight: bold;
+}
+article.panel span.label {
+	color: #ffffff;
+}
+article.pax section div.pax:not(:nth-of-type(1)) {
+border-top: none;
+}
+.copy-name {
+	position: static;
+}
+body.alpi div.pax.infant {
+	background: rgba(0,0,0,.2);
+	padding: .4em 1em;
+	margin: .7em 0;
+}
+input[type="text"][readonly] {
+	background-color: #d6d6d6;
+	color: #4b4b4b;
+}
+div.cale div[role="grid"] li[data-aria-selected="true"], div.cale div[role="grid"] ul.columnhead li[data-aria-selected="true"] {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+.panel.sum.inBound a.secondary {
+	line-height: 2.3em;
+}
+body > section:first-of-type {
+	margin: 0;
+}
+body.booking.fava ul[role='listbox'] li[role="option"]:nth-child(4n+3), .row-options:nth-child(4n+4) {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+.panel.list section li div {
+	display: inline-block;
+}
+section article.panel p.transit, section article.panel section p.total {
+	background: rgba(255,255,255,.4);
+	color: #414042;
+}
+body.fava .panel.list li[role="option"] > p {
+	margin: 0.7em 2em 0.7em auto;
+}
+section article.panel p.transit, section article.panel section p.total {
+	padding: .4em 0 .4em .4em;
+}
+body.booking.pick article.date-picker header {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+}
+.date-picker .pagination li a {
+	position: relative;
+	z-index: 20;
+	text-indent: -9999px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+	background-image: url(../img/client/arrow-left-navigation.png);
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.date-picker .pagination li:first-child a:after {
+	left: 28%;
+	border-right: none;
+}
+.date-picker .pagination li:last-child a:after {
+	border-left: none;
+}
+.date-picker .pagination li:last-child a {
+	background-image: url(../img/client/arrow-right-navigation.png);
+}
+.date-picker section {
+	position: relative;
+}
+.panel section {
+	margin: .7em;
+}
+date-picker table th {
+	background-color: #414042;
+	color: #ffffff;
+}
+.date-picker table th {
+	width: 14.28%;
+	height: 1em;
+	border: 1px solid #fff;
+}
+.calendar-slider th {
+	font-size: 1em;
+}
+.date-picker table td {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #d8d9da;
+	height: 2.7em;
+}
+.date-picker table td.date-passed {
+	background-color: #f2f2f2;
+	color: #414042;
+}
+.date-picker table td.date-today {
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0, .8);
+	-moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0, .8);
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0, .8);
+}
+.calendar-slider td.date-today {
+	background-color: #fff;
+	color: #000;
+	font-weight: normal;
+}
+.date-picker table td.date-selected {
+	background-color: #f25c05;
+	color: #fff;
+}
+.date-picker table td.date-selected {
+	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, .5);
+	-moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, .5);
+	box-shadow: inset 1px 1px 1px 1px rgba(0,0,0, .5);
+	font-weight: normal;
+}
+.date-picker table td.date-activity {
+	background-image: url(../img/client/icon-cal-activity.png);
+	background-position: .2em .2em;
+	background-position: 50% 2.4em;
+	background-repeat: no-repeat;
+}
+.date-picker .list.date .input li select {
+	padding: 0;
+	background: no-repeat 97% center, #fff;
+	background-image: none;
+}
+.expiry select {
+	padding: 0;
+}
+div.expiry, p.card-cvv {
+	display: block;
+}
+body.purc .panel.payment footer div.list ul.input li {
+	margin: 0;
+}
+div.list ul.input li {
+	display: inline-block;
+}
+.state > ul > li:first-child, .state > ul > li:last-child {
+	width: 50%;
+}
+p.promotion button {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+p.promotion button:hover, p.promotion button:active {
+	background: #fff;
+}
+body.booking.purc article.panel section p.promotion input {
+	width: 50%;
+}
+button.validation.back, button.validation.cancel {
+	padding: 0 .5em;
+	height: 1.9em;
+	line-height: 1.4em;
+}
+input[type='radio'] + label, input[type='checkbox'] + label {
+	float: none;
+	display: inline-block;
+	width: 87%;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-top: 4px;
+}
+.booking.sear article.miles {
+	padding: 18px 10px;
+}
+.booking.sear article.miles > label {
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	color: #fff;
+}
+.onoffswitch {
+	position: absolute;
+	top: 11px;
+	right: 40px;
+}
+.onoffswitch {
+	display: inline-block;
+}
+.favourite {
+	left: 11.5em;
+}
+.panel.breakdown h1 {
+	background: none;
+	border: none;
+	color: #414042;
+}
+article.panel.breakdown header {
+	border-bottom: 1px solid #8c8c8c;
+}
+div.details a.balink {
+	color: #fff;
+}
+.panel p.transit {
+	margin: .7em;
+}
+body > section:first-of-type {
+	margin: .7em .4em 0 .4em;
+	overflow: visible !important;
+	text-align: left;
+}
+.panel div.details, .panel p.transit {
+	margin-bottom: 0;
+}
+.panel div.details {
+	padding: .4em 0 0 0;
+}
+nav.navigation a.navigation:after {
+	top: 0;
+}
+.map-point {
+	top: 180px;
+}
+a.navigation:before, a.secondary:before {
+	width: 2.2em;
+	height: 1.7em;
+	left: .3em;
+}
+a.navigation:after, div.buttons a.secondary:after {
+	right: 0.5em;
+}
+body.map {
+	background: url("../img/map.png") no-repeat scroll -235px 165px #A4BEDB;
+}
+body > section {
+	padding-bottom: 0;
+}
+nav.navigation a.navigation {
+	height: 2.8em;
+}
+.miles-status .meter-progress {
+	background: #ff9900;
+	background-image: url(img/bgrd-lines.png), -moz-linear-gradient(bottom, #ff9900, #fcab32);
+	background-image: url(img/bgrd-lines.png), -webkit-linear- gradient(bottom, #ff9900, #fcab32);
+	border: none;
+	width: 70%;
+	height: .5em;
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+.miles-slider > div {
+	background: rgba(0,38,105,.3);
+	clear: none;
+	float: left;
+	width: 23.5%;
+	padding: 0 .7em;
+	color: #fff;
+}
+.miles-slider {
+	left: 0;
+	position: relative;
+	width: 400%;
+}
+.meter-progress span, .miles-status footer li span, .meal-selection label {
+	display: none;
+}
+.miles-status .meter-panel {
+	background: rgba(255,255,255,.5);
+	border: none;
+	height: .6em;
+	width: 100%;
+	-moz-box-shadow: inset 1px 1px 2px #333;
+	-webkit-box-shadow: inset 1px 1px 2px #333;
+	box-shadow: inset 1px 1px 2px #333;
+}
+.miles-status div:not(:nth-of-type(3)):not(:nth-of-type(4)) p > strong {
+font-size: 1.33em;
+}
+.miles-status div div + p:nth-of-type(2) {
+	text-align: right;
+}
+.miles-status footer li.active a, dl.card-3ds dt figure {
+	background: #fff;
+}
+.miles-status footer li a {
+	width: 6px;
+	height: 6px;
+	background: #6c6c6d;
+	border-radius: 50%;
+	display: block;
+}
+.miles-status footer {
+	border: 1px solid black;
+	text-align: center;
+	clear: both;
+}
+.miles-status footer li {
+	margin-left: .7em;
+	display: inline-block;
+}
+.meal-selection {
+	border: 1px solid rgba(255,255,255, .5);
+	margin: 0.5em 0 0.7em 0;
+	background-color: rgba(255,255,255,.1);
+}
+.meal-selection p {
+	display: inline-block;
+	float: left;
+	font-weight: bold;
+	font-size: 1em;
+	margin: 0em;
+	max-width: 36%;
+}
+/*.trip div {
+	display: inline-block;
+}*/
+.meal-selection p .note {
+	display: block;
+	font-size: .8em;
+	font-weight: normal;
+	color: rgba(255, 255, 255, .5);
+	padding-top: .5em;
+}
+select.mealList {
+	display: inline-block;
+	width: 100%;
+}
+.meal-selection {
+	padding: .7em;
+	overflow: hidden;
+}
+button.validation.disabled, button.validation.disabled:hover, button.validation.disabled:active {
+	background: #ffcc81;
+	box-shadow: none;
+	color: #ffffff;
+}
+.dialog.native p {
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, .5);
+	font-size: 1.33em;
+}
+.dialog.native {
+	/*PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2 issue 1*/
+	padding: 0 0 0.4em 0;
+	/*End PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2*/
+	margin: 5em 5% 5% 5%;
+	background: #3c4969 url(../img/client/bgrd-modal.png) no-repeat !important;
+	border: 2px solid #dfe1e6;
+	color: #fff;
+	border-radius: 13px;
+	text-align: center;
+	width: 89%;
+	-webkit-box-shadow: 4px 4px 3px rgba(0,0,0,.7);
+	-moz-box-shadow: 4px 4px 3px rgba(0,0,0,.7);
+	box-shadow: 4px 4px 3px rgba(0,0,0,.7);
+}
+.dialog button {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+article.panel.price section ul li span {
+	color: #000;
+}
+.popup article.panel.price h2 {
+	background: none;
+	border: none;
+}
+.popup article.panel h2 span:first-child {
+	font-weight: bold;
+}
+.popup article.panel h2, .popup article.panel h3 {
+	font-size: 1em;
+}
+article.panel > header:first-child h1 + h2 {
+	margin-top: 1px;
+}
+.panel header h2, .panel header h3, .popup .panel.price h2 {
+	margin: 0;
+	padding: .4em .7em;
+}
+.popup article.panel.price section li:last-child {
+	font-weight: bold;
+}
+p.flexible input[type='checkbox'] + label {
+	width: 70%;
+	vertical-align: initial;
+}
+.popup article.panel.price section li span.data, footer.total ul li strong span.label, .popup article.panel.price footer.total span.data {
+	color: #414042;
+}
+.popup article.panel.price section ul li span.label {
+	width: auto;
+	margin-right: auto;
+	display: inline;
+}
+article.panel.price section ul li {
+	margin: auto;
+}
+.popup footer li {
+	border-top: 1px solid rgba(0,0,0,.2);
+}
+.popup footer li {
+	padding-top: 10px;
+}
+.popup footer li span:first-child {
+	float: left;
+}
+article.panel.price footer {
+	text-align: right;
+	padding-bottom: 8px;
+}
+a.secondary, header h2 {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+.panel header h2 {
+	font-size: 1em;
+}
+.panel header h2, .panel header h3 {
+	margin: 0;
+	padding: .4em .7em;
+}
+header h2 {
+	border-bottom-width: auto;
+	border-bottom-style: none;
+}
+.panel header h2 {
+	line-height: 2em;
+}
+body.conf .slide-options button.toggle {
+	background: #7d9ac4!important;
+}
+body.conf .row-options {
+	top: -.7em;
+	right: -.7em;
+	height: 3em;
+}
+.row-options {
+	min-height: 2.7em;
+	overflow: hidden;
+	position: relative;
+}
+html body.booking section form article.panel section, button.datepicker, button.search, button.extend, ul[role="listbox"] li[role="option"], button.increase, button.decrease {
+	position: relative;
+}
+.baggage-allowance, .meal-selection {
+	border: 1px solid rgba(255,255,255, .5);
+	margin: 1.2em 0 0.7em 0;
+	background-color: rgba(255,255,255,.1);
+}
+.popup button {
+	float: right;
+}
+article.panel.xbag header p, article.panel.xbag header li {
+	color: #171717;
+}
+.baggage-allowance h1 {
+	margin: 0;
+	position: relative;
+	font-size: 1.1em;
+	padding: .7em .7em;
+}
+article.panel div.services a.balink {
+	color: #ffffff;
+}
+article.panel div.services div.buttons li {
+	margin-bottom: 10px;
+}
+div.services div.buttons a {
+	margin-bottom: 0;
+}
+.panel div.details {
+	margin-top: 0;
+}
+article.panel.seatmap {
+	color: #414042;
+	background: #fff;
+}
+ol.input li {
+	color: #000;
+}
+div.seatmap div h2 button, div.seatmap div h2 button:hover, div.seatmap div h2 button:active {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+	border: none;
+}
+div.seatmap button.secondary {
+	text-transform: capitalize;
+}
+button.secondary {
+	outline: 0;
+}
+input[type="text"].width_75 + button {
+	height: auto;
+	margin: auto;
+	max-width: auto;
+}
+div.seatmap h2 button {
+	padding: 0 1.2em;
+}
+body.seat div.seatmap .secondary {
+	float: right;
+}
+/*07345592*/
+div.seatmap td.is-current {
+	background-position: 0px -5.15rem;
+	background-size: 22px auto;
+}
+/*07345592*/
+/*div.seatmap table .occupied, div.seatmap table .selected, div.seatmap td.is-current {
+	background: url(../img/client/colorBlocks.png) 50% 4% no-repeat;
+	background-size: 25px 350px;
+}*/
+/*07345592*/
+div.seatmap table .occupied {
+	background: url(../img/client/colorBlocks.png) 50% -55px no-repeat;
+	background-size: 22px 302px !important;
+}
+/*07345592*/
+div.seatmap table .selected {
+	background: url(../img/client/colorBlocks.png) 50% -112px no-repeat;
+	background-size: 22px 308px;
+}
+/*07345592*/
+.seat_select {
+	background: url(../img/client/colorBlocks.png) -1px -102px no-repeat;
+	background-size: 22px 308px;
+}
+/*07345592*/
+.seat_occupied {
+	background: url(../img/client/colorBlocks.png) -1px -52px no-repeat;
+	background-size: 22px 308px;
+}
+div.seatmap table .selected {
+	color: #fff;
+	font-size: 130%;
+	font-weight: bold;
+}
+span[data-flightInfo], span[data-seatInfo] {
+	display: inline;
+}
+span[data-flightInfo="route"] {
+	font-weight: normal;
+}
+/*07345592*/
+/*PTR 08303390 [Medium]: SQ mob-UAT-R15:MCI - The Bassinet seat icon is not showing correctly in the seatmap*/
+div.seatmap table .bassinetReference {
+	background: url(../img/client/icon-bassinet.png) 50% 50% no-repeat;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-background-size: 23px 20px;
+	background-size: 23px 20px;
+}
+div.seatmap table .bassinet {
+/*background: url(../img/client/icon-bassinet.png) 50% 0 no-repeat;
+	width: 22px;
+	height: 22px;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-background-size: 23px 20px;
+	background-size: 23px 20px;*/
+}
+/*PTR 08020485 [Medium]: SQ mob-UAT-R15-MCI - There are no bassinet icon the seat map*/
+div.seatmap table span.bassinetFilled {
+	/*background: url(../img/client/icon-bassinet_occupied.png) 50% 0 no-repeat;
+	width: 22px;
+	height: 22px;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-background-size: 23px 20px;
+	background-size: 23px 20px;*/
+	width: 20px!important;
+	height: 22px!important;
+	background: url(../img/client/colorBlocks.png) 50% -56px no-repeat!important;
+	background-size: 24px 314px!important;
+	border-radius: 0!important;
+}
+/*End PTR 08303390 [Medium]: SQ mob-UAT-R15:MCI - The Bassinet seat icon is not showing correctly in the seatmap*/
+div.seatmap table span.bassinetFilled {
+	display: inline-block;
+}
+body.seat footer.panel div.list label:first-child, body.seat header.panel div.list label:first-child {
+	display: none!important;
+}
+nav.tabs a.navigation {
+	font-size: 1.3em;
+}
+nav.tabs ul li a.navigation {
+	padding: 0;
+}
+/*PTR 08010323
+body.daof.list button.bookmark {
+	position: absolute;
+}
+button.bookmark {
+	display: none;
+}
+body.daof.list button.bookmark {
+	background: none;
+	border: none;
+}*/
+body.list .panel.list section li[role="option"] > span.price {
+	display: inline-block;
+	width: 4em;
+}
+body.daof.list .panel.list section li > span {
+	padding-right: .5em;
+}
+body.favour.daof .panel.list section ul[role="listbox"] li[role="option"] {
+	text-align: center;
+}
+.panel.list section li p {
+	vertical-align: top;
+	margin: 0;
+}
+.panel {
+	margin: 1em 0;
+	min-height: 1.9em;
+}
+body.booking article.panel.inBound section {
+	min-height: 2.9em
+}
+body.daof.list .panel.list header p.filter-results {
+	background: #8c8c8c;
+	color: #fff;
+	margin: 0;
+	text-align: left;
+	padding: 1em .7em;
+	position: relative;
+}
+article.panel.list header {
+	background-color: #d8d9da;
+	color: #414042;
+}
+body.daof.list article.panel header label {
+	color: #414042;
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li.deals {
+	background: url(../img/client/icon_meddle.png) 5% 5% no-repeat;
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li[role="gridcell"]:hover, body.daof.cale form article.panel div.cale div.swipe div.scroller li[role="gridcell"]:active {
+	background-color: #ff9900;
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li[role="gridcell"]:hover div span, body.daof.cale form article.panel div.cale div.swipe div.scroller li.deals:active span {
+	color: #FFF;
+}
+div.cale div[role="grid"] li[role="gridcell"][data-aria-selected="true"] {
+	-moz-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,1);
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li[role="gridcell"]:hover div span, body.daof.cale article.panel div.cale .swipe div.scroller li[data-aria-selected="true"].deals:hover div span {
+	text-shadow: 0px 1px 1px #000;
+}
+body.daof.cale article.panel div.cale .swipe div.scroller li[data-aria-selected="true"].deals div span {
+	text-shadow: 1px 1px 1px #fff;
+}
+body.daof.cale article.panel.cale div.cale div.swipe div.scroller li.deals em {
+	display: none;
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li[data-aria-selected="true"].deals {
+	background: url(../img/client/icon_meddle.png) no-repeat 5% 5%, -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: url(../img/client/icon_meddle.png) no-repeat 5% 5%, -webkit-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li[data-aria-selected="true"].deals:active, body.daof.cale form article.panel div.cale div.swipe div.scroller li[data-aria-selected="true"].deals:hover {
+	background: url(../img/client/icon_meddle.png) no-repeat 5% 5% #ff9900);
+}
+div.cale div[role="grid"] li[role="gridcell"] span:last-of-type, .popup article.panel h2 span:first-child {
+	color: #ff9900;
+}
+body.daof.cale form article.panel div.cale div.swipe div.scroller li.deals:hover, body.daof.cale form article.panel div.cale div.swipe div.scroller li.deals:active {
+	/*background:url(img/icon-tag-active.png) 50% no-repeat;*/
+	background: url(../img/client/icon_meddle.png) 5% 5% no-repeat #ff9900;
+}
+nav.pagination ul li a {
+	color: #fff;
+}
+.panel.cale section {
+	margin: 0;
+}
+article.facs button.toggle {
+	width: 101px;
+	float: left;
+}
+select, p select {
+	width: 100%
+}
+ul[role='listbox'] li[role="option"]:nth-child(2n+2) {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+}
+.panel.list h3 {
+	background: #414042;
+	color: #ffffff;
+}
+.panel div.message:first-child {
+	margin-top: 1.5em;
+}
+.panel div.message p {
+	padding: .5em .5em .5em 2.5rem;
+}
+.panel div.message p {
+	font-size: 1em;
+}
+body.fava .panel.list section li[role="option"] > span {
+	display: block;
+	float: none;
+}
+span.fare-deals {
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	top: 2.2em;
+	right: 0.7em;
+}
+.fare-deals {
+	color: #ffffff;
+	text-transform: capitalize;
+}
+body.daof article.panel li span.price strong.data {
+	font-weight: bold;
+}
+.daof .fare-deals {
+	top: 0;
+	left: 0;
+}
+.boardpass div.economy {
+	background: #006c50;
+}
+.boardpass .cabin > p {
+	color: #fff;
+}
+.boardpass p.name {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.boardpass .trip .tier .data {
+	color: #ffffff;
+}
+.boardpass p.tier {
+	border-bottom: 1px solid #688ABD;
+	padding-bottom: 1.071em;
+	margin-bottom: 1.071em;
+}
+article.boardpass .trip .location .city, .boardpass .trip .location span.dash {
+	font-size: 1.16em;
+	color: #fff;
+	text-transform: uppercase;
+	/* padding-left: 23px; *//*MBP SQ FEEDBACK*/
+}
+.boardpass .trip .tier {
+	border-bottom: 1px solid #688ABD;
+}
+.boardpass .trip .label {
+font-size: .8rem;
+	color: #92cbf0;
+}
+article.boardpass div.trip p time.date {
+	font-size: 1em;
+	color: #ffffff;
+}
+section.lounge {
+	background-color: rgba(0,0,0,.3);
+	background-image: url(../img/client/bgrd-batik.png);
+	background-repeat: no-repeat;
+	background-position: -26px 0;
+	padding: .6em .7em 1em 2em;
+	background-size: 67px 173px;
+}
+/*123*/
+article section {
+	border-top: 0;
+}
+/*End of 123*/
+.boardpass section {
+	margin: 0;
+}
+.boardpass section.lounge h1 {
+	margin: 0 0 .4em;
+	display: inline-block;
+	padding: .25em 1.3em 0 0;
+	background: url(../img/client/icon-sq-bird.png) 100% 0 no-repeat;
+}
+section.lounge h1 {
+	font-family: PhilosopherRegular, "Times New Roman", Times, serif;
+}
+/*123*/
+.boardpass div.trip p.gate, .boardpass div.trip p.terminal {
+	display: inline-block;
+ width: auto%;
+	margin: 0 0 1em 0;
+}
+/*End of 123*/
+/*MCI conf SQ FEEDBACK*/
+div.accordion *[role="tab"][aria-expanded="true"]:after {
+	background: url(../img/client/icon-close.png) no-repeat 50% 50% transparent !important;
+	background-size: 20px 20px !important;
+-webkit-background-size: 20px 20px !important;
+}
+/*end MCI conf SQ FEEDBACK*/
+.carrousel-full > h1 {
+	margin: 0 auto;
+	padding: 0.60em 2.5em 0.60em .60em;
+	text-align: center;
+ border-radius: .8rem;
+	background: rgba(255,255,255,.5);
+	border: 1px solid #fff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: .88em;
+	font-weight: normal;
+	width: 90%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+.carrousel-full-item .is-checkin-open h3 {
+	border-bottom: 1px solid #a5a5a5;
+	background: #ff9800;
+	background-image: -moz-linear-gradient(bottom, #ff9e01, #ffac25 50%, #ffdea9 100%);
+	background-image: -webkit-linear-gradient(bottom, #ff9e01, #ffac25 50%, #ffdea9 100%);
+}
+.carrousel-full-item > section > h3 {
+	margin: 0;
+	background: #b6b6b6;
+	background-image: -moz-linear-gradient(bottom, #b6b6b6, #c3c3c3 50%, #c3c3c3 100%);
+	background-image: -webkit-linear-gradient(bottom, #b6b6b6, #c3c3c3 50%, #c3c3c3 100%);
+	color: #414042;
+	text-shadow: none;
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: .3em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: left;
+	position: relative;
+	min-height: 2.5rem;
+	border-bottom: 1px solid #a5a5a5;
+}
+.carrousel-full-item .is-checkin-open h3 {
+	color: #414042;
+	text-shadow: none;
+}
+ul.services-pax > li > h4 {
+	font-weight: normal;
+	background: rgba(0,0,0,.2);
+	border: 1px solid rgba(255,255,255, .3);
+	padding: .7em 1em;
+	margin: 0;
+}
+h1 button.toggle:after {
+	height: 1.1rem;
+	width: 1.4rem;
+}
+header h2 {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+body.ffaccount article.panel div.description {
+	width: 75%;
+	padding-right: 0;
+}
+article.panel.miles section {
+	margin: auto;
+}
+body.ffaccount.miex .support-info ul.legend li.extendable:before, body.ffaccount.miex .support-info ul.legend li.unextendable:before {
+	border: 1px solid white;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: .3em;
+	height: 1em;
+	width: 1em;
+}
+footer.buttons a {
+	color: #ffffff;
+}
+ul.legend li:after {
+	display: none;
+}
+a.navigation, a.secondary, a.button, button {
+	padding: 0;
+}
+.panel.miles td {
+	min-width: auto;
+}
+.panel.miles td, .panel.miles th {
+	padding: auto;
+}
+button.extend {
+	padding-bottom: 24px;
+}
+body.ffaccount.miex article.panel table.grid tbody tr.buttons td {
+	background: #8093B4;
+	padding: .9em .2em;
+}
+a.navigation.disabled {
+	color: #8c8c8c;
+}
+.fava .panel section div.details {
+	border-bottom: none;
+}
+header h1 {
+	color: #ffffff;
+}
+div.trip + div.details, div.details + div.trip {
+	margin-top: 1.5em;
+}
+section div.services, body.timetable.fava div.details + div.trip ul, body.timetable.fava div.trip ul:nth-of-type(2) {
+	border-top: 1px solid rgba(255,255,255,.5)!important;
+}
+body.timetable article.panel header h1 p.last-updated {
+	font-size: .6em;
+	text-transform: capitalize;
+}
+article.panel section div.list.type {
+	margin: .7em auto;
+}
+.width_75, input[type="text"].width_75 {
+	width: 100%;
+}
+ul.input-radio > li {
+	display: block;
+}
+/*123*/
+ul.input-elements > li ul li {
+	margin: auto;
+}
+/*End of 123*/
+body.timetable.fava header h1 em.op {
+	font-size: .7em;
+	text-transform: capitalize;
+	font-style: normal;
+}
+body.booking.logn article.panel footer ul.buttons li a.navigation {
+	line-height: 1.2em;
+	padding: .4em 1.2em;
+}
+input[type="password"] {
+	height: 2.5em;
+}
+.singleFlightLabel {
+	color: #000
+}
+body.timetable table[role='listbox'] tr.odd {
+	background-color: rgba(255, 255, 255, 0.05) !important;
+	color: #ffffff;
+}
+body.timetable table[role='listbox'] tr.even {
+	background-color: rgba(255, 255, 255, 0.2)!important;
+	color: #ffffff;
+}
+table[role='listbox'] tr[role="option"]:nth-child(even) td {
+	background: none;
+	border-top: none
+}
+.panel.list table.grid tbody td.time em {
+	font-size: .7em;
+}
+body.daof.list .panel.list section li[role="option"] > span.miles {
+	display: inline-block;
+	width: 4em;
+	background-image: url(../img/client/icon-award.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 1.4em auto;
+}
+body.daof.list .panel.list section li[role="option"] > span.miles em {
+	margin-left: 1.6em;
+	font-style: normal;
+}
+a.navigation {
+	padding: 0 1.2em;
+}
+aside.panel footer {
+	background-color: rgba(0, 38, 105, 0.5);
+	color: #ffffff;
+}
+div.list ul.input li {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: .7em;
+}
+article.panel.sear section div.list ul.input {
+	width: 85%;
+	margin-top: 0.8em;
+}
+.data.price small {
+	float: left;
+}
+.data.price small {
+	font-size: .7em;
+	margin-right: 4.4em;
+}
+header.summ {
+	display: block;
+}
+section div.meal-selection {
+	display: block;
+}
+div.meal-selection div {
+	width: 63%;
+}
+div.trip + div.details {
+	margin-top: auto;
+}
+.panel.list section ul li h2 {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000!important;
+}
+article.triplist li h2 {
+	font-size: 1em;
+}
+article.panel.list.triplist li[role="option"] p.route {
+	margin-left: .7em;
+}
+article.triplist li[role="option"] p {
+	margin: 0.7em 2em 0.7em auto!important;
+}
+article.panel.list.triplist li[role="option"] time {
+	margin: 0.7em auto;
+	display: inline-block;
+}
+body.pnr-retrieve.list .panel.list li[role="option"] p.period, body.pnr-retrieve.list .panel.list li[role="option"] p.route {
+	float: none;
+}
+footer a.secondary {
+	right: 0.75em;
+	top: 0.75em;
+	width: auto;
+}
+a.secondary {
+	display: inline-block;
+	outline: 0;
+	padding: 0 1.2em;
+	line-height: 2.3em;
+	text-decoration: none;
+}
+.pnr-retrieve.list a.secondary {
+	font-size: 1.33em;
+}
+article.triplist footer {
+	background-color: #d8d9da;
+	color: #414042;
+}
+article.triplist footer {
+	position: relative;
+	min-height: 3em;
+	margin: 0;
+	padding: 0.75em;
+}
+body.pnr-retrieve.list .panel.list footer {
+	margin-top: auto;
+}
+body.pnr-retrieve.list .panel.list footer a {
+	top: 0.5em;
+}
+a.secondary {
+	border-color: transparent;
+}
+body.pnr-retrieve.over .panel section.trip h2 {
+	line-height: 2em;
+	font-size: 1em;
+	margin: 0;
+	padding: 0.4em 0.7em;
+}
+.panel.trip section.trip {
+	margin: .7em;
+}
+article.panel.trip > section.trip, article.panel.trip > header > h1 > label {
+	opacity: 1 !important;
+	color: #fff;
+}
+header.booking {
+	color: #fff;
+}
+.services.add-service label:before {
+	background: none;
+}
+section div.services ul li label {
+	display: none!important;
+}
+section div.services ul li:last-child label {
+	display: block!important;
+}
+body.pnr-retrieve div.services.add-service ul li:last-child {
+	text-align: right;
+}
+body.pnr-retrieve div.services.add-service ul li:first-child {
+	float: left;
+	width: 50%;
+}
+body.pnr-retrieve div.services.add-service ul li:last-child {
+	width: 50%;
+	clear: none;
+	text-align: right;
+	font-size: .8em;
+}
+body.pnr-retrieve div.services.add-service ul li:last-child span {
+	font-size: 1.8em;
+	margin: .4em 0 0;
+	display: inline-block;
+	font-weight: normal;
+}
+footer.panel.price {
+	background-color: #dcdbd8;
+	color: #414042;
+}
+div.services div.pax.child:before {
+	background: url(../img/client/icon_child.png) no-repeat 5px 0px;
+	height: 28px;
+	background-size: 15px 25px
+}
+div.services div.pax.infant:before {
+	background: url(../img/client/icon_infant.png) no-repeat 5px 0px;
+	height: 28px;
+	background-size: 15px 25px
+}
+body.pnr-retrieve div.services.add-service input {
+	text-align: center;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	height: 1.3em;
+	width: 2.4em;
+	float: left;
+	font-size: 1.5em;
+	color: #fff;
+	background: rgba(255,255,255,.2);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.5);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,.5);
+}
+body.xbag div.services.add-service.bag ul li p {
+	display: inline-block;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.8em;
+}
+body.xbag div.services.add-service.bag p abbr {
+	margin: 0 .4em;
+	font-size: 1.3em;
+	color: #fff;
+}
+button.increase:after, button.decrease:after {
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 1.5em;
+	height: 1.4em;
+	width: 1.4em;
+	color: #000;
+	right: -.4em;
+}
+div.popup.xbag article.panel button.toggle {
+	width: 37%;
+}
+nav.navigation a.navigation {
+	line-height: 3em;
+}
+a.navigation:before, a.secondary:before {
+	height: 2.1em;
+}
+body.rebo .panel.list li[role="option"] p.price.difference {
+	font-size: 1em;
+	padding-right: .4em;
+}
+body.rebo .panel.list li[role="option"] p.price, body.rebo .panel.list li[role="option"] p.price, body.rebo .panel.list li[role="option"] p.price.difference {
+	right: 0.7em;
+	top: 0.7em;
+	position: absolute;
+}
+body.list .panel.list section li[role="option"] p:nth-of-type(2) span {
+	display: inline-block;
+}
+body.rebo .panel.list li[role="option"] p.price.difference {
+	font-size: 1em;
+	padding-right: .4em;
+}
+body.list .panel.list section li[role="option"] p span.city {
+	display: block!important;
+}
+body:not(.timetable).list .panel.list section li[role="option"] p span.dash {
+	display: none!important;
+}
+body.avai .panel.list section li[role="option"] > p {
+	display: block;
+	float: none;
+}
+/*fix for the ptr 07284399*/
+body.rebo .panel.list li[role="option"] p.price {
+	top: 3.5em;
+	font-size: .833em;
+	right: -0.2em;
+}
+/*End of fix for the ptr 07284399*/
+.panel.list section li p {
+	vertical-align: top;
+	margin: 0;
+}
+.price.difference strong {
+	padding-left: 0;
+}
+body.list .panel.list section li[role="option"] p:nth-of-type(2) span {
+	display: inline-block;
+}
+body.rebo.purc footer.acknowledgement p label a, body.timetable.tmwv nav.pagination a {
+	color: #414042;
+}
+div[role="group"] article[role="treeitem"][data-aria-selected="false"] section, div[role="group"] article[role="treeitem"][data-aria-selected="false"] footer {
+	opacity: 0.2;
+}
+footer.panel.flexible {
+	background: none;
+	background-color: none;
+	border: none;
+	color: #000;
+}
+body.rebo.list .panel.list footer {
+	margin-top: 0;
+}
+body.rebo.list .panel.list footer a {
+	top: .75em;
+}
+body.rebo.list article.panel footer a.secondary {
+	font-size: 1.33em;
+}
+a.secondary {
+	border-radius: 4px;
+}
+article.triplist li h2 {
+	line-height: 2em;
+	font-size: 1em;
+	margin: 0;
+	padding: 0.4em 0.7em;
+}
+ul[role="listbox"] li[role="option"]::after {
+	height: 1.7em;
+}
+.timetable table.grid td.large, .timetable table.grid th.large {
+	width: 25.5%;
+	max-width: 25.5%;
+}
+table.grid tbody td.trip div {
+	display: block;
+}
+.panel.list table[role="listbox"] th {
+	font-weight: normal;
+}
+ul.input-radio > li:first-child input[type="radio"][name="trip-type"]:after, ul.input-radio > li:last-child input[type="radio"][name="trip-type"]:after {
+	background-image: none;
+}
+input[type="radio"].is-tab {
+	-webkit-appearance: radio;
+	width: 13px;
+}
+ul.services-pax > li dl {
+padding-left: .8rem;
+}
+.checkin-list li button {
+	top: 16px;
+}
+.checkin-list input[type="radio"] {
+	-webkit-appearance: checkbox;
+	height: 1em;
+	width: 1em;
+}
+.panel.list header h1.checkin-ready {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+	text-shadow: none;
+	padding-left: 0.7em;
+}
+.checkin-list li:nth-child(even) {
+	background-color: transparent;
+}
+.checkin-list > li {
+	border-bottom: none;
+}
+.checkin-list li > label > span > span:first-child {
+	font-weight: normal;
+	color: #ffffff;
+}
+.checkin-list time {
+	font-weight: normal;
+}
+/*123*/
+.checkin-list li > label > span > span {
+	display: block;
+}
+/*End of 123*/
+.panel.list section li p {
+	display: block;
+}
+.onoffswitch-general-label {
+	max-width: 100%;
+}
+.checkin-list[data-info="pax-list"] li p, .checkin-list[data-info="pax-list"] li label {
+	padding-left: 0;
+}
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox) {
+	-webkit-appearance: checkbox;
+	width: 1em;
+	height: 1em;
+}
+.panel section h2.subheader {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+h2.subheader button {
+	top: 5px;
+}
+article.panel header .carrousel-header {
+	background-color: none;
+	color: #fff;
+	border: none;
+}
+.boardpass .cabin > p.flight-number:before, .boardpass .cabin > p:before, .boardpass .cabin > p:before {
+	background-size: 23px 76px!important;
+	left: 0.4rem;
+}
+.boardpass .cabin > p.flight-number:before {
+/*MBP SQ FEEDBACK*/
+/* background: rgba(0,0,0,.5) url(../img/client/sprite_boardingPass.png) 6px -52px no-repeat; */
+}
+.boardpass .cabin > p.data:before {
+/*MBP SQ FEEDBACK*/
+/* background: rgba(0,0,0,.5) url(../img/client/sprite_boardingPass.png) 6px 1px no-repeat; */
+}
+.boardpass .cabin > p.seat:before {
+/*
+  PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues
+
+  background: rgba(0,0,0,.5) url(../img/client/sprite_boardingPass.png) 6px -52px no-repeat; */
+}
+.boardpass .cabin > p {
+	padding-left: 3rem;
+}
+.boardpass div.trip p {
+	margin: .4em 0;
+}
+.boardpass div.trip {
+	margin: 0 .7em;
+}
+.checkin-list li > label {
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+}
+input[type='checkbox'] + label strong {
+	display: inline-block;
+}
+/*MCI conf SQ FEEDBACK*/
+ul.input-elements > li .checkin-list.is-selectable li {
+	margin-bottom:1em;
+}
+/*end conf MCI SQ FEEDBACK*/
+.panel section header h2 {
+	margin: 0 -.7em .7em -.7em!important;
+	padding: .4em .7em .4em .7em;
+	position: relative;
+}
+.panel section.subsection {
+	margin: 0;
+}
+section.subsection header button.toggle, section h2.subheader button.toggle {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background: none;
+	border: none
+}
+article.panel section div.message.info {
+	/** PTR 07698953 [Medium]: MERCI R15 INT: MCI_AP No Warning Shown On the Confirmation Page **/
+	display: block;/** END PTR 07698953 [Medium]: MERCI R15 INT: MCI_AP No Warning Shown On the Confirmation Page **/
+}
+.panel section h2.subheader > span {
+	padding-top: 0;
+	text-transform: capitalize;
+}
+.subsection div {
+	margin: 0;
+}
+/*123*/
+section ul.input-elements select {
+	width: 100%;
+}
+/*end of 123*/
+.checkin-list li > p > span > span:first-child {
+	color: #ffffff;
+	font-weight: normal;
+}
+ul.checkin-list li button.secondary {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+button.secondary {
+	outline: 0;
+	padding: 0 1.2em;
+}
+.checkin-list li button {
+	width: 3.6rem;
+	right: auto;
+	margin-left: 5px;
+	margin-top: -5px;
+	display: inline-block;
+	padding-left: 24px;
+}
+.panel.list section li p {
+	display: inline-block;
+}
+body.booking.sear div.list.type label:first-child {
+	display: none;
+}
+body.sear .list.pax ul.input li select {
+	position: relative;
+	bottom: 0em;
+	right: 0;
+}
+body.sear .list.pax ul.input li {
+	min-height: 0;
+	width: 40%;
+	margin-right: 0;
+}
+body.sear .list.pax ul.input li:last-child {
+	margin-right: 0
+}
+body.sear article.miles {
+	position: relative;
+	padding: 0 1em 0em 1em;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+	box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+	border-radius: 4px;
+}
+body.booking.cale nav.pagination li a {
+	color: #002669;
+}
+div.cale div[role="grid"] li[role="gridcell"] {
+	height: 50px;
+}
+div.tabs {
+	background-image: none;
+}
+.panel.list section > ul li {
+	padding: .7em;
+}
+body.fava .panel.list section li[role="option"] > p {
+	margin-bottom: 0;
+}
+article.sum section {
+	position: relative;
+}
+section.trip div.return {
+	margin-top: 0.3em;
+}
+section.trip div.return {
+	display: block;
+}
+article.panel.payment header p {
+	margin: 0.7em!important
+}
+body.conf ul[role='listbox'] li:not(:first-child) {
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	padding-top: 0.4em;
+}
+article.panel.price footer p {
+	text-align: left;
+	margin: auto!important;
+}
+div.meal-selection p {
+	margin: auto!important;
+}
+.dialog.native button.cancel, .dialog.native button.validation {
+	font-size: 1.4em;
+}
+.dialog {
+	padding: 1em 1.4em 2em 1.4em;
+	margin-top: 80px;
+}
+div.dialog.extend p.extend {
+	margin: 0.7em 0!important;
+}
+.dialog footer.buttons button {
+	margin-top: 0;
+}
+.panel.miles td.extended:after {
+	background: none;
+	height: 0;
+}
+button.extend {
+	font-size: .75em;
+}
+button.extend {
+	height: 5.5em;
+	width: 80%;
+	border: 1px solid #082561;
+	padding-bottom: 20px;
+	text-align: center;
+}
+div.description p, section ul li p {
+	margin: 0!important;
+	padding-top: 5px;
+}
+article.panel.list.triplist section ul[role="listbox"] li[role="option"]:after {
+	height: 5.7em;
+}
+body.pnr-retrieve.over.trip p.last-updated {
+	color: #ffffff;
+}
+p.last-updated {
+	font-size: 1em;
+}
+article.panel.trip p.transit, article.panel.list p.trip {
+	margin: 0.7em!important;
+}
+p.total.time strong.label {
+	color: #4b4c4c;
+}
+article.panel.trip div.list.date {
+	padding: 0;
+}
+a.navigation:hover {
+	background: #fff;
+	color: #000;
+}
+header h1 {
+	margin: 0.9em 0em;
+}
+.sear div.list ul.input {
+	width: 100%;
+}
+body.fava .panel.list li[role="option"] > span {
+	margin: 0.7em 2em 0 auto;
+}
+body.booking.fava article.panel section li[role="option"] span.price {
+	right: 0.7em;
+}
+article.panel.pax header p {
+	margin: 0.7em!important;
+	color: #fff;
+}
+section ul.input-elements li a.secondary.email:before {
+	background: url(../img/client/mail.png) no-repeat;
+	top: 14px;
+}
+/*123*/
+.getPassbook a.secondary {
+	padding: 0.5rem 0 0 2.5rem;
+}
+/*End of 123*/
+section ul.input-elements li a.secondary.sms:before {
+	background: url(../img/client/sms.png) no-repeat;
+	top: 11px;
+}
+section ul.input-elements li a.secondary.add-passbook:before {
+	background: url(../img/client/passbook.png) no-repeat;
+	top: 14px;
+}
+section ul.input-elements li a.secondary.app:before {
+	background: url(../img/client/boarding.png) no-repeat;
+	top: 11px;
+}
+.boardpass .trip .label {
+	color: #fff;
+}
+article.panel.boardpass section div.cabin.economy p {
+	margin: 0.5em 0 0 6.5em!important
+}
+section.lounge {
+padding: .5rem .5rem .5rem 4.5rem;
+margin: .5rem 0 0 0em;
+	border-top: 1px dashed #bbb;
+}
+.boardpass .trip .tier {
+	border-bottom: 1px dashed #bbb;
+padding-bottom: .5rem;
+}
+article.boardpass .trip .location .city {
+	font-size: 1.2rem;
+}
+article.boardpass div.trip p time.date, article.boardpass section div.trip p time.hour {
+	font-size: 1rem;
+}
+p.seat {
+	font-size: 0.8em;
+	font-weight: normal;
+	line-height: 0.9em;
+}
+.boardpass .cabin {
+	overflow: visible;
+	height: 15.5em;/*MBP SQ FEEDBACK*/
+}
+article.panel.boardpass section div.cabin.economy p.seat {
+	margin: 1.1em 0 0 6.5em!important;
+}
+.carrousel-full-item > section time {
+	text-align: left;
+	color: #414042;
+}
+.carrousel-full > h1 a:after {
+	background: url(../img/client/arrow-right.png) no-repeat 0 0;
+}
+/*123*/
+.checkin-list li > button.edit:after {
+	background: url(../img/client/edit_pen.png) no-repeat 10px 1px;
+	top: 0.3em;
+}
+/*End of 123*/
+.panel.list section > ul.checkin-list li {
+	padding: 1.3em .7em;
+}
+nav.navigation a.navigation:before {
+	top: 0.4em;
+}
+a.oldDatePicker img {
+	position: absolute;
+	height: 20px;
+	right: 5px;
+	top: 5px;
+	width: 20px;
+}
+section p.location {
+	margin-bottom: 0px!important;
+}
+.delete {
+	top: 8.5px;
+	border-right: none;
+	right: 0.09em;
+	height: 27px;
+	background: #fff;
+}
+.delete .x {
+	top: -0.23em;
+	margin-top: -1px;
+}
+section p.flexible, section p.cabin {
+	margin-top: 1em!important;
+}
+.inbound span > ul li {
+	padding: .7em;
+}
+p.cabin select {
+	width: 100%;
+}
+select, p select, p.cabin select {
+	height: 2.5em;
+	border-radius: 0.3rem;
+	border: 0px;
+	background: #fff;
+}
+article.panel {
+	margin-bottom: 10px;
+}
+/*123*/
+form {
+	margin: 0;
+}
+/*End of 123*/
+.ui-widget-header {
+background-color: #3b76de!;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x!important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de))!important;
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+}
+.ui-widget-header .ui-icon {
+	background-image: url(../img/client/arrow-right-navigation.png)!important;
+	background-size: 12px 12px!important;
+	top: 17px!important;
+	left: 18px!important;
+}
+.ui-icon.ui-icon-circle-triangle-w {
+	background-image: url(../img/client/arrow-left-navigation.png)!important;
+	background-size: 12px 12px!important;
+	top: 17px!important;
+	left: 16px!important;
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all a {
+	position: absolute;
+	z-index: 20;
+	text-indent: -9999px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+	background-image: url(img/arrow-left-navigation.png);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	right: 10px!important;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+.ui-datepicker th {
+	background-color: #414042!important;
+	color: #ffffff!important;
+	width: 14.28%;
+	height: 3.2em;
+	border: 1px solid #fff;
+	font-size: 1em!important;
+}
+.date-picker table td.date-passed {
+	background-color: #f2f2f2;
+	color: #414042;
+}
+.ui-widget-content {
+	background-color: rgba(0, 38, 105, 0.5);
+	background: rgba(0, 38, 105, 0.5);
+	border: 2px solid #ffffff;
+	border-top: none;
+}
+#ui-datepicker-div:before {
+	bottom: -.4em;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+#ui-datepicker-div:after {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all, button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corner-all, .secondary.change {
+	background-color: #ff9900!important;
+	background: -moz-linear-gradient(bottom, #ff9900, #ffc876 100%)!important;
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#ff9900), color-stop(100%, #ffc876))!important;
+	color: #ffffff!important;
+	text-transform: capitalize;
+	font-size: 1.18em;
+}
+.ui-datepicker .ui-datepicker-buttonpane button:before {
+	background: none!important;
+	background: none!important;
+	background: none!important;
+}
+.ui-datepicker .ui-datepicker-buttonpane button:after {
+	background: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane button:after, .ui-datepicker .ui-datepicker-buttonpane button:before {
+	width: 0;
+	height: 0;
+	padding: 10px;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all {
+	padding: 0 1em!important;
+	height: 2.3em;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75)!important;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75)!important;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75)!important;
+	margin-right: 0.4em;
+	float: right;
+}
+.ui-datepicker .ui-datepicker-header {
+	border: none!important;
+}
+div .ui-datepicker-buttonpane ui-widget-content {
+	border: none!important;
+}
+.ui-datepicker .ui-datepicker-buttonpane button:after, .ui-datepicker .ui-datepicker-buttonpane button:before {
+	content: none;
+	position: static;
+	width: 0;
+	height: 0;
+	top: 0;
+	right: 0;
+	border-radius: 0;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+	color: #000 !important;
+	background-color: #fff!important;
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	box-shadow: none!important;
+	border: 1px solid #000!important;
+}
+.ui-datepicker .ui-datepicker-next {
+	top: 8px !important;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 9px;
+	top: 8px;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	width: auto!important;
+}
+.ui-datepicker table {
+	border: 1px solid #fff!important;
+}
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+	left: 1.5%!important;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+nav.pagination ul li a {
+	color: #000;
+}
+#htmlPopup h1.boundsTitle {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border-top: 1px solid #5B8DE3;
+	color: #ffffff;
+	border-left: none;
+	border-right: none;
+}
+#htmlPopup {
+	-webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 5px;
+}
+div.msg.info:before {
+	background: url(../img/client/icon-info.png);
+	background-size: 102%;
+}
+div.msg:before {
+	width: 44px;
+	height: 40px;
+	left: -0.6em;
+}
+div.msg ul:before {
+	width: 43px;
+	height: 43px;
+	left: -0.5em;
+}
+div.msg.info {
+	background: none repeat scroll 0 0 #EADEB9;
+}
+div.msg ul {
+	padding: 1px 4px 1px 35px;
+}
+article.panel.contact {
+	margin: 1.2em 0em 1em 0em;
+}
+nav.buttons li a.navigation {
+	line-height: 2.2em;
+}
+article.panel div.services div.buttons li:nth-of-type(2n) {
+	padding-left: 0;
+}
+div.msg ul:before, div.msg ul:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	bottom: 6px;
+	height: 30px;
+	width: 46%;
+	-webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 1);
+}
+div.msg ul:before {
+	left: .2em;
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+div.msg ul:after {
+	right: 0.4em;
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+div.msg {
+	box-shadow: none;
+}
+a.navigation.checkin:before {
+	background: url(../img/client/icon-check-in.png) no-repeat 52% 54%;
+}
+.language {
+	background: url(../img/client/colorBlocks.png) 0 -320px no-repeat;
+	background-size: 25px 350px;
+	-moz-background-size: 25px 350px;
+	padding-left: 25px;
+	webkit-background-size: 25px 350px;
+}
+.ui-datepicker-buttonpane.ui-widget-content button {
+	margin-bottom: 11px !important;
+	margin-top: 4px !important;
+}
+label {
+	font-weight: normal;
+}
+footer p {
+	color: #fff;
+	font-weight: normal;
+}
+section:first-of-type {
+	overflow: visible !important;
+	text-align: left;
+}
+.panel.breakdown footer p {
+	padding-top: 5px;
+}
+section.trip p.flight-number {
+	margin: 0.2em 0!important;
+}
+div.departure p.location, div.return p.location {
+	margin-top: 3px!important;
+}
+.is-scrollable div.seatmap h2 {
+	padding-top: 0;
+}
+nav.navigation {
+	margin-top: 30px;
+}
+/*fix for 07339381*/
+.panel.sum .secondary {
+	bottom: auto;
+	right: -0.2em;
+	top: 0.1em;
+}
+/*End of fix for 07339381*/
+button.ui-datepicker-trigger {
+	background: #fff url(../img/client/icon-cal.png) no-repeat 96% center;
+}
+footer.bottom li.website {
+	display: block;
+}
+.panel.sear p.smartDropDwn {
+	margin: -0.9em 0 !important;
+}
+article.panel.sear section p.location label[for="E_LOCATION_1"] {
+	margin: 2em 0 0 0;
+}
+.panel.sear p.flexible {
+	margin: 1.5em 0 0.1em 0!important;
+}
+#htmlPopup .wrapper.pop {
+	color: #000;
+	padding: 0px 1px;
+}
+section.inbound span ul li[role="option"] {
+	padding: 0.1em 0.7em 0.5em 0.5em;
+}
+section header.sum p {
+	margin-bottom: -0.5em!important;
+}
+section header.sum h1 {
+	font-weight: bold
+}
+header.sum {
+	margin: .7em 0 .7em 0;
+}
+ul[role='tablist'] li:first-of-type {
+	padding: 0.7em 0.5em 0 0;
+}
+body.fava ul[role='listbox'] li[role="option"]:after {
+	top: 47%;
+}
+section p.location.departure {
+	padding-top: 10px;
+}
+.panel.breakdown.price td:last-child {
+	font-weight: bold;
+	color: #414042;
+}
+.panel.breakdown footer a.bag-charge {
+	margin-bottom: 0.7em;
+}
+article.panel.breakdown header h1 {
+	padding: .4em 0em;
+}
+article.panel.breakdown header {
+	margin: 5px 10px;
+}
+article.panel.breakdown.price section {
+	margin: 0.7em;
+}
+.panel.breakdown.price td:last-child, .panel.breakdown.price th:last-child {
+	text-align: right;
+}
+#htmlPopup h1.posR {
+	background-color: #3b76de;
+	background: -moz-linear-gradient(center top, #6fa3ff 0%, #6fa3ff 25%, #3b76de 75%, #3b76de 100%) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6fa3ff), color-stop(25%, #6fa3ff), color-stop(75%, #3b76de), color-stop(100%, #3b76de));
+	border-bottom: 1px solid #285EB8;
+	border: none;
+}
+a.navigation.seat {
+	padding: 0 0.7em;
+}
+div.buttons a.secondary.seat:after, div.buttons a.secondary.baggage:after {
+	content: "";
+	position: absolute;
+	width: 1.2em;
+	height: 100%;
+	background: url(../img/client/homeNav_arrow.png) 100% 50% no-repeat!important;
+	background-position: center;
+	background-clip: border-box;
+	background-color: transparent;
+	background-size: 1em 1.2em!important;
+	-webkit-background-size: 1em 1.2em !important;
+	right: 0.1em;
+	top: 0;
+}
+.panel.breakdown.price thead th:first-child {
+	text-align: left;
+}
+button.validation.cancel {
+	padding: 0 1em;
+}
+footer.buttons button.validation.cancel {
+	padding-right: 1em;
+}
+div.msg.info {
+	font-weight: normal;
+}
+article.panel.age {
+	color: #000;
+}
+article.panel.price header span.label {
+	font-size: 100%;
+}
+article.panel.price dt.footerRow strong {
+	font-weight: normal;
+	padding-top: 0.5em;
+}
+.popup.cost article.panel.price dl {
+	margin-bottom: 0;
+}
+.panel.price dl {
+	margin: 0;
+}
+.panel header h2, .popup .panel.price h2 {
+	padding: 0 .7em 0;
+}
+.popup.cost article.panel.price dt {
+	margin-bottom: 0.5em;
+}
+article.panel.price footer.total strong {
+	font-size: 125%;
+}
+.popup.cost article.panel.price footer dl {
+	margin: 0.3em auto 0;
+}
+.popup.cost footer.total dd span.unit, .popup.cost footer.total dd span.data {
+	display: inline-block;
+}
+.panel.price dt {
+	width: 60%;
+}
+.panel.price dd {
+	width: 40%;
+}
+.popup.cost footer.total dd span.unit {
+	font-size: 125%;
+}
+.flight_notAvail {
+	background: url(../img/client/tick.png) no-repeat 50% -21px;
+	background-size: 14px 38px;
+	-moz-background-size: 14px 38px;
+	-o-background-size: 14px 38px;
+	-webkit-background-size: 14px 38px;
+	width: 21px;
+	height: 21px;
+}
+.flight_Avail {
+	background: url(../img/client/tick.png) no-repeat 50% 4px;
+	background-size: 14px 38px;
+	-moz-background-size: 14px 38px;
+	-o-background-size: 14px 38px;
+	-webkit-background-size: 14px 38px;
+	width: 21px;
+	height: 21px;
+}
+.popup article.panel {
+	border: none;
+}
+.seatMap {
+	padding: 0;
+}
+.m-sliding-content span[data-seatInfo="seatnr"] {
+	top: 1.6em;
+}
+.m-sliding-content.is-seat:after {
+	top: 3.3em;
+}
+.seatmap.is-scrollable .seatmap {
+	border: none;
+}
+header div.wrapper.pop {
+	padding: 5px;
+}
+/*123*/
+.ui-datepicker-calendar td.ui-datepicker-today {
+	background: #f25c05!important;
+}
+/*End of 123*/
+header.banner button {
+	top: 0.9em;
+}
+header.banner, header.banner button.share, header.banner button.refresh, header.banner button.bookmark, .slider button, .slider button {
+	box-shadow: .1em .1em 0.5em rgba(0, 0, 0, 1);
+	-moz-box-shadow: .1em .1em .2em rgba(0, 0, 0, 1);
+	-webkit-box-shadow: .1em .1em 0.5em rgba(0, 0, 0, 1);
+}
+nav.pagination {
+	background: #dcdbd8;
+}
+body.booking.fava article.sum section p {
+	width: 75%;
+	line-height: 1.5em;
+}
+/*123*/
+/*PTR 08004004 [Medium]: MeRCI R15 SP1 SVV - MCI - Overlay and Conf msg UI issues on Conf page*/
+div.msg.warning, div.msg.info, div.msg.validation, div.msg.question {
+	margin: 1.5em 0.4em 1.5em 1em;
+}
+div.msg.warning:before {
+	background: url(../img/client/alert-new.png)-6px -657px no-repeat;
+	background-size: 50px 1429px;
+}
+/*End of 123*/
+article.panel.price.static section h1 {
+	margin: 0;
+}
+article.panel.price.static section {
+	margin: 0.7em 0.7em 0 0.7em;
+}
+article.panel.cale footer p:last-child {
+	font-weight: bold;
+}
+header.sum p {
+	margin: -0.2em 0 0.7em 0!important;
+}
+/*123*/
+header.banner button.home {
+	background: url(../img/client/home.png)no-repeat;
+	background-size: 33px 32px;
+	-webkit-background-size: 33px 32px;
+	border: none!important;
+	top: 9px;
+	left: 5px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 33px;
+	height: 33px;
+}
+header.banner button.back {
+	background: url(../img/client/back_icon.png)no-repeat;
+	background-size: 40px 28px;
+	-webkit-background-size: 40px 28px;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 40px;
+	height: 28px;
+	top: 11px;
+	left: 7px;
+}
+/*End of 123*/
+
+header.banner button.home:after {
+	background: none;
+}
+header.banner button.back:before, header.banner button.home:before {
+	background-color: none;
+	background: none;
+	border: none;
+}
+header.banner button.back:after {
+	background: none;
+}
+ul[role='tablist'] li.filterButtons {
+	padding: .5em .8em .5em .8em;
+}
+header.tabpanel p.country {
+	margin: 0!important;
+}
+.panel header.tabpanel {
+	border-radius: .2em .2em 0 0;
+}
+input[type='radio'] + label {
+	text-align: left;
+}
+li.input-radio-item label {
+	width: 55%;
+}
+ul.input-radio > li {
+	display: inline-block;
+}
+nav.tabs li.input-radio-item {
+	text-align: left;
+	width: 49.9%;
+}
+nav.tabs ul.input-radio li:last-child {
+	margin-left: 0;
+}
+nav.tabs {
+	margin-top: 24px;
+}
+/*123*/
+.panel.sear section {
+	margin: 0.2em 0.6em;
+}
+/*End of 123*/
+ul.contactList li a {
+	color: #fff;
+}
+article.panel.contact p.location input[type="text"] {
+	width: 100%;
+}
+nav.tabs ul.input-radio.baselineText li:first-child {
+	width: 46%;
+	position: absolute;
+	display: block;
+}
+nav.tabs ul.input-radio.baselineText li:last-child {
+	width: 40%;
+	display: block;
+	position: absolute;
+	left: 40%;
+}
+.trip div.xTplContent.xPrintAdaptX.xPrintAdaptY {
+	display: block;
+}
+.trip a.navigation.checkin:before {
+	background: none;
+}
+body.daof.list nav.tabs a.navigation:before, body.daof.map nav.tabs a.navigation:before {
+	top: 0.05em;
+}
+body.list .panel.list section li[role="option"] > span.price {
+	position: absolute;
+	left: 0;
+	margin-left: 15px;
+}
+p.route, p.period {
+	padding-top: 0;
+	text-align: left
+}
+body.list.daof .panel.list section li[role="option"] p.period {
+	padding-right: 0;
+	top: 9px;
+}
+body.daof.list section article.panel section ul li p.route {
+	padding-right: 8em;
+}
+body.daof.list section article.panel.list.dealspanel section ul li p.route {
+	padding-right: 0em;
+}
+ul[role="listbox"] li[role="option"]::after {
+	height: 2em;
+}
+ul[role="listbox"] li[role="option"]::after {
+	background-position-x: 50%;
+	background-position-y: -1%;
+	top: 35%;
+}
+p.route span {
+	font-weight: normal;
+	width: auto;
+}
+abbr.city {
+	display: inline-block;
+}
+span.fl-nr {
+	padding-left: 1em;
+}
+p.schedule {
+	padding-top: 3px;
+}
+.timetable table.grid td.trip {
+	font-size: 0.6em;
+}
+.timetable table.grid td.trip abbr {
+	font-size: 1.3em;
+}
+.panel.list header nav.pagination a {
+	color: #000;
+}
+tr.header th span, tr.header th.large {
+	font-weight: bold;
+}
+footer.total span.unit, footer.total span.data strong#fareBrkTotalPrice {
+	font-weight: bold;
+}
+table.bgAllowance {
+	text-align: left;
+}
+#htmlPopup .bgAllowance td:first-child {
+	text-align: left;
+	padding-left: 4px;
+}
+.trip p.location input[type="text"] {
+	width: 100%
+}
+.trip div {
+	margin-bottom: 0;
+}
+.trip footer.buttons {
+	padding-top: 8px;
+}
+.trip div.meal-selection p {
+	max-width: 100%;
+}
+.contact dt img {
+	left: 0px;
+}
+.contact dt {
+	padding-left: 3em;
+}
+.contact dd {
+	margin-left: 3em;
+}
+.trip nav.tabs {
+	margin-top: 0
+}
+body.daof.list article.panel header p.country label {
+	padding: 0 0 0.2em 0;
+	margin-left: .3em;
+}
+body.daof.list article.panel header p.country {
+	padding-top: .5em;
+}
+body.daof.list article.panel header p.country select {
+	width: 97%;
+	margin-left: 0.3em;
+}
+body.daof.list.favour article.panel.list button.toggle[aria-expanded="true"]:after {
+	background: url(../img/client/acc_close.png) no-repeat 50% 50% transparent !important;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+body.daof.list.favour article.panel.list button.toggle[aria-expanded="false"]:after {
+	background: url(../img/client/acc_open.png) no-repeat 50% 50% transparent !important;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+article.panel.list button.toggle[aria-expanded="true"]:after {
+	background: url(../img/client/icon-close.png) no-repeat 50% 50% transparent !important;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+article.panel.list button.toggle[aria-expanded="false"]:after {
+	background: url(../img/client/icon-open.png) no-repeat 50% 50% transparent !important;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+header.booking span.data {
+	font-weight: bold;
+}
+.ui-datepicker-close {
+	display: block;
+}
+button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corner-all {
+	padding: 0em 0.7em !important;
+	height: 2.3em;
+	float: left;
+	margin-left: .7em;
+}
+a.meal.secondary {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.timetable.fava article.panel header h1 {
+	font-weight: bold;
+}
+.timetable.tmdv.list article.panel.list p.route abbr.city, .timetable.tmdv.list article.panel.list p.route span.dash, .timetable.tmdv.list article.panel.list p.route abbr.city {
+	font-size: 0.9em;
+}
+.timetable section .panel.list li p.route {
+	padding-top: 0.3em;
+}
+.popup article.panel h2 span:first-child {
+	color: #000;
+}
+body.booking.fava div.booking.summ article.panel.price header hgroup h2 {
+	background: #DCDBD8;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+article.panel.price footer.total strong#fareBrkTotalPrice {
+	font-size: 155%;
+}
+body.booking.fava section form#alpiForm article.panel.contact {
+	margin: 0;
+}
+input.promotion {
+	width: 70%;
+}
+button.secondary.promocode {
+	line-height: 2em;
+	top: 0;
+	width: 26%;
+}
+body.booking.conf article.panel section div.details {
+	margin-bottom: 1.4em;
+}
+body.pnr-retrieve.over.trip section a.navigation.contact:before {
+	background: none;
+}
+body.pnr-retrieve.list .panel.list li[role="option"]:after, body.rebo.list .panel.list li[role="option"]:after {
+	top: 4.3em;
+}
+body.sear .list.pax .paxtypes ul.input > li:first-child {
+	width: 70%;
+}
+body.sear .list.pax .paxtypes ul.input {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+}
+body.sear .list.pax .paxtypes a {
+	width: 100%;
+	height: 2.5rem;
+	padding: 0.2em 0 0.2em 2.2em;
+}
+body.sear .list.pax .paxtypes a:before {
+	top: -0.1em;
+	left: 0.3em;
+}
+body.sear .list.pax .paxtypes a:after {
+	right: -1em;
+	top: 1em;
+}
+body.sear .list.pax .paxtypes select {
+	height: 2.5rem;
+}
+article.panel.sear section div.list ul.paxtypes ul.input {
+	margin-top: 0;
+}
+button.add-pax {
+	padding: 0 0.5em;
+}
+article.panel.sear section div.list ul.paxtypes ul.input {
+	width: 80%
+}
+.paxtypes button.delete-button {
+	height: 2.5rem;
+	width: 2.5rem;
+}
+button.delete-button:after {
+	height: 2.5rem;
+	width: 2.5rem;
+	left: -0.1em;
+}
+.spanel {
+	background: none;
+}
+button.validation.closePanel {
+	padding: 0 10px;
+}
+button.validation {
+	margin: 0 0.5em;
+}
+body.sear .list.pax .paxtypes ul.input > li:last-child {
+	width: 30%;
+}
+article.panel.list.triplist section ul[role="listbox"] li p.route {
+	margin-left: 0.5em !important;
+}
+nav.buttons .navigation.contact {
+	background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+}
+article.panel.list section table.grid tr[role="option"] td.trip abbr, article.panel.list section table.grid tr[role="option"] td.trip span.dash {
+	font-size: 1em;
+}
+/*123*/
+select:focus {
+	/*background: #ccc; !important*/
+	color: #171717;
+}
+/*End of 123*/
+div.onoffswitch input[type='checkbox'] + label.onoffswitch-label {
+	padding-left: 0;
+}
+/*123*/
+footer.buttons button.validation {
+	margin: 0.1em;
+}
+/*End of 123*/
+aside.krisFlyerAria button.toggle[aria-expanded="true"]:after {
+	top: -0.1em;
+	right: -0.2em;
+}
+aside.user.krisFlyerAria button.toggle[aria-expanded="true"]:after {
+	background: url(../img/client/icon_arrow_close.png) no-repeat 50% 50% transparent !important;
+}
+body.daof.list article.panel header div.tabs p.country select {
+	width: 100%;
+	margin-left: 0;
+}
+.wrapper.form {
+	border-radius: 0.3rem;
+	-webkit-border-radius: 0.3rem;
+}
+div.wrapper.form ul.inputForm {
+	padding-top: 0;
+}
+aside.user.krisFlyerAria {
+	background-color: #002857;
+	color: #fff;
+	border: 1px solid #002857;
+}
+aside.user.krisFlyerAria div.message.info p {
+	color: #fff;
+}
+aside.user div.message.info:before {
+	left: 1px;
+}
+aside.user.EliteGoldAria {
+	background-color: #9D8E68;
+	color: #fff;
+	border: 1px solid #9D8E68;
+}
+aside.user.EliteGoldAria div.message.info p {
+	color: #fff;
+}
+aside.user.eliteSilverAria {
+	background-color: #D8D9DA;
+	color: #000;
+	border: 1px solid #D8D9DA;
+}
+aside.user.eliteSilverAria div.message.info p {
+	color: #000;
+}
+aside.user.solitairePPSClubAria {
+	background-color: #A18651;
+	color: #fff;
+	border: 1px solid #A18651;
+}
+aside.user.solitairePPSClubAria div.message.info p {
+	color: #fff;
+}
+aside.user.solitaireLifePPSClubAria {
+	background-color: #A18651;
+	color: #fff;
+	border: 1px solid #A18651;
+}
+aside.user.solitaireLifePPSClubAria div.message.info p {
+	color: #fff;
+}
+aside.user.PPSClubAria {
+	background-color: #A1A1A4;
+	color: #fff;
+	border: 1px solid #A1A1A4;
+}
+aside.user.PPSClubAria div.message.info p {
+	color: #fff;
+}
+div.seatmap table .noSeat {
+	width: 5px;
+}
+.bassinetSeat {
+	background: url(../img/client/icon-bassinet_active.png)no-repeat 50% 50%;
+	background-size: 20px 20px;
+	-webkit-background-size: 16px 16px;
+	width: 30px;
+}
+/*07345592*/
+div.seatmap table input {
+	background: url(../img/client/colorBlocks.png) 50% -9px no-repeat;
+	background-size: 20px 293px;
+}
+/*07345592*/
+div.seatmap table input {
+	width: 20px;
+	height: 22px;
+}
+/*07345592*/
+div.seatmap table .occupied {
+	width: 20px;
+	height: 22px;
+}
+/*07345592*/
+table.clear.seatLayout {
+	font-size: .8em;
+	width: 95%
+}
+.panel.list div.scrollable-content div.seatmap h2 {
+	padding-top: 0.5em;
+	color: #fff!important;
+}
+article.panel.seatmap.is-scrollable p.availFlightInfo {
+	padding-left: 1.4em;
+}
+.ui-datepicker select.ui-datepicker-month {
+	margin-right: 5px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+	font-weight: bold;
+}
+a.ui-datepicker-prev.ui-corner-all.ui-state-disabled {
+	background-color: #c4c4c4!important;
+}
+a.ui-datepicker-next.ui-corner-all.ui-state-disabled {
+	background-color: #c4c4c4!important;
+}
+.booking article.panel.list section.inbound ul[role="listbox"] li span.fare-deals {
+	top: 1.2em;
+	right: auto;
+	left: 75%;
+}
+body.fava .panel.list section li[role="option"] > p {
+	width: 73%;
+}
+/*fix for 07246160*/
+.secondary.disabled:hover, .secondary.disabled:active {
+	background: #bbc4d3;
+	border-color: #aeb7be;
+	cursor: default;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+/*123*/
+.fontBigCKIN.flightRecapCheckin.disabled {
+	opacity: 0.2;
+}
+/*End of 123*/
+.services-pax.selectable input[type="checkbox"] {
+	margin-top: 0.3em;
+}
+/*already existing classes modified*/
+.checkin-list input[type="radio"] {
+	-webkit-appearance: checkbox;
+	height: 1em;
+	width: 1em;
+}
+.checkedinTripsPage {
+	color: #76d376;
+}
+.checkin-list input[type="checkbox"]:checked, .services-pax.selectable input[type="checkbox"]:checked {
+	box-shadow: none;
+}
+.checkin-list input[type="checkbox"]:checked, .services-pax.selectable input[type="checkbox"]:checked {
+	background-position-x: 0.1em;
+	background-position-y: -2.9em;
+}
+.checkindenained {
+	color: #ef8484;
+}
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox) {
+	width: 1.3em;
+	height: 1.3em;
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+}
+/*End of fix for the PTR 7246160*/
+
+/*fix for the PTR 07301185*/
+custom_merci.css h2.subheader button {
+	right: -10px;
+}
+div.msg:before {
+	left: -0.8em;
+	top: -0.5em;
+}
+h1 button.toggle::after {
+	height: 1.2rem;
+}
+/*End of fix for the PTR 07301185*/
+/**********Given for reraised issues*******************/
+.checkinAT div.popup.input-panel article section {
+	border-top: none;
+}
+.checkinAT input[type="tel"], .checkinAT input[type="text"] {
+	height: 2.5em;
+}
+p.country input[type="text"].ui-autocomplete-input {
+	height: 2.3em;
+}
+/*fix for the PTR 07284828*/
+body.pnr-retrieve.over.trip article.panel.cale section div.cale h2.return {
+	margin-top: 0;
+}
+body.pnr-retrieve.over.trip article.panel.cale section div.cale h2.return span {
+	padding-left: 0;
+}
+/*End of fix for the PTR 07284828*/
+
+/*07339766*/
+.panel.list.triplist footer p {
+	width: 60%;
+	color: black;
+}
+/*7345631*/
+div.msg ul:before, div.msg ul:after {
+	height: 10px;
+}
+li {
+	margin: .4em auto;
+}
+.m-sliding-content ul[data-seatInfo="charact"] li {
+	line-height: 1.5em;
+}
+div.seatmap table td span {
+	top: 0;
+}
+/* PTR 07340418 [START] */
+.amtPaid span.amtPaidRight {
+	padding-right: 10px;
+	font-weight: bold;
+}
+p.amtPaid {
+	background: #c8c8c8;
+	background: -moz-linear-gradient(bottom, #c8c8c8, #e2e2e2 50%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c8c8c8), color-stop(50%, #e2e2e2));
+	background: -webkit-linear-gradient(bottom, #c8c8c8, #e2e2e2 50%);
+	min-height: 1.7em;
+	height: auto;
+	font-size: 1.3em;
+	padding-top: 0.6em;
+	margin: 0 -0.5em -0.5em -0.5em!important;
+	padding-left: 10px;
+}
+/* PTR 07340418 [ END ] */
+
+
+/*07339204*/
+a.navigation.disabled, a.navigation.disabled:hover, a.navigation.disabled:active {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #ccc;
+	border: 1px solid #c3c3c3
+}
+/*PTR 07343796 [Medium]: MeRCI R14 SVV: SQ: Schedule Change  - Warning message shd be removed and UI issues*/
+.alert {
+	background: #eae8b9;
+	border-radius: 4px;
+	margin: 5px!important;
+	display: block;
+	padding: 0 10px 0 35px !important;
+}
+header h2.alert:after {
+	background: url(../img/client/icon-alert.png) no-repeat 0 0;
+	content: "";
+	background-size: 42px 42px;
+	height: 45px;
+	width: 45px;
+	display: block;
+	position: absolute;
+	top: -0.9em;
+	left: -1.2em;
+}
+/*PTR 07343796 [Medium]: MeRCI R14 SVV: SQ: Schedule Change  - Warning message shd be removed and UI issues*/
+
+/*fix for the PTR 07306232 */
+.pnr-retrieve.over.trip footer.buttons {
+	color: #000;
+	padding: 5px;
+	margin: 0px;
+	min-height: 2.7em;
+}
+.pnr-retrieve.over.trip footer.buttons button.validation {
+	margin: 0px;
+	right: 11px;
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+	border: 1px solid #ccc
+}
+.pnr-retrieve.over.trip footer.buttons span {
+	display: inline-block;
+	width: 60%;
+}
+/*End of fix for the PTR 07306232 */
+/*fix for the PTR 07403433*/
+table.tableFlightConf, table.tableFlightConf table {
+	color: #fff;
+}
+li.baggage span.dotLink div.popup article header h2 {
+	margin: 0 !important;
+}
+article.panel div.popup article section {
+	color: #000;
+}
+div.wrapper.pop p a {
+	color: #000;
+}
+/*End of fix for the PTR 07403433*/
+.pnr-retrieve.over.trip footer.buttons button.validation.cancel {
+	left: 9px;
+	width: 24%;
+}
+body.pnr-retrieve.over.trip section article.panel.contact {
+	margin: 1em 0;
+}
+.panel section header h2.alert {
+	margin: 5px !important;
+}
+article.panel.price.static section .label {
+	color: #000;
+}
+article.panel.sear section nav.tabs {
+	margin: 3em 0;
+}
+/*Fix for 07428349*/
+article.panel.sear section nav.tabs {
+	margin: 2.5em 0 1.8em 0;
+}
+/*Fix for 7400826*/
+.row-options:nth-child(4n) {
+	background-color: rgba(255, 255, 255, 0.2) !important;
+	color: #fff;
+}
+/*Fix for 07284870*/
+.panel.price.static dt {
+	width: 60% !important
+}
+div.pax div.xTplContent.xPrintAdaptX.xPrintAdaptY p.name {
+	overflow: hidden;
+}
+section.deals article.panel.list div ul.inputForm.offers p.country {
+	width: 100%;
+}
+.blackColor {
+	color: #000;
+}
+body.sear .list.pax ul.input li {
+	width: 46%;
+}
+/* PTR 07517219 fix*/
+div.cale h2.departure {
+	letter-spacing: 0.1px;
+}
+/*123*/
+button.ui-datepicker-trigger {
+	border-radius: 0.3rem;
+}
+/*End of 123*/
+article.panel.static .label {
+	color: #414042;
+}
+article.panel.payment section div.list.expiry ul.input li:last-child {
+	margin-top: 0.4em;
+	position: absolute;
+	width: 45%;
+}
+article.panel.price header h2 {
+	letter-spacing: 0.1px;
+}
+.eMiddlepanel {
+	background: url("../img/client/eMiddlepanel.png") repeat-x scroll 0 0 transparent;
+	height: 30px;
+	-webkit-border-radius: 13px 13px 0 0;
+	border-radius: 13px 13px 0 0;
+}
+.eLeftpanel {
+	background: url("../img/client/eLeftpanel.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	width: 139px;
+}
+.eRightPanel {
+	background: url("../img/client/eRightPanel.png") no-repeat scroll 0 0 transparent;
+	float: right;
+	width: 139px;
+}
+article.panel.sear section div.list ul.input.radioButtons {
+	width: 100%;
+}
+.dialog.native span {
+	height: 30px;
+}
+
+/* Removed text indent for PTR 07517219*/
+@-moz-document url-prefix() {
+ select {
+ padding: 8px 4.6px;
+ text-overflow: " ";
+ background:#fff url(../img/client/select-arrow.png) right no-repeat!important;
+ font-size: 15.6px;
+ height: auto;
+ text-indent: 0.01px;
+}
+}
+/* PTR 07517219 fix*/
+
+/********************** SPECIFIC TO MCI ADDED **********************************/
+/* Commented as this is not allowing Merci Booking flow logo to be displayed
+header.banner h1 {
+  background: none
+}
+*/
+
+.award-alert span.miles:before, body.fava .price.award-alert:before {
+	background-image: none;
+}
+.boardpass section.lounge h1.clientElement {
+	display: inline-block !important;
+	background: url(../img/client/icon-sq-bird.png) 100% 0 no-repeat;
+}
+.boardpass section.lounge h1.baselineText {
+	display: inline-block !important;
+	background: url(../img/client/icon-sq-bird.png) 100% 0 no-repeat;
+}
+ul[role='listbox'] li[role="option"]:nth-child(2n+1), body.timetable table[role='listbox'] tr:nth-child(2n+1) {
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #ffffff;
+}
+ul[role='listbox'] li[role="option"]:nth-child(2n+2), body.timetable table[role='listbox'] tr:nth-child(2n+2) {
+	background-color: rgba(255, 255, 255, 0.2)!important;
+	color: #ffffff;
+}
+.timetable .trip div {
+	font-weight: normal;
+}
+#IdentificationType section ul.input-elements select {
+	width: 100%;
+}
+button.ui-datepicker-trigger-disabled {
+	background: #fff url(../img/client/icon-cal.png) no-repeat 96% center;
+	background-color: #d6d6d6;
+	color: #4b4b4b;
+}
+.ui-datepicker-trigger-disabled:hover {
+	cursor: default;
+}
+nav.tabs li {
+	width: 48%;
+	font-size: 90%;
+}
+nav.tabs li a.navigation {
+	line-height: 2.5em;
+}
+footer.tabbar {
+	display: none
+}
+.smartDropDwn {
+	margin-top: 0px !important
+}
+.smartDropDwn.multipleTextbox input, .smartDropDwn.multipleTextbox select {
+	width: 48.5%;
+}
+.smartDropDwn.multipleTextbox input {
+	margin-right: 5px
+}
+select {
+	line-height: 1.9em;
+	width: 100%
+}
+button.validation.widthFull {
+	float: none;
+	width: 100%;
+	text-align: center
+}
+.panel .trip dl dt, .panel .details dl dt {
+	float: left;
+	clear: left;
+	display: inline-block
+}
+.panel .trip dl dd, .panel .details dl dd {
+	float: right;
+	clear: right;
+}
+.panel .details dl dt, .panel .details dl dd, .panel .trip dl dt, .panel .trip dl dd {
+	width: 50%;
+	margin: .2em 0;
+	padding: 0;
+	display: inline-block
+}
+.panel .trip dl {
+	padding: .5em 0;
+}
+.panel dl {
+	margin: .5em 0;
+}
+.panel.flightStatus header h2 {
+	line-height: 1.5em
+}
+.details.flightStatus {
+	color: #fff;
+}
+.panel .details.flightStatus dl {
+	margin: 5px 0
+}
+.panel .details.flightStatus dt {
+	padding-left: 10px;
+	width: 46%
+}
+.favUnchecked {
+	background: url(../img/client/fav@2x.png) no-repeat;
+}
+.favChecked {
+	background: url(../img/client/fav_selected@2x.png) no-repeat;
+}
+.favUnchecked, .favChecked {
+	background-size: 25px 25px;
+	-webkit-background-size: 25px 25px;
+	display: inline-block !important;
+	width: 30px !important;
+	height: 30px;
+	position: absolute;
+	right: 0px;
+	top: 3px
+}
+div.trip + div.details, div.details + div.trip {
+	margin-top: 5px
+}
+.panel.flightStatus h1 span {
+	display: block;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-transform: capitalize
+}
+.panel.flightStatus h1 span.date {
+	font-size: 90%
+}
+.panel.flightStatus header h2.singleLabel {
+	line-height: 2em;
+	padding: .4em .7em;
+}
+.panel.timetable section {
+	margin: 0px
+}
+.panel.timetable p {
+	display: inline-block
+}
+.panel.timetable p.route {
+	margin-left: 15px !important
+}
+.panel.timetable p .fl-nr {
+	margin-right: 15px
+}
+.panel.timetable section ul[role="listbox"] li[role="option"]:after {
+	background: url("../img/client/arrow-right.png") no-repeat scroll 100% 50% transparent;
+	content: "";
+	width: 1.2em;
+	position: absolute;
+	right: .7em;
+}
+header.banner button.favorite {
+	background: url(../img/client/fav@2x.png)no-repeat !important;
+	background-size: 30px 30px !important;
+	-webkit-background-size: 30px 30px !important;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	width: 30px;
+	height: 30px;
+	top: 11px;
+	left: auto;
+	right: 5px;
+	border: none !important;
+}
+.favouriteList tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+}
+.favouriteList {
+	border-collapse: collapse;
+}
+.favouriteList td {
+	vertical-align: middle;
+	padding: 5px;
+	background: none
+}
+.favouriteList td.airport span, .favouriteList td.date span {
+	display: block
+}
+.favouriteList td.airport {
+}
+.favouriteList td.date {
+	background: url("../img/client/arrow-right.png") no-repeat 96% 50%;
+}
+.favouriteList td.airportCode {
+	width: 20%
+}
+.favouriteList td.airportCode span {
+	display: block
+}
+.emptyBlock {
+	padding: 10px;
+}
+.panel.list.settings ul {
+	font-size: 130%
+}
+.panel.list.settings li {
+	border-bottom: 1px solid #fff;
+	padding: 10px;
+	margin: 0px;
+	position: relative;
+}
+.panel.list.settings li:last-child {
+	border-bottom: none;
+}
+.panel.list.settings li span {
+	position: absolute;
+	right: 5px;
+	top: 2px
+}
+.panel.list.settings li input {
+	font-size: 80%;
+	width: 100%;
+	background: none;
+	text-align: right !important;
+	border: none;
+	color: #fff
+}
+.panel.list.settings li span.select {
+	width: 40%
+}
+.panel.list.settings li select {
+	font-size: 80%;
+	width: 100%;
+	text-align: right;
+	border: none;
+	text-align: center
+}
+.freeText {
+	color: #fff;
+	font-size: 110%
+}
+.panel.list.settings span.freeText {
+	top: 10px;
+	font-size: 90%
+}
+.panel.list.settings .onoffswitch {
+	top: 1px;
+	right: 0px
+}
+/*.checkin-list label {
+  position:relative;
+  top:2px
+}
+commented by checkin team
+*/
+.input-elements span a {
+	float: right;
+	color: #fff;
+	font-size: 90%
+}
+/*Added for check-in*/
+
+
+/*123*/
+ul.input-elements > li {
+	margin: 0;
+}
+.sectionDefaultstyle footer.buttons {
+	/*PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2*/
+	padding: 0.6em 0.4em;/*End PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2*/
+}
+/*End of 123*/
+
+.sectionDefaultstyle header h3 {
+	color: #fff
+}
+h2.subheader button.toggle[data-aria-expanded="false"]:after, .sectionDefaultstyle h1 button.toggle[data-aria-expanded="false"]:after {
+	background: url("../img/client/icon-open.png") no-repeat transparent;
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+}
+h2.subheader button.toggle[data-aria-expanded="true"]:after, .sectionDefaultstyle h1 button.toggle[data-aria-expanded="true"]:after {
+	background: url("../img/client/icon-close.png") no-repeat transparent;
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+}
+.sectionDefaultstyle h1 button.toggle {
+	/*PTR 08716495 [Medium]: MeRCI R18 IA - MCI - UI issues on seat map n collapse/expand on conf pg*/
+	right: 7px;
+	height: 15px;
+}
+.checkin-list .secondary.edit {
+	text-indent: -9999px
+}
+/*123*/
+.checkin-list li > button {
+	width: auto;
+	height: 1.6875rem;
+	right: .7em;
+	top: .6em;
+}
+/*End of 123*/
+.checkin-list[data-info="pax-list"] li {
+	padding: 0.8em !important
+}
+.panel.list header h1.checkin-ready {
+	padding-left: 0.7em
+}
+.panel.list header h1.checkin-ready:before {
+	background: url(../img/client/lock.png) no-repeat 0 0px;
+	-webkit-background-size: 18px 63px;
+	background-size: 18px 63px;
+}
+.panel.list header h1.checkin-ready:before {
+	content: '';
+	position: absolute;
+top: .2rem;
+left: .4rem;
+}
+.checkin-list li.is-checked > label > span span {
+	font-weight: normal;
+}
+/*123*/
+#flightDep {
+	padding-left: 0;
+	font-size: 95%
+}
+/*End of 123*/
+.pax-sub-list .pax {
+	background: none !important
+}
+/*123*/
+ul[data-info="pax-sub-list"] {
+	margin-top: 5px;
+	padding-left: 1.7em;
+	font-weight: bold
+}
+/*End of 123*/
+ul.checkin-list ul li.pax:nth-child(odd), ul.checkin-list ul li.pax:nth-child(even) {
+	background: none;
+	border-top: none;
+	border-bottom: none;
+	color: #fff;
+}
+.panel.list section li div.onoffswitch {
+	position: relative;
+	top: 0;
+	right: 0;
+	margin-top: 10px
+}
+p.onoffswitch-general-label {
+	padding-top: 0px
+}
+.panel.contact #wrap {
+	border: none;
+	border-bottom: 1px solid #fff
+}
+.list.phone div.list ul.input li {
+	margin-top: 0px
+}
+/*123*/
+.panel.contact section header h2 {
+	margin: 0 -10px !important;
+}
+.panel.contact .PaxSelectionScreen section:first-of-type header h2 {
+	margin: -0.65em!important
+}
+/*End of 123*/
+
+.form p {
+	margin: 0px auto 5px auto !important
+}
+.is-selected {
+	position: relative
+}
+.is-selected label[for="flightsAll"] {
+	padding-left: 25px;
+	font-size: 100%;
+	margin-bottom: 10px
+}
+/*For -- 07246019*/
+.secondary.sms span, .secondary.email span, .secondary.app span, .secondary.add-passbook span {
+	display: none
+}
+a.secondary:before {
+	left: 0.8em
+}
+/*123*/
+/*MCI conf SQ FEEDBACK*/
+.is-selected input[type='checkbox'] + label {
+	padding-left: 0;
+	font-size: 100%
+}
+/*End MCI conf SQ FEEDBACK*/
+/*End of 123*/
+/*MCI conf SQ FEEDBACK*/
+.is-selected input[type='checkbox'] + label strong {
+	/* display: block */
+}
+/*End MCI conf SQ FEEDBACK*/
+li[data-service="seat"] {
+	float: left
+}
+.services-checked a.secondary:before {
+	background: url(../img/client/seatMap_grey.png) no-repeat;
+	background-size: 25px 136px;
+	top: 0;
+}
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox), .services-pax.selectable input[type="checkbox"] {
+	/*PTR 08716495 [Medium]: MeRCI R18 IA - MCI - UI issues on seat map n collapse/expand on conf pg*/
+	appearance: checkbox;
+	-moz-appearance: checkbox;
+	-webkit-appearance: checkbox;
+}
+.services-checked a.secondary {
+	padding: 1.5rem 0 0 0;
+}
+ul.services-pax > li h4 {
+	padding: .3em;
+	background: none;
+}
+ul.services-pax > li h4 {
+	background: none
+}
+/*fix for 7273650*/
+.services-pax.selectable.last li label h4 {
+	font-size: 1em;
+}
+ul.services-pax li:first-child label h4 {
+	font-size: 1em;
+}
+/*End of the fix for 7273650*/
+ul.services-pax > li dl, .services-pax.selectable.last li label h4 {
+	padding-left: 0px
+}
+ul.services-pax > li dl > dd {
+	font-weight: normal;
+	font-size: 80%
+}
+ul.services-pax > li dl {
+	margin-bottom: 5px
+}
+.panel.email, .panel.sms {
+	background: none
+}
+.panel.email .input-elements, .panel.sms label {
+	color: #000
+}
+.popup button.validation {
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+/*123*/
+.popup.input-panel button.validation, .popup.input-panel button.validation.cancel {
+	max-width: 99%;
+	width: 100%;
+	float: none
+}
+/*End of 123*/
+.popup.input-panel footer {
+	margin-top: 0px
+}
+.panel.sms .services-pax.selectable h4 {
+	color: #000
+}
+.input-group.contact {
+	margin: 0px
+}
+.panel.sms ul.services-pax > li {
+	padding: 0px;
+	margin: 5px 0 !important
+}
+ul.input-group li {
+	padding: 0px;
+	margin: 0;
+}
+/*fix for 7273650, 07818778*/
+.services-pax h4 {
+	font-weight: normal !important;
+	background: rgba(0,0,0,.2)!important;
+	border: 1px solid rgba(255,255,255, .3)!important;
+	padding: 0em!important;
+	margin: 0!important;
+	position: relative!important;
+	padding: 5px !important;
+	line-height: 20px;
+}
+/*End of the fix for 7273650, 07818778*/
+.services-pax li > h4 button {
+	top: 14px;
+	width: 2.7rem;
+	right: 2px
+}
+.secondary.edit {
+	background-color: #c3c3c3;
+	background: -moz-linear-gradient(bottom, #c3c3c3, #ffffff 60%);
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#c3c3c3), color-stop(60%, #ffffff));
+	color: #000;
+	text-indent: -9999px
+}
+/*MCI SQ FEEDBACK*/
+.services-pax li > h4 > button.edit:after {
+	top: -1px;
+	left: 0px;
+	background: url(../img/client/eyr_new_trans.png) no-repeat 11px 3px;
+	background-size: 75%;
+}
+/*end MCI SQ FEEDBACK*/
+ul.services-pax > li dl {
+	padding-left: 15px
+}
+div.cabin img {
+	width: 14em;/*MBP SQ FEEDBACK*/
+	height: 14em;/*MBP SQ FEEDBACK*/
+	border-style: solid;
+	border-width: 1px 3px 3px 1px;
+	position: absolute;
+	margin: 5px
+}
+.cabin.economy strong {
+	font-weight: normal;
+	padding: 5px 0
+}
+p.name .data {
+	font-weight: normal;
+	padding-left: 9px;/*MBP SQ FEEDBACK*/
+}
+section.lounge h1 {
+	font-family: PhilosopherRegular, "Times New Roman", Times, serif;
+}
+.checkinopen {
+	background: none;
+	padding-left: 0px;
+}
+.carrousel-full-item > section > h3 span {
+	font-weight: normal
+}
+.checkinnotopen {
+	background: url(../img/client/flightLocked.png) no-repeat;
+	background-size: 13px 14px;
+}
+.carrousel-full > footer li {
+margin: .4rem;
+}
+.boardpass .cabin > p {
+	/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+	padding: 3px 5px 2px 15px;   /*MBP SQ FEEDBACK*/
+	margin: -2px 0px -5px 177px !important
+}
+button.validation {
+	text-transform: none;
+}
+#wrap li {
+	clear: none !important
+}
+.input-radio input[type="radio"].is-tab {
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+input[type="radio"].is-tab+label {
+	color: #000;
+	padding-left: 37px;
+}
+input[type="radio"].is-tab:after {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 0 .6em;
+	top: 0px;
+}
+.sectionDefaultstyle select {
+	background: #fff;
+	-webkit-appearance: menulist
+}
+input[type="radio"].is-tab:checked {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6FA3FF), color-stop(0.25, #6FA3FF), color-stop(0.5, #4D86E9), color-stop(0.75, #3B76DE), to(#3B76DE));
+}
+.scrollableareaBottomspace {
+	padding-bottom: 0;
+}
+/*
+Added newly for PTR 07262915 [Medium]: MeRCI R14 SVV - MCI - UI not correct for info message for BP print success
+*/
+div.message.validation strong {
+	font-weight: normal
+}
+div.message.validation:before {
+	background: url(../img/client/icon-check.png) no-repeat -3px 50%;
+	background-size: 40px 40px;
+	width: 50px;
+	height: 50px;
+	top: -16px;
+	left: -6px
+}
+/*
+
+Added newly for PTR 07229727 [Medium]: MeRCI R14 SVV Android : S2 App :UI Issues for Confirmation Page and Seat map
+*/
+div.seatmap td.is-current {
+	background: url(../img/client/colorBlocks.png) 50% -128px no-repeat;
+	background-size: 25px 350px;
+}
+#seatMapMainSection div.seatmap table .selected {
+	color: #fff;
+	font-size: 100%;
+	font-weight: normal;
+}
+div.seatmap td.is-current {
+	color: #fff;
+	font-size: 130%;
+	font-weight: bold;
+}
+/*PTR 07262915 [Medium]: MeRCI R14 SVV - MCI - UI not correct for info message for BP print success*/
+#conf-email {
+	box-shadow: none;
+	background: #c1e4b9;
+	border: none!important;
+}
+#conf-sms {
+	box-shadow: none;
+	background: #c1e4b9;
+	border: none!important;
+}
+#conf-checkedin {
+	box-shadow: none;
+	background: #c1e4b9;
+	border: none!important;
+}
+/*PTR 07284802 [Medium]: MeRCI R14 SVV - MCI - UI issues*/
+.panel.email .validation, .panel.sms .validation {
+	text-align: center
+}
+/*PTR 07283767 [Medium]: MeRCI R14 SVV - SMS and Email pop up should display full pax name*/
+.panel.sms ul.input-group.contact li label {
+	width: 440%
+}
+/*PTR 07283545 [Medium]: MeRCI R14 SVV - Pop up for SMS not appeared at correct location*/
+.popup {
+	top: 3px;
+}
+input[type="text"].width_75 {
+	width: 100%;
+}
+/*PTR 07277350 [Medium]: MeRCI R14 SVV - MCI - UI not correct for autocomplete list - SQ custom css*/
+ul.ui-autocomplete li {
+	background: #002669;
+}
+ul.ui-autocomplete li a {
+	color: #fff;
+}
+ul.ui-autocomplete li:hover, ul.ui-autocomplete a:hover {
+	background: #79c9ec !important;
+	border: none;
+}
+/*PTR 07291004 [Medium]: MeRCI R14 SVV- MCI-Non-modifiable field on pax details, not greyed out*/
+input[type="text"]:disabled {
+	background-color: #d6d6d6;
+	color: #4b4b4b;
+}
+/*For PTR 07255695 [Medium]: MeRCI R14 SVV- MCI- wrong font color for warning messages - SQ custom skin - styleguide issue*/
+
+
+/* PTR 07307639 [Medium]: MeRCI R14 SVV - green card error isn't displayed with proper style guide */
+#more-info-req {
+	box-shadow: none;
+	background: #c1e4b9;
+	border: none!important;
+}
+div.message.warning p {
+	background: none repeat scroll 0 0 #F8E8EB;
+}
+div.message.warning:before {
+	background: url(../img/client/icon-error.png) no-repeat;
+	background-size: 100% auto;
+}
+div.message.warning:before {
+	left: -0.6em;
+}
+/* Fix for PTR 07294960 [Medium]: MeRCI R14 SVV -MCI- Due to missing space after : , text not wrapping */
+div.message.validation p {
+	word-wrap: break-word;
+}
+/*123*/
+
+nav.breadcrumbsForS2 li.active span:after {
+	top: 13px;
+}
+div.msg::before {
+	left: -1em;
+}
+/*End of 123*/
+
+/**************************** Added for date picker ***********************/
+.datepickerButton {
+	width: 100%;
+}
+.datepickerButton>li {
+	width: 100%;
+}
+/******************** END of added for date picker **********************/
+/************PTR 07322157 [Medium]: MeRCI R14 SVV - MCI - Android jellybean dropdown issue***************************/
+.selctboxs2 {
+	background: #fff url(../img/client/arrow-down-navigation.png) no-repeat 96% 50% !important;
+	-webkit-appearance: button !important;
+	padding-left: 3px !important;
+	border-radius: 5px !important;
+	padding-right: 1em !important;
+}
+/****************end of PTR 07322157 [Medium]: MeRCI R14 SVV - MCI - Android jellybean dropdown issue ***************/
+/*************** BOARDING PASS ISSUES FIXED*********************/
+.mbpFirst, .firstClass {
+	background: none repeat scroll 0 0 #7C1D20 !important;
+}
+.mbpBusiness, .businessClass {
+	background: none repeat scroll 0 0 #002569 !important;
+}
+.mbpEconomy {
+	background: none repeat scroll 0 0 #006A4E !important;
+}
+.mbpSuite, .suiteClass {
+	background: none repeat scroll 0 0 #8A6C4C !important;
+}
+.mbpPremium {
+	background: none repeat scroll 0 0 #687878 !important;
+}
+.boardpass .cabin > p.flight-number:before {
+	top: 0rem
+}
+/*************** END BOARDING PASS ISSUES FIXED*********************/
+/*PTR 07278141 [Medium]: MeRCI R14 SVV - A - Nationality selection via auto complete tedious on samsung s2*/
+.sectionRequiredDetailsBase > section {
+	padding-bottom: 250px;
+}
+/*End of PTR 07278141 [Medium]: MeRCI R14 SVV - A - Nationality selection via auto complete tedious on samsung s2*/
+/** Changed as part of PTR 07246160 [Medium]: MeRCI R14 SVV - UI issues on flight selection and conf page */
+header.disabled h1 {
+	color: #ccc !important;
+	background-color: #d8d9da;
+	background: #939393 !important;
+}
+/** End Changed as part of PTR 07246160 [Medium]: MeRCI R14 SVV - UI issues on flight selection and conf page */
+/*PTR 07296596 [Medium]: Merci MCI- 6X display of IDC screen is not right*/
+header.banner h1.if6x {
+	background: none;
+}
+/*End of PTR 07296596 [Medium]: Merci MCI- 6X display of IDC screen is not right*/
+/*PTR 07384108 [Medium]: MeRCI R14 SVV : Css fixes required for date picker*/
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	width: auto!important;
+	margin-right: 0.5em;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner- all {
+	margin-left: 0.6em;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	margin: .5em .6em .4em;
+}
+button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corne r-all {
+	padding: .3em 1em .3em 1em !important;
+	height: 2.8em;
+}
+.panel.contact .list.phone li:first-child {
+	margin-left: 0;
+}
+.panel.contact .list.phone li:first-child {
+	margin-right: 0;
+}
+/*PTR 07364164 [Medium]: MeRCI R14 SVV : Css fixes required for date picker*/
+div.msg.warning {
+	color: #000;
+}
+/*End of PTR 07364164 [Medium]: MeRCI R14 SVV : Css fixes required for date picker*/
+.panel div.msg:before {
+	left: -0.8em;
+	top: -1.1em;
+}
+div.cale div[role="grid"] li[role="rowheader"] {
+	height: 51px;
+}
+/*End of fix for 07501259*/
+.panel.list section li div .noBassinet {
+	color: #000;
+	display: block !important;
+	padding: 5px;
+	margin-top: 2.5em;
+}
+.wrapper.pop .toggleOuterCustom {
+	margin-right: .5em;
+}
+/*Fix for PTR 07591606*/
+div.services div.pax.CHD:before {
+  background: url(../img/client/sprite_paxTypes_r14.png)no-repeat 0 -48px;
+  height: 28px;
+}
+/*Fix for PTR 07909473 [Medium]: SQ mob-UAT-R15: MCI - infant icon*/
+div.services div.pax.ADT:before {
+	background: url(../img/client/icon_pax.png) no-repeat 0% 0%;
+	height: 29px;
+	background-size: 20px;
+	width: 30px;
+	margin-left: 5px;
+}
+
+.sectionDefaultstyle div.services div.pax.ADT:before {
+	background: url(../img/client/icon_pax.png) no-repeat 5px 3px;
+	height: 28px;
+	background-size: 15px 25px
+}
+div.services div.pax.CHD:before {
+	background: url(../img/client/icon_child.png) no-repeat 5px 3px;
+	height: 28px;
+	background-size: 15px 25px
+}
+div.services div.pax.INF:before {
+	background: url(../img/client/icon_infant.png) no-repeat 5px -2px;
+	height: 28px;
+	background-size: 15px 25px
+}
+/*End of PTR 07909473 [Medium]: SQ mob-UAT-R15: MCI - infant icon*/
+/*Fix for PTR 08204080*/
+#savBtn {
+	margin-right: 0px;
+}
+table.bgAllowance tr:first-child {
+	text-align: center;
+}
+.ui-datepicker-calendar td.ui-datepicker-today a {
+	color: #000!important;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all, button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corner-all, .secondary.change {
+	background-color: #ff9900!important;
+	background: -moz-linear-gradient(bottom, #ff9900, #ffc876 100%)!important;
+	background: -webkit-gradient(linear, 0 100%, 0 0, from(#ff9900), color-stop(100%, #ffc876))!important;
+	color: #ffffff!important;
+	text-transform: capitalize;
+	font-size: 1.18em;
+}
+button.ui-datepicker-close.ui-state-default.ui-priority-primary.ui-corner-all {
+	padding: 0em 0.7em !important;
+	height: 2.3em;
+	float: left;
+	margin-left: .7em;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all {
+	padding: 0 1em!important;
+	height: 2.3em;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75)!important;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75)!important;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75)!important;
+	margin-right: 0.4em;
+	float: right;
+}
+/*END PTR 07384108 [Medium]: MeRCI R14 SVV : Css fixes required for date picker*/
+/*PTR 07369498 [Medium]: MeRCI R14 SVV - MCI - Alignment issues for contact field on pax info*/
+div.list.phone {
+	width: 100%;
+}
+/*MCI conf SQ FEEDBACK*/
+.panel.contact .list.phone li:first-child {
+	width: 38%;
+}
+.panel.contact .list.phone li:last-child
+{
+	width: 60%;
+}
+.panel.contact .list.phone li:first-child {
+	margin-top: 0;
+}
+/*End MCI conf SQ FEEDBACK*/
+.boardpass .cabin > p:nth-child(4) {
+	/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+	margin-top: 11px !important;
+}
+/*End of PTR 07369498 [Medium]: MeRCI R14 SVV - MCI - Alignment issues for contact field on pax info*/
+
+
+/*123*/
+.sectionDefaultstyle h1 button.toggle {
+	top: 13px;
+}
+ul.services-pax > li dl > dt {
+	font-size: .916em;
+}
+.panel h1, .panel h2, a.navigation, button.validation {
+	letter-spacing: -0.02em;
+}
+label {
+	font-size: 1.15em;
+}
+.panel.list section > ul.checkin-list li {
+	padding: .5em;
+}
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox) {
+	margin-bottom: 0;
+}
+button.validation {
+	font-size: 1.4em;
+}
+.panel section:not(.wo-margin):first-of-type header h2 {
+	margin: -0.9em;
+}
+.panel.contact .list.phone input[type="tel"] {
+	margin-top: 0.2em;
+}
+.checkinAT input[type="tel"] {
+	height: 2.25em;
+}
+ul.input-elements {
+	margin-top: 0;
+}
+ul.input-elements > li {
+	margin: 1em 0;
+}
+ul.input-elements li ul.input-radio {
+	height: 3.5em;
+}
+/*PTR 07790698 [Medium]: AeRE v17.0 Merci R15 SP1 - MCI - UI issues with multi segment PNR*/
+ul.input-radio li.width_50:first-child input[type="radio"].is-tab {
+	height: auto;
+	line-height: 2.5em;
+	padding: 15px
+}
+ul.input-radio li.width_50:last-child input[type="radio"].is-tab {
+	height: auto;
+	padding: 15px
+}
+/*End PTR 07790698 [Medium]: AeRE v17.0 Merci R15 SP1 - MCI - UI issues with multi segment PNR*/
+input[type="radio"].is-tab+label {
+	top: 0.5em;
+}
+.thirdBlock {
+	right: 1px;
+}
+.firstBlock, .thirdBlock {
+	top: 0px;
+}
+.secondBlock {
+	top: 0px;
+	margin: 0 18px;
+}
+.firstBlock {
+	left: 1px;
+}
+.popup.input-panel button.validation, .popup.input-panel button.validation.cancel {
+	margin-bottom: 10px;
+}
+a.secondary.main {
+	padding-top: 0;
+}
+ul.input-elements li.top-input-element {
+	margin: 0.4em 0 0 0;
+}
+header.banner h1 span {
+	font-size: 1.1em;
+	line-height: 2.7em;
+}
+input[type='checkbox'] + label {
+	padding-left: 0;
+}
+.services-pax.selectable input[type="checkbox"] {
+	margin: 0.2em;
+}
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox) {
+	margin: 0;
+}
+.checkin-list li input[type='checkbox'] + label:not(.onoffswitch-label) {
+	max-width: 83%;
+}
+section ul li p {
+	padding-top: 0;
+}
+/*MCI conf SQ FEEDBACK*/
+.checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox) {
+	vertical-align: top;
+	margin-top: 0.2em;
+}
+/*End MCI conf SQ FEEDBACK*/
+div.msk {
+	background: rgba(0, 0, 0, 0.3) !important;
+	color: #ffffff;
+}
+ul.input-group.contact li.width_75 {
+	width: 75%
+}
+ul.input-group.contact li:last-child input {
+	margin-top: 1.2em;
+	height: 2.2rem;
+}
+input[type="text"].ui-autocomplete-input {
+	height: 2.2rem;
+}
+input[type="text"].ui-autocomplete-input {
+	padding-right: 0 !important;
+	border-radius: 0.3rem;
+	padding-left: 5px;
+}
+.boardpass .cabin > p:before {
+	margin-top: 0.4em;
+}
+.boardpass .cabin > p.flight-number {
+	/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+	margin: 0px 0px 14px 177px !important;
+	padding-top: 0.6em;
+}
+.boardpass .cabin > p strong {
+	padding-top: 5px;
+}
+.boardpass .cabin > p.data {
+	/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+	padding-top: 0.4em;
+}
+.boardpass .cabin > p.seat {
+	/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+	padding-top: 0em;
+}
+input[type="tel"] {
+	height: 2.2rem;
+	font-size: 1.167em;
+}
+#mycarousel li span.seatNum {
+	right: 18px;
+	top: 0.8em;
+}
+#mycarousel li span.paxName {
+	padding: 4px 0 4px 0;
+}
+input[type="radio"].is-tab, textarea {
+	margin: 0.4em 0 0 0;
+}
+ul.input-radio input[type="radio"].is-tab+label {
+	top: 0.8em;
+}
+.jcarousel-skin-tango-requireddetails {
+	margin: 0;
+}
+article.panel.list section ul.checkin-list li.is-checked label {
+	font-size: 1.167em
+}
+/*PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2*/
+form#CPRRetrieveMultipax article.panel.list section ul.checkin-list li.is-checked label+ul>li.infant {
+	font-size: 1.167em
+}
+/*End PTR 07870444 [Medium]: MeRCI R15 SP1 SVV - MCI - UI issues with check-in flow Version 2*/
+.seatMap {
+	margin: 0;
+}
+footer.buttons button.cancel:nth-child(3) {
+	margin-left: 0;
+}
+.seatmap.is-scrollable {
+	padding-bottom: 0;
+}
+.panel.contact .list.phone li:first-child {
+	margin-top: 6px;
+}
+.sectionOfCPRRetriveMultiPax input[type="checkbox"] + label {
+	width: 82%;
+}
+ul.checkin-list label {
+	font-size: 1em;
+}
+#mycarousel .paxName {
+	width: 52%;
+	margin-right: 7em;
+	/** CHECKIN**/
+	margin-left: 16px;/**END CHECKIN**/
+}
+#mycarousel .jcarousel-item .paxName {
+	/** CHECKIN**/
+	margin-left: 16px;
+	float: left;/**END CHECKIN**/
+}
+#listboxa a {
+	text-decoration: none;
+}
+/*PTR 07755027 [Medium]: MERCI R15 INT: MCI_IPHONEINT_SeatMap Not Completely Shown in app As it is Shown in Jfe*/
+div.seatmap table {
+	width: auto;
+}
+.sectionDefaultstyle .seatmap .aisle span {
+	display: inline-block;
+	text-indent: -9999px;
+	width: 5px
+}
+.sectionDefaultstyle .seatmap .aisle {
+	background: #fff;
+	width: 5px;
+}
+/*PTR 07755027 [Medium]: MERCI R15 INT: MCI_IPHONEINT_SeatMap Not Completely Shown in app As it is Shown in Jfe*/
+
+/*End of 123*/
+
+
+
+
+/* fix for PTR 07661813 */
+table.bgAllowance th {
+	width: 21%;
+}
+/* fix for PTR 07517219 */
+.acknowledgement label {
+	color: #000000;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	display : none;
+}
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover, .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus, .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+	background: url("../img/client/sprite_prevPax_nextPax.png") no-repeat scroll 3px -134px / 33px 173px rgba(0, 0, 0, 0);
+}
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover, .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus, .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+	background: url("../img/client/sprite_prevPax_nextPax.png") no-repeat scroll 12px -134px / 33px 173px rgba(0, 0, 0, 0);
+}
+/*PTR 07805901 [Medium]: AeRE v17.0 Merci R15 SP1 : MCI : UI issues : APP : Flight selection page*/
+/*08451501 - changed selector from .checkin-list[data-info="pax-list"] li:before
+And removed !important for all element sinside
+*/
+/*MCI conf SQ FEEDBACK*/
+.checkin-list.is-selectable[data-info="pax-list"] li:before {
+	top: 18px;
+	background: url(../img/client/mciPax.png)8px 3px no-repeat;
+	-webkit-background-size: 12px 104px;
+	background-size: 12px 104px;
+}
+/*end MCI conf SQ FEEDBACK*/
+.onoffswitch-inner {
+	height: 27px;
+}
+/*End PTR 07805901 [Medium]: AeRE v17.0 Merci R15 SP1 : MCI : UI issues : APP : Flight selection page*/
+/*
+08451501 -- added last three elements
+*/
+.checkin-list[data-info="pax-list"] li:before {
+	content: '';
+	position: absolute;
+	width: 1.5rem;
+	height: 2.4em;
+ left: .3rem;
+	background: url(../img/client/mciPax.png)8px 1px no-repeat;
+	top: 18px;
+	background-size: 12px 104px;
+}
+.panel.list section li p:not(.onoffswitch-general-label) {
+	padding-top: 1.5em;
+}
+article.panel.list section ul li p.route, article.panel.list section ul li p.period {
+	padding-top: 0em;
+}
+article.panel.list section ul.checkin-list[data-info="pax-list"] li p {
+	padding-top: 0em !important;
+}
+/*PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+.loungeInvitation>p {
+	display: inline-block;
+}
+.gate {
+	margin-right: 15px !important;
+}
+/*END PTR 07832338 [Medium]: MeRCI R15 SP1 SVV MCI Apps:Boarding pass UI issues*/
+/*PTR 07824883 [Medium]: AeRE v17.0 Merci R15 SP1 - MCI - icon UI issues*/
+.checkin-list.is-selectable[data-info="pax-list"] li:before {
+	left: 1.7rem;
+}
+.checkin-list[data-info="pax-list"] ul li.infant:before {
+	background: url(../img/client/mciPax.png)8px -66px no-repeat;
+	-webkit-background-size: 12px 104px;
+	background-size: 12px 104px;
+	left: 25px;
+	top: 14px;
+}
+/*MCI conf SQ FEEDBACK*/
+.checkin-list[data-info="pax-list"] li.child:before {
+	background: url(../img/client/mciPax.png)8px -34px no-repeat;
+	-webkit-background-size: 12px 104px;
+	background-size: 12px 104px;
+}
+/*end MCI conf SQ FEEDBACK*/
+.checkin-list[data-info="pax-list"] li label, .checkin-list[data-info="pax-list"] li p {
+	padding-left: 1.6rem;
+}
+.panel.list section > ul li.infant {
+	padding: 0.4em 0.7em 0.2em 2.5em !important
+}
+/*End PTR 07824883 [Medium]: AeRE v17.0 Merci R15 SP1 - MCI - icon UI issues*/
+
+/*Start PTR 07805901 Banner changes*/
+
+aside.user #section2a {
+	margin-top: -3px
+}
+aside.user #section2a p:last-of-type {
+	font-size: 1.1em;
+	margin-right: 5px !important
+}
+aside.user #section2 {
+	margin-top: -10px;
+}
+aside.user #section2 table {
+	font-size: 1em
+}
+aside.user #section2 div.message.info p {
+	background: #eadeb9;
+	font-size: 1em;
+	color: #000;
+	padding: .4em;
+	padding-left: 42px
+}
+aside.user #section2 div.message.info p em {
+	font-size: 1em;
+}
+aside.user div.message.info:before {
+	top: 0px;
+	left: 0px
+}
+aside.user h1 {
+	font-size: 1.1em;
+	margin-top: 5px;
+	margin-left: 47px;
+}
+/*End PTR 07805901 Banner changes*/
+/*MCI conf SQ FEEDBACK*/
+ul.checkin-list ul li.pax:nth-child(even), ul.checkin-list ul li.pax:nth-child(odd) {
+	background: url(../img/client/mciPax.png)8px 4px no-repeat;
+	-webkit-background-size: 12px 104px;
+	background-size: 12px 104px;
+	padding-left: 23px !important;
+}
+/*end MCI conf SQ FEEDBACK*/
+ul.checkin-list ul li.pax.infant {
+	background-position: 24px -65px;
+	padding-left: 45px !important;
+}
+ul.checkin-list ul li.pax.child {
+	background-position: 8px -34px;
+}
+div.cale div[role="grid"] li[role="rowheader"][data-aria-selected="true"] div {
+	border: none
+}
+.infantpaxpaddingTL h4 button {
+	top: 15px !important;
+	right: 0.1em !important;
+}
+/*PTR 07887470 [Medium]: SQ mob-UAT-R15: MCI - Error message font for pax with waitlist booking is too small*/
+.sectionDefaultstyle .msg.warning, .sectionDefaultstyle .msg.info, .sectionDefaultstyle .msg.validation, .sectionDefaultstyle .msg.question {
+	font-size: 1.2em;
+}
+/*End of PTR 07887470 [Medium]: SQ mob-UAT-R15: MCI - Error message font for pax with waitlist booking is too small*/
+/*PTR 07898273 [Medium]: SQ mob-UAT-R15: MCI - seat map airport name*/
+span[data-seatInfo="price"], span[data-flightInfo="route"] {
+	text-transform: capitalize;
+}
+/*END PTR 07898273 [Medium]: SQ mob-UAT-R15: MCI - seat map airport name*/
+/*PTR 07898632 [Medium]: SQ mob-UAT-R15: MCI - toilet signs seat map*/
+div.seatmap table .toilet {
+	background-size: 25px 144px;
+	-webkit-background-size: 25px 144px;
+	-moz-background-size: 25px 144px;
+	-o-background-size: 25px 144px;
+}
+/*End PTR 07898632 [Medium]: SQ mob-UAT-R15: MCI - toilet signs seat maps*/
+/*PTR 07897604,07915662 [Medium]: SQ mob-UAT-R15: MCI - unable to scroll down on pax info screen*/
+#nextButton:after {
+	background: url(../img/client/mciPax.png) right 1px no-repeat!important;
+	content: '';
+	background-size: 17px 152px!important;
+	width: 100%!important;
+	-moz-box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	-o-box-shadow: none!important;
+	box-shadow: none!important;
+}
+#previousButton:before {
+	background: url(../img/client/mciPax.png) left 1px no-repeat!important;
+	content: '';
+	background-size: 17px 152px!important;
+	width: 100%!important;
+	-moz-box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	-o-box-shadow: none!important;
+	box-shadow: none!important;
+}
+#previousButton {
+	float: left;
+}
+#section1 dt, dd {
+	display: inline-block;
+	margin-left: 0;
+}
+#section1 dl {
+	display: block;
+	margin: 0 0 0 18px;
+	font-size: .916em;
+}
+#section1 li dl:first-of-type {
+	margin-top: 6px;
+}
+/*End of PTR 07897604,07915662 [Medium]: SQ mob-UAT-R15: MCI - unable to scroll down on pax info screen*/
+span[id^="delTITLE_"], span[id^="delFIRST_NAME_"], span[id^="delLAST_NAME_"] {
+	top: 7.5px;
+}
+#rh4 {
+	height: 52px
+}
+#rh7 {
+	height: 53px
+}
+/*Start of fix for PTR 07501259 [Medium]: AeRE v16.2 Merci R14 SP1 S4 SQ CR 07250358: Add trip to calendar icon is not displayed*/
+body.pnr-retrieve header.booking li.row-options {
+	min-height: 2.6em;
+	overflow: hidden;
+	position: absolute;
+	z-index: 50;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	width: 14em;
+}
+body.pnr-retrieve.over.trip header.booking {
+	position: relative;
+}
+body.booking.conf article.panel li.row-options {
+	min-height: 2.6em;
+	overflow: hidden;
+	position: absolute;
+	z-index: 50;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	width: 14em;
+}
+body.booking.conf article.panel section#section3 {
+	position: relative;
+}
+/*End of fix for PTR 07501259 [Medium]: AeRE v16.2 Merci R14 SP1 S4 SQ CR 07250358: Add trip to calendar icon is not displayed*/
+.panel.currencyConverter.addHeight {
+	background-color: rgba(0, 38, 105, 1);
+	background: rgba(0, 38, 105, 1);
+}
+/*Start of fix for PTR 07992693 [Medium]: MeRCI R15 SP1 SVV : CR 07355841 : ATC : Flexi dates UI : iphone 5 */
+footer.panel.flexible section p.flexible {
+	width: 100%;
+}
+/*End of fix for PTR 07992693 [Medium]: MeRCI R15 SP1 SVV : CR 07355841 : ATC : Flexi dates UI : iphone 5*/
+div.accordion [role="tab"][aria-expanded="true"]::after {
+	background: url(../img/client/icon-close.png) no-repeat 50% -5px transparent !important;
+	background-size: 20px 20px !important;
+	-webkit-background-size: 20px 20px !important;
+}
+/*MBP SQ FEEDBACK - PTR 09026488*/
+.boardpass p.location.departure, .boardpass p.location.arrival {
+	height: 20px;
+	display: table;
+}
+/*PTR 09252422 [Medium]: MeRCI R22 S1 : MCI Boarding pass from, to label css fixes*/
+.boardpass p.location.departure:before
+{
+	content:"From: ";
+	padding-right: 3.2em;
+}
+.boardpass p.location.arrival:before
+{
+	content: "To: ";
+	padding-right: 4.3em;
+}
+/*End PTR 09252422 [Medium]: MeRCI R22 S1 : MCI Boarding pass from, to label css fixes*/
+.boardpass p.location.departure span, .boardpass p.location.arrival span
+{
+display:table-cell;
+}
+.boardpass div.logo {
+	background: url(../img/client/singapore-banner.png) 50% 29% no-repeat, -webkit-gradient(linear, 0 100%, 0 0, from(#0e3094), color-stop(100%, #00286d ));
+	height: 60px;
+	background-size: contain;
+}
+.boardpass div.paxname {
+	height: 50px;
+}
+.boardpass .cabin > p:before {
+	background: none;
+}
+.booking.conf #savBtn {
+	margin-right: 0px;
+}
+/*PTR 08004004 [Medium]: MeRCI R15 SP1 SVV - MCI - Overlay and Conf msg UI issues on Conf page*/
+div.msg.validation:before {
+	background: url(../img/client/alert-new.png)-5px -387px no-repeat;
+	background-size: 50px 1429px;
+}
+form[id="alpiForm"] select, form[id='purcForm'] select {
+	padding-left: 5px;
+}
+form[id="searchForm"] select {
+	padding-left: 10px;
+}
+p.country {
+	width: 100%
+}
+#AIR_CC_ADDRESS_COUNTRY_TXT {
+	width: 50%;
+}
+#delAIR_CC_ADDRESS_COUNTRY_TXT {
+    right: 51%;
+}
+/*PTR 08048870 [Medium]: SQ mob-UAT-R15-MCI : To leave a space before the word 'Booking reference' on the checkin identification*/
+.sectionDefaultstyle select.iphoneselect {
+	padding-left: 5px;
+}
+/* PTR 07517219 fix*/
+
+/* CR 07073569 Start */
+nav.navigation a.navigation.bookHotel {
+	padding-left: 10px
+}
+a.navigation.bookHotel span {
+	background: url(../img/client/agoda_logo.png) no-repeat 50% 50%;
+	background-size: 60px 27px;
+	display: inline-block;
+	text-indent: -9999px;
+	width: 60px;
+	height: 27px;
+	position: relative;
+	left: 10px;
+	top: 5px;
+}
+/* CR 07073569 End*/
+a.navigation.bookCar span {
+	background: url(../img/client/rentalCar_logo.png) no-repeat 50% 50%;
+	background-size: 149px 20px;
+	display: inline-block;
+	position: relative;
+	left: 15px;
+	top: 8px;
+	width: 149px;
+	height: 20px;
+}
+div.location {
+	margin-top: 1em;
+}
+article.panel.sear div.location p.smartDropDwn {
+	margin-top: 0.1px !important;
+	margin-bottom: 0.1px !important;
+}
+body.timetable article.panel.sear div.location p.smartDropDwn {
+	margin-bottom: -0.9em !important;
+}
+body.timetable div.list.date {
+	padding: 10px 0 5px 0;
+}
+div.searchInput p.smartDropDwn {
+	margin: 0em 0 0 0 !important;
+}
+.listMatrix .departure label, .listMatrix .arrival label {
+	background: transparent;
+}
+.listMatrix .departure label:nth-child(even), .listMatrix .arrival label:nth-child(even) {
+	background: #5e7dab;
+}
+.listMatrix .departure label.selected, .listMatrix .arrival label.selected {
+	background: #bed7ff;
+	box-shadow: 0px 0px 10px #9a9a9a;
+	border: 1px solid #7eaffe;
+	color: #000;
+}
+.listMatrix .departure label div, .listMatrix .arrival label div {
+	width: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+/*08451501 - added for MCI UAT fixes.*/
+ul.ui-autocomplete {
+	width: auto;
+}
+h2.subheader button {
+	right: 0px !important;
+}
+.sectionDefaultstyle .checkin-list[data-info="pax-list"] li p {
+	padding-left: 1.2rem;
+}
+.sectionDefaultstyle h2.subheader button {
+	right: -9px !important;
+	top: 8px;
+}
+.sectionDefaultstyle .panel.contact section header h2, .sectionDefaultstyle .panel.contact .PaxSelectionScreen section:first-of-type header h2 {
+	margin: 0 -8px !important;
+}
+.sectionDefaultstyle section:first-of-type {
+	margin-top: 0;
+}
+.panel.sms>section>label {
+	margin: 6px 0;
+}
+.sectionDefaultstyle .panel.list section ul.checkin-list.is-selectable li > span {
+	width: auto;
+	margin-left: 3.8em;
+}
+.sectionDefaultstyle .panel.list section ul.checkin-list.is-selectable li>ul.dependent span.checkindenained {
+	margin-left: 1.4em;
+	color: #ef8484;
+	padding-left: 0;
+}
+/*at last span.checkindenained - removed*/
+.sectionDefaultstyle ul.checkin-list ul li.pax.child>span {
+	margin-bottom: -5px;
+}
+.greenHighlightIcon {
+	display: block;
+	color: #009900;
+	margin: 0;
+	background-color: initial;
+	padding: 0;
+	padding-left: 60px;
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+}
+/*End 08451501 - added for MCI UAT fixes.*/
+.popup article.panel div.accordion h2:last-of-type {
+	margin: 0 0 0 0;
+}
+div.accordion *[role="tabpanel"][aria-hidden='false'] {
+	background-color: #093a83;
+}
+
+/*MCI PTR 08530590 [Medium]: MeRCI R18 SPRINT 3: R18 MCI issues cause of new aria migration and css issuse*/
+.sectionDefaultstyle .panel section header h2
+{
+	margin: 0 -0.7em!important;
+}
+div.sectionDefaultstyle.sectionRequiredDetailsBase footer.buttons button.validation.cancel
+{
+	margin-top: 0;
+}
+.sectionDefaultstyle #mycarousel .paxName
+{
+	margin-left: 0;
+}
+.sectionDefaultstyle div.seatmap table .occupied
+{
+	background: url(../img/client/colorBlocks.png) 50% -63px no-repeat;
+}
+.sectionDefaultstyle div.seatmap table .selected
+{
+	background-position: center -16.1rem;
+}
+div.sectionDefaultstyle.sectionAcceptanceConfirmationClass section>header+div
+{
+	margin-top: 5px;
+}
+ul.ui-autocomplete
+{
+	position: absolute;
+}
+/*
+for makesure autocomplete ul be absolute for MCI
+MCI using Jquery autocomplete, wont effect aria auto complete
+*/
+ul[role="listbox"].ui-autocomplete
+{
+  position: absolute;
+}
+.sectionDefaultstyle button.secondary {
+	float: none;
+}
+.sectionDefaultstyle .boardpass .cabin>p {
+	font-size: 1.1rem;
+	word-wrap: break-word;
+}
+.sectionDefaultstyle .boardpass .cabin>img {
+	max-width: 14em;
+	float: left;
+	padding-right: .5em;
+	background: #fff;
+	margin: 5px;
+}
+.sectionDefaultstyle ul.services-pax.selectable label
+{
+	width: 90%;
+}
+.sectionDefaultstyle .popup {
+	top: 50px;
+}
+.sectionDefaultstyle div.seatmap td.is-current {
+	background: url(../img/client/colorBlocks.png) 50% -134px no-repeat;
+	background-size: 25px 369px;
+}
+.sectionDefaultstyle ul.services-pax>li h4 {
+	width: 95%;
+}
+/*End MCI PTR 08530590 [Medium]: MeRCI R18 SPRINT 3: R18 MCI issues cause of new aria migration and css issuse*/
+#section_newContactInfo > ul > div > div.areaMain > label {
+	font-size: 1.05em;
+}
+/*08549802*/
+label[for="thirdPartyCheck"] {
+	display: inline !important;
+	vertical-align: baseline!important;
+}
+/*End 08549802*/
+/*For seatmap SQ PTR 08592203 [Medium]: Merci R 18 S4 : MCI  UI SQ show stoppers*/
+/*For date picker*/
+.sectionDefaultstyle ul.htmlDatePicker,.sectionDefaultstyle ul.htmlDatePicker>li
+{
+width: 100%;
+}
+.sectionDefaultstyle ul.selctBoxDatepicker{
+width: 100%;
+vertical-align: top;
+}
+.sectionDefaultstyle .htmlDatePicker input[type='date'] {
+width: 86% !important;
+line-height: 2em;
+border-radius: 0.3em;
+background: #fff;
+height: 2.1rem;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+border: 1px solid #939393;
+font-family: inherit;
+font-size: 1.3em;
+color: #000;
+}
+button.ui-datepicker-trigger.specialDatepicker {
+position: static;
+width: 13%;
+margin: .2em 0 0 0;
+padding: 0 .3em;
+display: inline-block;
+font-size: 1.3em;
+-moz-box-sizing: border-box;
+border: 1px solid #939393;
+border-radius: .3rem .3rem .3rem .3rem;
+height: 2.1rem;
+background-position: 50% center;
+margin-top: 0;
+/* float: right; */
+vertical-align: bottom;
+}
+button.ui-datepicker-trigger.specialDatepicker time{
+	visibility:hidden;
+}
+.sectionDefaultstyle .selctBoxDatepicker li{
+width:22%;
+vertical-align:top;
+}
+.sectionDefaultstyle .selctBoxDatepicker li>select{
+margin-top:0;
+}
+.sectionDefaultstyle .selctBoxDatepicker li:last-child{
+margin-right: 3px;
+float: right;
+}
+.sectionDefaultstyle .selctBoxDatepicker li:last-child button{
+width:100%;
+}
+/*End for date picker*/
+/*For seatmap*/
+.sectionDefaultstyle div.seatmap table input {
+width: 22px;
+height: 22px;
+background: url(../img/client/colorBlocks.png) 50% -13px no-repeat;
+background-size: 25px 350px;
+}
+
+.sectionDefaultstyle div.seatmap table td.occupied:not(.selected) {
+/*PTR 08716495 [Medium]: MeRCI R18 IA - MCI - UI issues on seat map n collapse/expand on conf pg*/
+background-size: 25px 358px!important;
+}
+.sectionDefaultstyle div.seatmap table .occupied {
+background: url(../img/client/colorBlocks.png) 50% -67px no-repeat;
+}
+.sectionDefaultstyle .seatmap .aisle {
+background: #fff;
+width: 4.1%;
+/*PTR 08827470 [Medium]: SQ mob-UAT-MCI: iOS A380 EY Class Seat Map Missing Aisle*/
+min-width: 6px;
+}
+.sectionDefaultstyle .seatmap .aisle span {
+display: inline-block;
+text-indent: -9999px;
+width: inherit;
+}
+.sectionDefaultstyle div.seatmap td.is-current {
+background: url(../img/client/colorBlocks.png) 50% -107px no-repeat;
+background-size: 22px 300px;
+}
+.sectionDefaultstyle div.seatmap table tbody:not(#lowerDeckHeader):not(#lowerDeckFooter):not(#upperDeckHeader):not(#upperDeckFooter) tr{
+	line-height: 0px;
+}
+.sectionDefaultstyle div.seatmap table span.bassinetFilled {
+width: 22px!important;
+height: 22px!important;
+background: url(../img/client/colorBlocks.png) 50% -64px no-repeat!important;
+background-size: 25px 344px!important;
+border-radius: 0!important;
+}
+.sectionDefaultstyle .seatmap .aisle span {
+display: inline-block;
+text-indent: -9999px;
+width: inherit;
+}
+.sectionDefaultstyle .seatmap .aisle{
+border-top:none;
+}
+.sectionDefaultstyle div.seatmap td.is-current {
+color: #fff;
+font-size: 120%;
+font-weight: bold;
+}
+.sectionDefaultstyle div.seatmap table .selected {
+background-position: center -6.7rem!important;
+background-size: 22px 300px!important;
+}
+.sectionDefaultstyle div.seatmap td.is-current span {
+color: #fff;
+font-size: 110%;
+font-weight: bold;
+}
+/*End for seatmap*/
+/*End For seatmap SQ PTR 08592203 [Medium]: Merci R 18 S4 : MCI  UI SQ show stoppers*/
+/*SQ uat feedback*/
+/*change time color from red to yellow, remove back button from screen*/
+.sectionDefaultstyle .trip.large-display time:last-of-type{
+color: #ff9e00;
+}
+.sectionDefaultstyle button.validation.cancel{
+ display:none;
+}
+#seatMapMainSection button.validation.cancel:nth-child(3),.popup button.validation.cancel{
+display:block;
+}
+/*End change time color from red to yellow, remove back button from screen*/
+/*MCI conf SQ FEEDBACK*/
+.subsection .checkin-list.is-selectable li.is-selected {
+background: transparent;
+}
+ul.checkin-list.is-selectable li label[for="flightsAll"]{
+width:85%;
+}
+section.subsection ul.checkin-list.is-selectable li.is-selected{
+font-size:1.1em;
+}
+ul.checkin-list.is-selectable li label {
+width: 64%;
+}
+section.subsection ul.checkin-list.is-selectable li.is-selected div.pax{
+margin-left:1em
+}
+a.navigation:before, a.secondary:before {
+width: 4.5em;
+}
+a.navigation:before, a.secondary:before {
+height: 3em;
+}
+.checkin-list li input[type='checkbox'] + label:not(.onoffswitch-label) {
+max-width: 87%;
+}
+ul.checkin-list.is-selectable li label {
+width: 67%;
+font-size: 1.05em;
+}
+span.seatBtn {
+display: inline-block;
+vertical-align: middle;
+width: 24%;
+text-align: center;
+}
+span.seatBtn a.secondary:before {
+background: url(../img/client/seatMap_grey.png) 50% 0 no-repeat;
+background-size: 25px 117px;
+top: 0;
+}
+span.seatBtn a.secondary {
+text-align: center;
+padding: 1.4rem 0 0 0;
+font-size: .7rem;
+width: 4.5rem;
+height: 2.75rem;
+}
+.input-elements span a {
+float: right;
+color: #000;
+}
+.sectionDefaultstyle .checkin-list li>label
+{
+font-weight: normal;
+}
+.sectionDefaultstyle .checkin-list li>label .strong,.sectionDefaultstyle .checkin-list li>label .strong time{
+	font-weight: bold!important;
+	font-size: 1em;
+}
+ul.input-elements > li .checkin-list.is-selectable li{
+	margin:0;
+}
+ul.checkin-list.is-selectable div.pax h3 {
+display: inline-block;
+width: 50%;
+margin-left: 0.3em;
+}
+ul.checkin-list.is-selectable div.pax ul {
+/* width: 37%; */
+display: inline-block;
+overflow: inherit;
+float: right;
+vertical-align: middle;
+text-align: right;
+}
+ul.checkin-list.is-selectable div.pax:before {
+background: url(../img/client/mciPax.png) no-repeat 0.5em 0.5em;
+-webkit-background-size: 17px 140px;
+background-size: 17px 140px;
+}
+ul.checkin-list.is-selectable div.pax.child:before
+{
+background: url(../img/client/mciPax.png) no-repeat 0.5em -6.3em;
+-webkit-background-size: 17px 140px;
+background-size: 17px 140px;
+}
+ul.checkin-list.is-selectable div.pax.infant:before
+{
+background: url(../img/client/mciPax.png) no-repeat 0.5em -3.3em;
+-webkit-background-size: 17px 140px;
+background-size: 17px 140px;
+}
+ul.checkin-list.is-selectable div.pax:before {
+content: "";
+position: absolute;
+left: -1.5em;
+top: -0.1em;
+width: 2em;
+height: 2.5em;
+}
+.checkin-list.is-selectable>li>label>span
+{
+display:block;
+width: 100%;
+}
+.checkin-list.is-selectable>li>label>span div{
+padding-bottom: 1em;
+padding: .7em 0;
+}
+.sectionDefaultstyle ul.checkin-list ul li.pax:before
+{
+	content:none;
+}
+.trip.large-display p:last-child{
+	border-left:0;
+}
+.trip.large-display p:last-child:before
+{
+	/*position:absolute;
+	content:">";
+	width:1em;
+	padding-top:1.2em;
+	left: 45%;
+	font-size: 2.2em;
+	*/
+	position: absolute;
+	content: "";
+	background: url(../img/client/mci_arrow.png) no-repeat;
+	background-size: 18px 18px;
+	-webkit-background-size: 18px 18px;
+	width: 18px;
+	height: 18px;
+	padding-top: 1.2em;
+	left: 48%;
+	font-size: 2.2em;
+	display: inline-block;
+	top: 3.2em;
+}
+.infantpaxpaddingTL
+{
+padding-left: 3em!important;
+margin-top: -5px!important;
+padding-right: 2.2em!important;
+margin-bottom: 13px;
+}
+/*end MCI conf SQ FEEDBACK*/
+/*MCI sq feedback dangerous goods issue fixed*/
+.sectionDefaultstyle [data-info="dangerous-goods"] p{
+display: block;
+margin-left: 24px!important;
+}
+.sectionDefaultstyle .panel.list section li div.onoffswitch{
+position: absolute;
+left: 1px;
+top: 0;
+margin: 0;
+width: 2.5em;
+}
+.sectionDefaultstyle .onoffswitch-checkbox{
+display: block;
+width: 1.3em;
+height: 1.3em;
+/*PTR 08716495 [Medium]: MeRCI R18 IA - MCI - UI issues on seat map n collapse/expand on conf pg*/
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+background: #fff;
+border-radius: 2px;
+}
+.sectionDefaultstyle .onoffswitch-label
+{
+display: none!important;
+}
+.sectionDefaultstyle [data-info="dangerous-goods"] li
+{
+padding-bottom: 0.9em!important;
+}
+/*END MCI sq feedback dangerous goods issue fixed*/
+/*PTR 08673065 [Medium]: MeRCI R18 IA - MCI -  correct the OK/Edit icon position*/
+input[id^="nationality_code_"]{
+
+	width: 78%!important;
+}
+ul[id^="passportInfo"] input[id^="nationality_code_"]{
+
+	width: 100%!important;
+}
+input[id^="nationality_code_"]+button{
+right: 0em;
+height: 2.5em;
+width: 20%;
+padding: 0;
+text-align: center;
+}
+/*End PTR 08673065 [Medium]: MeRCI R18 IA - MCI -  correct the OK/Edit icon position*/
+/*For show proper msg for restricted checkin*/
+ul .checkindenained{
+
+	color:#ef8484;
+}
+/*End For show proper msg for restricted checkin*/
+/*PTR 08716495 chekcbox issue in device default browser is fixed*/
+.sectionDefaultstyle .checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox), .sectionDefaultstyle .services-pax.selectable input[type="checkbox"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-radius: .1rem;
+	outline:none;
+	background-color: #fff;
+	border-radius: 2px;
+}
+.sectionDefaultstyle .checkin-list input[type="checkbox"]:checked, .sectionDefaultstyle .services-pax.selectable input[type="checkbox"]:checked, .sectionDefaultstyle .panel.list.flightsOpen .trip li > input[type="checkbox"]:checked {
+background: url(../img/client/sprite_tickmarc_mci.png) no-repeat rgb(239, 239, 239) 0px 1px;
+background-size: 100% auto;
+}
+.sectionDefaultstyle .checkin-list input[type="checkbox"]:not(.onoffswitch-checkbox){
+margin-top:0;
+}
+.sectionDefaultstyle input[type="checkbox"]:disabled{
+background-color:#8B9EBA!important;
+}
+/*End PTR 08716495 chekcbox issue in device default browser is fixed*/
+/*End SQ uat feedback*/
+#plcontrols article.miles {
+ padding: 0 1em 1em 1em;
+}
+#plcontrols label {
+ top: .5em;
+}
+div.payLtrBtn .onoffswitch {
+ margin-top: 28px;
+}
+button.validation.payLtrCancel {
+left: 0em;
+}
+header.banner button.tools {
+	width: 35px;
+	height: 35px;
+	background: #ccc;
+	border: 0;
+	display: inline-block;
+	background: url(../img/client/tools.png) no-repeat;
+	background-size: 35px 35px;
+	text-indent: -9999px;
+}
+/*
+PTR 08827470 [Medium]: SQ mob-UAT-MCI: iOS A380 EY Class Seat Map Missing Aisle
+*/
+.sectionDefaultstyle div.seatmap table tbody:not(#lowerDeckHeader):not(#lowerDeckFooter):not(#upperDeckHeader):not(#upperDeckFooter) tr td:first-child,
+.sectionDefaultstyle div.seatmap table tbody:not(#lowerDeckHeader):not(#lowerDeckFooter):not(#upperDeckHeader):not(#upperDeckFooter) tr td:last-child {
+/* background-color: red; */
+max-width: 15px;
+/* width: auto; */
+}
+/*PTR 08848831 [Serious]: SQ mob-UAT-MCI:  Frequent Flyer Member Flight Check-In Selection Page*/
+.sectionDefaultstyle .sectionTripListPage .carrousel-full > h1{
+display:none!important;
+}
+.sectionDefaultstyle .sectionTripListPage .carrousel-full-item>section:before{
+width:0;
+height:0;
+}
+.sectionDefaultstyle .sectionTripListPage .carrousel-full-item > section > h3{
+padding-bottom:0;
+text-align:center;
+}
+.sectionDefaultstyle .sectionTripListPage .carrousel-full-item > section > h3 span:last-child{
+font-size:120%;
+}
+.sectionDefaultstyle .sectionTripListPage .flightExpired{
+background: none;
+padding-left: 0px;
+}
+.sectionDefaultstyle .sectionTripListPage .checkinnotopen{
+background: none;
+padding-left: 0px;
+}
+.sectionDefaultstyle .carrousel-full-item>section>h3
+{
+border:0;
+}
+.sectionDefaultstyle .multicity .carrousel-full-item>section time{
+padding:0.4rem 0 .5rem 0rem;
+text-align:center;
+}
+/*End PTR 08848831 [Serious]: SQ mob-UAT-MCI:  Frequent Flyer Member Flight Check-In Selection Page*/
+/*PTR 08866680 [Medium]: MeRCI R19 IA - CSS issues on flight selection page*/
+.sectionDefaultstyle.sectionOfCPRRetriveMultiPax .checkedinTripsPage,.sectionDefaultstyle .checkedin{
+padding-left: 0px;
+}
+.sectionDefaultstyle .panel.list section li p:not(.onoffswitch-general-label){
+padding-top:0;
+}
+.sectionDefaultstyle .flightpendingerrDisp
+{
+padding-left: 0px;padding-top:5px;
+}
+.sectionDefaultstyle #seatMapMainSection form>footer.buttons{
+padding: 2.5em .4em;
+}
+.sectionDefaultstyle [data-info="flights-ready-list"] .greenHighlightIcon
+{
+margin-left: 0;
+padding-left: 0;
+width: 100%!important;
+font-weight: bold;
+}
+.sectionDefaultstyle.sectionspecificAcceptanceOverviewtpl .infant.infantpaxpaddingTL>h4{
+width: 75%;
+padding-right: 25%!important;
+}
+.sectionDefaultstyle.sectionspecificAcceptanceOverviewtpl .infant.infantpaxpaddingTL>h4 button {
+top: 50%!important;
+}
+/*End PTR 08866680 [Medium]: MeRCI R19 IA - CSS issues on flight selection page*/
+/*PTR 08837986 [Medium]: SQ mob-UAT-MCI:  DGS Text*/
+.sectionDefaultstyle .boardpass .trip .label{
+width: 5.2em;
+display: inline-block;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.sectionDefaultstyle #section1 li dl dt:first-of-type {
+	flex:1;
+}
+.sectionDefaultstyle #section1 dl {
+	display: flex;
+	margin: 0 0 0 1.2rem;
+	font-size: .916em;
+}
+.sectionDefaultstyle #section1 dt, dd {
+	display: inline-block;
+	margin-left: 0;
+	flex:2;
+	word-wrap: break-word;
+}
+.sectionDefaultstyle .boardpass section.lounge h1.clientElement
+{
+background: none;
+padding-right: 0.5em;
+padding-left: 0.9em;
+}
+/*End PTR 08837986 [Medium]: SQ mob-UAT-MCI:  DGS Text*/
+/*PTR 08902774 [Medium]: SQ mob-UAT-D4: KrisFlyer Check-In Flight Selection*/
+.sectionDefaultstyle .carrousel-full-item time [data-flightInfo="month"]
+{
+text-transform: none;
+}
+.sectionDefaultstyle .carrousel-full-item time [data-flightInfo="day-number"]
+{
+font-weight: normal;
+}
+.sectionDefaultstyle .multicity .carrousel-full-item time [data-flightInfo="day-name"],
+.sectionDefaultstyle .multicity .carrousel-full-item time [data-flightInfo="month"],
+.sectionDefaultstyle .multicity .carrousel-full-item time [data-flightInfo="year"]{
+font-size: 1rem;
+}
+/*End PTR 08902774 [Medium]: SQ mob-UAT-D4: KrisFlyer Check-In Flight Selection*/
+/*Fixes provided for R20 MCI SQ issues*/
+.sectionDefaultstyle ul.checkin-list.is-selectable ul.dependent
+{
+padding-left: 0;
+}
+.sectionDefaultstyle .msg.validation li {
+word-wrap: break-word;
+}
+/*End Fixes provided for R20 MCI SQ issues*/
+/*boarding pass name capital*/
+.sectionDefaultstyle .boardpass  p.name span.data
+{
+text-transform: capitalize;
+}
+/*End boarding pass name capital*/
+/*PTR 08991288 [Medium]: Merci R21 S2 MCI : MCI UX changes based on third party update
+.popup.input-panel button.validation.cancel{
+border: 1px solid #173d74!important;
+background: #063c87;
+background: -moz-linear-gradient(top,  #063c87 0%, #12315f 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#063c87), color-stop(100%,#12315f));
+background: -webkit-linear-gradient(top,  #063c87 50%,#12315f 50%);
+}
+/*End PTR 08991288 [Medium]: Merci R21 S2 MCI : MCI UX changes based on third party update*/
+.panel.boardpass .trip .label{
+	margin-left:0;
+}
+#deleteCC button {
+ padding: 0 1em;
+}
+a.oldDatePicker {
+top: 12px;
+}
+input[type="text"]{
+padding-left: 5px;
+}
+.miles label.onoffswitch-label {
+ padding-top: 0px;
+}
+/*PTR 09161854 [Medium]: MeRCI R21 S3 IA REG MCI CCV verification is asked when mode of payment is cash*/
+.sectionDefaultstyleSsci article.panel section div.message.info.displayNone
+{
+display:none;
+}
+/*End PTR 09161854 [Medium]: MeRCI R21 S3 IA REG MCI CCV verification is asked when mode of payment is cash*/
+.delete#delAIR_CC_ADDRESS_FIRSTLINE, .delete#delAIR_CC_ADDRESS_SECONDLINE, .delete#delAIR_CC_ADDRESS_CITY, .delete#delAIR_CC_ADDRESS_STATE, .delete#delAIR_CC_ADDRESS_ZIPCODE{
+	top: 1.5em;
+}
+/*PTR 09341381 [Serious]: MeRCI R22 : Search page not Loading in APP*/
+#sb-site {
+    background: none;
+}
+/*End PTR 09341381 [Serious]: MeRCI R22 : Search page not Loading in APP*/
+.clearNone{
+  clear: none;
+}
+.sectionDefaultstyle .carrousel-full ul li.boardingindex
+{
+	width: 295px;
+}
+.sectionDefaultstyle #mbpPopup .panel.email input[type='checkbox']+label
+{
+	padding-top: 2px;
+}
+.sectionDefaultstyle #mbpPopup .panel.email section>ul.input-elements
+{
+margin-left: 6px;	
+}
+.sectionDefaultstyle #mbpPopup .panel.email input[type='checkbox']:checked
+{
+	box-shadow: inset 0 .1em .3em rgba(0, 0, 0, .8);
+}

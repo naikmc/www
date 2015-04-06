@@ -1,0 +1,14 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{TextTemplate {$classpath: 'aria.ext.filesgenerator.tpl.CssTemplate'}}
+{macro main()}\{CSSTemplate \{
+    \$classpath : "${data.$classpath}",
+    \$hasScript : ${data.$hasScript}
+\}\}
+    \{macro main()\}
+        
+       \{/macro\}
+\{/CSSTemplate\}{/macro}
+{/TextTemplate}

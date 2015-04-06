@@ -1,0 +1,170 @@
+{Library {
+    $classpath : 'modules.view.merci.common.utils.MDisplayPopupLib',
+    $macrolibs: {
+      autocomplete: 'modules.view.merci.common.widgets.autocomplete.AutoCompleteLibrary'
+    },
+    $hasScript: true
+}}
+
+  {macro displayHTMLPopup(popup)}
+    <div id="htmlContainer" style="display: block;">
+      <div id="htmlPopup">
+          ${popup.htmlResponse}
+      </div>
+    </div>
+  {/macro}
+
+  {macro displayURLHTMLPopup(popup)}
+      {if popup.showHeader!=true}
+          <header><h1 class="urlTitle">${document.title}</h1></header>
+      {/if}
+
+      {if this.utils.isEmptyObject(popup.URL)}
+        ${history.go(-1)|eat}
+      {else/}
+        <object data='${popup.URL}' {on load {'fn': '_onHtmlPopupLoad', args: popup}/}/>
+      {/if}
+  {/macro} 
+
+  {macro displayFareFamilyPopup(popup)}
+    <div id="htmlContainer" style="display: block;">
+      <div id="htmlPopup">
+          ${popup.data.segId}
+      </div>
+    </div>
+  {/macro}
+  
+
+  {macro displayPriceBreakDown(popup)}
+
+      {if (popup.fromPage=="fare" || popup.fromPage=="CONF") }
+        <div class="cost" id="pricePopup" style="display: block;">
+          {@html:Template {
+            classpath: "modules.view.merci.segments.booking.templates.farereview.MFareBreakdown",
+            data: {
+              bRebooking: popup.bRebooking,
+              labels: popup.labels,
+              siteParams: popup.siteParams,
+              rqstParams: popup.rqstParams,
+              globalList: popup.globalList,
+              finalAmount: popup.finalAmount,
+              'currCode': popup.currCode,
+              'exchRate': popup.exchRate,
+              fromPage: popup.fromPage,
+              insData: popup.insData,
+              'payLaterElig': popup.payLaterElig
+            }
+          }/} 
+        </div>
+      {elseif (popup.fromPage=="alpi") /}
+         <div class="cost" id="pricePopup" style="display: block;">
+            {@html:Template {
+                classpath: 'modules.view.merci.segments.booking.templates.farereview.MFareBreakdown',
+                data: {
+                  'labels': popup.labels,
+                  'siteParams': popup.siteParams,
+                  'rqstParams': popup.rqstParams,
+                  'fromPage':popup.fromPage,
+                  currCode:popup.currCode,
+                  exchRate:popup.exchRate
+                }
+            }/}
+        </div>
+      {elseif (popup.fromPage=="purc") /}
+         <div class="cost" id="pricePopup" style="display: block;">
+            {@html:Template {
+                classpath: 'modules.view.merci.segments.booking.templates.farereview.MFareBreakdown',
+                data: {
+                  bRebooking: popup.bRebooking,
+                  labels: popup.labels,
+                  siteParams: popup.siteParams,
+                  rqstParams: popup.rqstParams,
+                  globalList: popup.globalList,
+                  finalAmount: popup.finalAmount,
+                  'currCode': popup.currCode,
+                  'exchRate': popup.exchRate,
+                  fromPage: popup.fromPage,
+                  insData: popup.insData,
+                  totalPrice: popup.totalPrice,
+                  'payLaterElig': popup.payLaterElig
+                }
+            }/}
+        </div>
+      {/if}
+
+    
+  {/macro}
+
+  {macro displayFareConditions(popup)}
+        {@html:Template {
+          classpath: "modules.view.merci.segments.booking.templates.farereview.MFareCondition",
+          data: {
+            labels: popup.labels,
+            siteParams: popup.siteParams,
+            rqstParams: popup.rqstParams
+          }
+        }/}
+  {/macro}
+
+    {macro displayCurrencyTerms(popup)}
+    {var chargeCurrCode = new modules.view.merci.common.utils.StringBufferImpl(popup.data.labels.tx_merci_pattern_chargetheUserCurrencyCode)/}
+    {var chargeConvRate = new modules.view.merci.common.utils.StringBufferImpl(popup.data.labels.tx_merci_pattern_chargetheUserConversionRate)/}
+        <div class="CheckTermsLink" id="checkTermsPopUp" style="display: block;">
+            <div id="htmlPopup"> 
+            <h1 class="boundsTitle">${popup.data.labels.tx_merci_text_chargeInConvertedCurrencyTermsLnk}</h1> 
+              <dl style="margin:0px;">
+                <dt style="padding:1em;"> ${chargeCurrCode.formatString([popup.currencies[1].code])}<br>
+                  ${chargeConvRate.formatString([popup.data.rqstParams.fareBreakdown.targetCurrencyExchangeRate])} <br>
+                  ${popup.data.labels.tx_merci_text_chargetheUserContactAgency}
+                </dt>
+              </dl>
+            </div>
+        </div>
+    {/macro}
+
+  {macro displayCurrencyConverter(popup)}
+      {var currData = this.initCurrData(popup)/}
+      <article class="currencyConverter addHeight">
+      <header>
+        <h1>${currData.labels.tx_merci_currency_converter}</h1>
+      </header>
+      <div class="msg warning messageB error" id="convErrDiv" style="display: none;">
+        <ul><li id="errMsg"></li></ul>
+      </div>
+      <section class="formConverter">
+        <span class="originalCurrency"><span class="title">${currData.labels.tx_merci_org_currency}</span>${currData.name} (${currData.code})</span>
+        <div class="onoffswitch cConverter">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <div class="onoffswitch-inner">
+              <div id="orgCurrency" class="onoffswitch-active">&nbsp;{if currData.currentPage.currCode!=""}${currData.currentPage.currCode}{elseif localStorage.getItem('convCurrency') != null/}${localStorage.getItem('convCurrency')}{else/}${currData.code}{/if}</div><div id="currCurrency" class="onoffswitch-inactive">&nbsp;${currData.code}</div>
+            </div>
+            <div class="onoffswitch-switch"></div>
+          </label>
+        </div>
+        <div class="location">
+          {var defValue = ''/}
+          {if localStorage.getItem('orgCurrency') != null
+              && localStorage.getItem('convCurrency') != null
+              && localStorage.getItem('orgCurrency') != localStorage.getItem('convCurrency')}
+            {set defValue = localStorage.getItem('convCurrency')/}
+          {/if}
+          {call autocomplete.createAutoComplete({
+            name: 'newCurrency',
+            id: 'newCurrency',
+            type: 'text',
+            labelText: currData.labels.tx_merci_sel_currency,
+            value: defValue,
+            source: this.getCurrencyConversionSource(currData)
+          })/}
+        </div>
+      </section>
+
+      <footer class="buttons">
+        <button type="submit" {on click {fn: 'applyCurrency', args: {currData: currData, moduleCtrl: popup.moduleCtrl}}/} class="validation">${currData.labels.tx_merci_booking_avail_filter_apply}</button>
+        <button type="submit" class="validation cancel" {if currData.newPopupEnabled==true } {on click {fn: 'closePopup', args: {moduleCtrl: popup.moduleCtrl} } /} {/if}>${currData.labels.tx_merci_cancel}</button>
+      </footer>
+    </article>
+  {/macro}
+
+{/Library}

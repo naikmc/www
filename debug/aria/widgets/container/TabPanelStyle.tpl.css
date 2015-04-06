@@ -1,0 +1,12 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.container.TabPanelStyle",
+    $extends : "aria.widgets.WidgetStyle"
+}}
+    {var skinnableClassName="TabPanel"/}
+    {var useFrame=true/}
+    
+{/CSSTemplate}

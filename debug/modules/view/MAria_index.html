@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="mobile-app">
+	<head>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta http-equiv="Cache-Control" content="no-transform"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title id="title">Book Flight</title>
+
+		<!----- INCLUDING REVAMPED UI CSS [START] ----->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" href="modules/common/css/merci.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="modules/sq/css/custom_merci.css" type="text/css" media="screen" />
+		<!----- INCLUDING REVAMPED UI CSS [END] ----->
+	
+		<style type="text/css">
+		    html,body{border:0;}
+			div#top {
+				display: none;
+			}
+			div#layout {
+				margin-top: 0px;
+			}
+			#sb-site {
+				background-color: none;
+			}
+		    .bodyHeight {
+		    /*PTR 09368304 [Medium]: MeRCI R22 S3 MCI IA REG : CSS issues in Trip Overview page in SQ app*/
+			  min-height:1000px;
+			  overflow:hidden;
+			}	
+			ul.ui-autocomplete {
+				position: relative;
+			}
+			.stmpFooter {
+				bottom: 4.5em!important;
+			}
+		</style>
+	</head>
+
+	<body class="bodyWrapper bodyHeight">
+  
+		<input type="hidden" value="" name="offer_id_list" id="offer_id_list"/>
+		<input type="hidden" value="" name="app_json_data" id="app_json_data"/>
+		<input type="hidden" name="json_resp" id="json_resp" value=""/>
+		<input type="hidden" name="aw_trip_detail_json" id="aw_trip_detail_json" value=""/>
+		<input type="hidden" id="ga_track_pageview" name="ga_track_pageview" value="" />
+		<input type="hidden" id="ga_track_event" name="ga_track_event" value="" />
+		<input type="hidden" id="ga_track_createItem" name="ga_track_createItem" value=""/> 
+		<input type="hidden" id="ga_track_createTransaction" name="ga_track_createTransaction" value=""/>
+		<input type="hidden" id="OFFICE_ID" name="OFFICE_ID" value=""/>
+		
+		<div id="sb-site">
+			<div id="top"></div>
+			<div id="layout"></div>
+			<div class="msk loading" style="display:block">&nbsp;</div>
+		</div>
+		
+		<script type="text/javascript" src="atbootstrap.js"></script>
+		<script type="text/javascript" src="core/merci-other.js"></script>
+
+		<!----- INCLUDING SCRIPTS FOR String compression ----->
+		<script type="text/javascript" src="modules/common/js/LZCompressorSQApp.js"></script>
+
+		<script type="text/javascript">
+
+
+			/** Method called from native code to inject URLs to this page */
+			function actionPara(myUrl, siteParams, pDataStr, jsonApp) { //offersBookmarked, tripPhotoCount,
+				/* Hidden Input tag having value of the json data (Native) */
+				if(jsonApp != null && jsonApp != {}) {
+					
+					var appJsonData = JSON.parse(jsonApp);
+					document.getElementById('app_json_data').value = jsonApp;
+
+					/* Hidden Input tag having value of the Offers Bookmarked (Native) */
+					/*	if(offersBookmarked != null && offersBookmarked != '') { */
+					if(appJsonData.offersBookmarked != null && appJsonData.offersBookmarked != '') {
+						document.getElementById('offer_id_list').value = appJsonData.offersBookmarked;
+					}
+
+					/* Hidden Input tag having value of Trip Photos (iPhone App) */
+					/*   if(tripPhotoCount != null && tripPhotoCount != '') { */
+					if(appJsonData.tripPhotoCount != null && appJsonData.tripPhotoCount != '') {
+						document.getElementById('offer_id_list').value = appJsonData.tripPhotoCount;
+					}
+				}
+
+				myUrl = myUrl + "&" + siteParams;
+				$(document).ready(function() {
+					actionSetting(myUrl, pDataStr);
+				});
+			}
+
+			/** Method called from native code to Check the latest version */
+			function actionAppVersionCheck(appDBParamurl, appversion , client) {
+  	
+				$.ajax({
+					url: appDBParamurl,
+					type: "GET",	  
+					processData: false,
+					dataType: "json",
+					crossDomain: "true",
+					success: function(data) {
+						var appStoreversion = 0;
+						var forceUpdate = "";
+						if (client.indexOf("Android") != -1) {
+						    appStoreversion = parseFloat((JSON.stringify(data.data.parameters.SITE_MC_APPS_V_ANDROID)).substr(1));
+						    forceUpdate = JSON.stringify(data.data.parameters.SITE_MC_ANDROID_VERSION)
+						} else if (client.indexOf("iphone") != -1) {
+						    appStoreversion = parseFloat((JSON.stringify(data.data.parameters.SITE_MC_APPS_V_IPHONE)).substr(1));
+						    forceUpdate = JSON.stringify(data.data.parameters.SITE_MC_IPHONE_VERSION)
+						}
+						var currentAppVersion = parseFloat(appversion);
+						if (!isNaN(appStoreversion) && (currentAppVersion < appStoreversion) && (forceUpdate.indexOf("TRUE") > -1)) {
+						    window.location = "sqmobile://?upgradeAPPAvail=" + appStoreversion;
+						}
+					},
+					error: function(a, b, c) {
+						console.log("appDBParam error :" + a);
+					}
+				});
+			}
+			
+			/** Method to make the ajax call to fetch json */
+			function actionSetting(myUrl, pDataStr) {
+
+			    $.ajax({
+			        url: myUrl + "&result=json",
+			        type: "POST",
+			        data: pDataStr,
+			        processData: false,
+			        dataType: "json",
+			        crossDomain: "true",
+			        success: function(data) {
+			            if (data.hasOwnProperty("data") && data.data.hasOwnProperty("MGetTrip") && data.data.MGetTrip.hasOwnProperty("reply") && data.data.MGetTrip.reply.hasOwnProperty("errors") && data.data.MGetTrip.reply.errors != undefined) {
+			                window.location = (data.data.MGetTrip.config.hasOwnProperty("siteAppCallback") ? data.data.MGetTrip.config.siteAppCallback : "sqmobile") + "://?message=" + JSON.stringify(data.data.MGetTrip.reply.errors).replace(/:/g, "=").replace(/\"/g, "").replace(/,/g, ", ");
+			            } else {
+			                data.myUrl = myUrl;
+			                if (myUrl.indexOf("MPNRValidate") != -1) {
+			                    tripDetail(data)
+			                }
+
+			                var compressed = LZString.compressToBase64(encodeURIComponent((JSON.stringify(data))));
+			                document.getElementById('json_resp').value = compressed;
+			                startApp({
+			                	'data':data
+			                });
+			            }
+			        },
+			        error: function(a, b, c) {
+			            window.location = "sqmobile://?message=Unable%20to%20load%20the%20data.%20Please%20try%20later";
+			        }
+			    })
+			}
+
+			function tripDetail(data) {
+			    jsonResponse = data;
+			    console.log("Response1 : " + jsonResponse);
+			    var TripDetailPnr = jsonResponse.data.MBookingDetails.request.REC_LOC;
+
+			    var itineraryData = jsonResponse.data.MFlightDetails.reply.tripplan.air.itineraries;
+			    var finalObj = "";
+
+			    var onwardSeg = [];
+			    var returnSeg = [];
+			    var multiSeg = [];
+			    var localAirObj = [];
+
+
+			    //Loop through array of itineraries
+			    for (var itenaryCount = 0; itenaryCount < itineraryData.length; itenaryCount++) {
+
+			        var segmentData = itineraryData[itenaryCount].segments;
+
+			        //Loop through array of segments in each itinerary
+			        for (var segment in segmentData) {
+			            var formattedDepartureDate = segmentData[segment].beginDate;
+			            formattedDepartureDate = formattedDepartureDate.split(" ");
+
+			            var formattedArrivalDate = segmentData[segment].endDate;
+			            formattedArrivalDate = formattedArrivalDate.split(" ");
+
+
+			            var beginTerminal = "";
+			            var endTerminal = "";
+			            if (segmentData[segment].beginTerminal != undefined)
+			                beginTerminal = segmentData[segment].beginTerminal;
+			            if (segmentData[segment].endTerminal != undefined)
+			                endTerminal = segmentData[segment].endTerminal;
+
+			            //Detailed Object of each segment
+			            var segmentDetailObj = {
+			                departureDate: {
+			                    date: formattedDepartureDate[2] + " " + formattedDepartureDate[1] + " " + formattedDepartureDate[5],
+			                    time: segmentData[segment].beginDateBean.hour + ":" + segmentData[segment].beginDateBean.minute
+			                },
+			                departureLocation: {
+			                    cityCode: segmentData[segment].beginLocation.cityCode,
+			                    cityName: segmentData[segment].beginLocation.cityName,
+			                    locationCode: segmentData[segment].beginLocation.locationCode,
+			                    locationName: segmentData[segment].beginLocation.locationName,
+			                    latitude: "",
+			                    longitude: ""
+
+			                },
+			                departureTerminal: beginTerminal,
+			                checkInDetails: {
+			                    date: "",
+			                    closingTime: "",
+			                    desk: ""
+			                },
+			                boardingDetails: {
+			                    date: "",
+			                    closingTime: "",
+			                    gate: "",
+			                    boardingPass: "",
+			                    seat: ""
+			                },
+			                arrivalDate: {
+			                    date: formattedArrivalDate[2] + " " + formattedArrivalDate[1] + " " + formattedArrivalDate[5],
+			                    time: segmentData[segment].endDateBean.hour + ":" + segmentData[segment].endDateBean.minute
+			                },
+			                arrivalLocation: {
+			                    cityCode: segmentData[segment].endLocation.cityCode,
+			                    cityName: segmentData[segment].endLocation.cityName,
+			                    locationCode: segmentData[segment].endLocation.locationCode,
+			                    locationName: segmentData[segment].endLocation.locationName,
+			                    latitude: "",
+			                    longitude: ""
+
+			                },
+			                arrivalTerminal: endTerminal,
+			                transportDetails: {
+			                    mode: "Air",
+			                    number: segmentData[segment].airline.code + segmentData[segment].flightNumber,
+			                    name: segmentData[segment].airline.name
+			                }
+
+			            };
+
+			            if (itenaryCount == 0) {
+			                onwardSeg.push(segmentDetailObj);
+			            } else if (itenaryCount == 1) {
+			                returnSeg.push(segmentDetailObj);
+			            } else if (itenaryCount > 1) {
+			                multiSeg.push(segmentDetailObj);
+			            }
+
+
+			        }
+
+			        if (itineraryData.length == 1) {
+			            //Create Final Trip Details Object when there is only One Way Trip
+			            var segmentObj = {
+			                segments: onwardSeg
+			            };
+
+			            finalObj = {
+			                tripPNR: TripDetailPnr,
+			                onewayTrip: segmentObj
+			            };
+
+			        } else if (itineraryData.length == 2) {
+
+			            //Create Final Trip Details Object when there is Round Trip
+			            if (itenaryCount == 0) {
+
+			                var onwardSegmentObj = {
+			                    segments: onwardSeg
+			                };
+
+			            } else if (itenaryCount == 1) {
+
+			                var returnSegmentObj = {
+			                    segments: returnSeg
+			                };
+			                var roundTripObj = {
+			                    onwardTrip: onwardSegmentObj,
+			                    returnTrip: returnSegmentObj
+			                };
+
+			                finalObj = {
+			                    tripPNR: TripDetailPnr,
+			                    roundTrip: roundTripObj
+			                };
+
+			            }
+			        } else if (itineraryData.length > 2) {
+
+			            //Create Final Trip Details Object when there is Round Trip
+			            if (itenaryCount == itineraryData.length - 1) {
+
+			                var finalMultiTripArr = [];
+
+			                //add onward trips
+			                for (var j = 0; j < onwardSeg.length; j++) {
+			                    finalMultiTripArr.push(onwardSeg[j]);
+			                }
+
+			                //add return trips
+			                for (var k = 0; k < returnSeg.length; k++) {
+			                    finalMultiTripArr.push(returnSeg[k]);
+			                }
+
+			                //add multifaced trips
+			                for (var l = 0; l < multiSeg.length; l++) {
+			                    finalMultiTripArr.push(multiSeg[l]);
+			                }
+
+			                //Create Final Trip Details Object when there is multi faced Trip
+			                var segmentObj = {
+			                    segments: finalMultiTripArr
+			                };
+
+			                finalObj = {
+			                    tripPNR: TripDetailPnr,
+			                    multiTrip: segmentObj
+			                };
+
+			            }
+
+			        }
+
+			    }
+			    var compressed = LZString.compressToBase64(encodeURIComponent((JSON.stringify(finalObj))));
+			    document.getElementById('aw_trip_detail_json').value = compressed;
+
+			}
+
+			/** Method called to fetch stored json and load the aria page without server call */
+			function jsonLoad(jsonRespSent, tripPhotoCount) {
+			    var jsonResp = JSON.parse(decodeURIComponent(LZString.decompressFromBase64(jsonRespSent)));
+
+			    if (jsonResp == null) { //PTR 08511859
+			        jsonResp = JSON.parse(decodeURIComponent(window.atob(jsonRespSent)));
+			    }
+
+			    delete jsonResp.data.framework.sessionId;
+			    /* Hidden Input tag having value of Trip Photos (iPhone App)*/
+			    if (tripPhotoCount != null && tripPhotoCount != '') {
+			        document.getElementById('offer_id_list').value = tripPhotoCount;
+			    }
+
+			    startApp({
+			    	'data':jsonResp
+			    });
+			}
+
+			function updateTripPhotoCount(count) {
+			    document.getElementById('offer_id_list').value = count;
+			    document.getElementById('tripPhoto_count').textContent = "Trip Photos (" + count + ")";
+			    console.log(count)
+			}
+			
+			/**
+			 * function to initialize aria templates in SQ app
+			 * @param args JSON object containing data
+			 */
+			function startApp(args) {
+				
+				args.data.data.framework.settings = {
+					isGTMEnabled: false,
+					showSideMenu: 'top',
+					gtmContainerValue: null,
+					isTabletEnabled: false,
+					isGaEnabled: false,
+					isCheckinEnabled: true
+				}
+				
+				application.initMeRCI({
+					isWebFlow: false,
+					json: args.data
+				});
+			}
+			
+			/**
+			 * used by KF Redemption Switch in Search Page
+			 * Called by Apps to Switch Off
+			 */
+			function cancelPopup() {
+				unCheckKF();
+				localStorage.setItem('BANNER', false);
+				$("#myonoffswitch").attr("checked", false);
+				$("#overlay, #dialog-award-fava").hide();
+
+				/* PTR 08569602 : Cal Matrix is displayed with the text Miles */
+				var awardFlowHidden = document.getElementById('AWARDS_FLOW');
+				if (awardFlowHidden != null && awardFlowHidden.value == "TRUE") {
+					awardFlowHidden.value = "FALSE";
+				}
+			}
+
+			function unCheckKF() {
+				$('#FIELD_INFANTS_NUMBER').removeAttr("disabled");
+				if (localStorage.getItem('INFANTS') != null && localStorage.getItem('INFANTS') != '') {
+					$('#FIELD_INFANTS_NUMBER').val(localStorage.getItem('INFANTS'));
+				}
+				$('#Wrapper_A_LOCATION_1,#Wrapper_C_LOCATION_1').addClass('hideThis');
+				$('#iconspan3,#iconspan4').attr('style', 'display:none');
+				$('#B_LOCATION_1,#E_LOCATION_1').removeClass('hideThis');
+				$('#Wrapper_B_LOCATION_1,#Wrapper_E_LOCATION_1').removeClass('hideThis');
+				/* $('#A_LOCATION_1,#C_LOCATION_1').addClass('hideThis'); (removed for PTR 7395750)*/
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,649 @@
+{Library {
+    $classpath:'modules.view.merci.segments.servicing.subModules.checkin.templates.lib.Common'
+}}
+  /* Macro used for displaying products, segments and cabin codes */
+  {macro FlightDetails(product,label,pattern,classlabel,segmentDisabled,entireLabel)}
+    {if label.Location.search(",")==-1}{if label.Location=label.Location.replace(" ",", ")}{/if}{/if}
+    {if jQuery.isUndefined(segmentDisabled)}
+      {set segmentDisabled = false /}
+    {/if}
+    <span id="flightDep" class="fontBigCKIN
+      {if segmentDisabled}
+        flightRecapCheckin disabled
+      {else/}
+        flightRecap
+      {/if}">
+        <span class="displayBlock">
+          /* Code used to display flight details */
+          <span>{call dateMacro(product.legLevelBean,product.operatingFlightDetailsBoardPoint,product.operatingFlightDetailsOffPoint,pattern) /} - ${product.operatingFlightDetailsMarketingCarrier}${product.operatingFlightDetailsFlightNumber}
+          </span>
+        </span>
+        <span class="displayBlock">
+          <span class="strong">
+              /* Code used to display time details of flight */
+              {call timeMacro(product.legLevelBean,product.operatingFlightDetailsBoardPoint,product.operatingFlightDetailsOffPoint,pattern,"DEPARTURE_TIME") /}
+              /* Code used to display stop details */
+              /*{call stopsMacro(product.legLevelBean , label) /}*/
+          </span>
+          ${jQuery.substitute(label.Location, [product.operatingFlightDetailsBoardPointInfo.city, product.operatingFlightDetailsBoardPointInfo.airport])|escapeForHTML:false} (${product.operatingFlightDetailsBoardPoint}) , ${product.operatingFlightDetailsBoardPointInfo.country}
+           /* Code used to display terminals */
+          /*<i>{call terminalMacro(product.legLevelBean , product.operatingFlightDetailsBoardPoint , label) /}</i>*/
+        </span>
+        <span class="displayBlock">
+           <span class="strong">
+              /* Code used to display time details of flight */
+              {call timeMacro(product.legLevelBean,product.operatingFlightDetailsBoardPoint,product.operatingFlightDetailsOffPoint,pattern,"ARRIVAL_TIME") /}
+              /* Code used to display stop details */
+              /*{call stopsMacro(product.legLevelBean , label) /}*/
+          </span>
+          ${jQuery.substitute(label.Location, [product.operatingFlightDetailsOffPointInfo.city, product.operatingFlightDetailsOffPointInfo.airport])|escapeForHTML:false} (${product.operatingFlightDetailsOffPoint}) , ${product.operatingFlightDetailsOffPointInfo.country}
+           /* Code used to display terminals */
+          /*<i>{call terminalMacro(product.legLevelBean , product.operatingFlightDetailsOffPoint, label) /}</i> */
+        </span>
+        <span class="displayBlock">
+           /* Code used to display booking class
+          {call classMacro(label.Class , product.bookedCabinCodeBean.cabinDetailsBookingClass , classlabel) /}
+          */
+          ${entireLabel.Cabin}: ${product.bookedCabinCodeBean.cabinDetailsBookingClassDescription.split(' ')[0]} <abbr>(${product.bookedCabinCodeBean.cabinDetailsBookingClass})</abbr>
+        </span>
+    </span>
+  {/macro}
+
+  {macro PaxDetilsFlightPage(label,ffnumber,email,phone)}
+
+	<dl>
+	<dt>${label.FFNumber}</dt>
+	<dd> {if ffnumber && ffnumber != ""}${ffnumber}{else /}-{/if} </dd>
+	</dl>
+
+	<dl>
+	<dt>${label.Email}: </dt>
+	<dd> {if email && email != ""}${email}{else /}-{/if} </dd>
+	</dl>
+	<dl>
+	<dt>${label.Phone}: </dt>
+	<dd> {if phone && phone != ""}${phone}{else /}-{/if} </dd>
+	</dl>
+
+
+  {/macro}
+
+  /* Code used to display class details of the flight*/
+  {macro classMacro(label , code , classlabel)}
+    {if code != null && code != "" }
+      {var statusValue = "" /}
+      {if code == "A"}{set statusValue = classlabel.FirstDisc /}{/if}
+      {if code == "B"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "BN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "C"}{set statusValue = classlabel.Business /}{/if}
+      {if code == "D"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      {if code == "E"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "F"}{set statusValue = classlabel.First /}{/if}
+      {if code == "FN"}{set statusValue = classlabel.NightFirst /}{/if}
+      {if code == "G"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "H"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "I"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      {if code == "J"}{set statusValue = classlabel.BusinessPrem /}{/if}
+      {if code == "K"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "KN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "L"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "M"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "N"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "NC"}{set statusValue = classlabel.BusinessUp /}{/if}
+      {if code == "NF"}{set statusValue = classlabel.FirstUp /}{/if}
+      {if code == "O"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "P"}{set statusValue = classlabel.FirstPrem /}{/if}
+      {if code == "Q"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "QN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "R"}{set statusValue = classlabel.Supersonic /}{/if}
+      {if code == "S"}{set statusValue = classlabel.Economy /}{/if}
+      {if code == "T"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "U"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "V"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "W"}{set statusValue = classlabel.EconomyPrem /}{/if}
+      {if code == "X"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "Y"}{set statusValue = classlabel.Economy /}{/if}
+      {if code == "YN"}{set statusValue = classlabel.NightEconomy /}{/if}
+      {if code == "Z"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      ${jQuery.substitute(label,statusValue)|escapeForHTML:false}
+    {/if}
+  {/macro}
+
+  /* Code used to display infant details */
+  {macro infantMacro(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg, paxPT, noOfPaxTPL,tempObj)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                <ul class="dependent">
+                  /*{if !paxCheckedin}*/
+					<li class="infant" id="pax${cust_index}" style="margin-top: 8px;">
+						<p for="prod${productIndex}-pax${infantToPax}">
+						  {if cust.otherPaxDetailsBean}
+							<strong>${jQuery.substitute(label.InfantPassengerName, [cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false} {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</strong>
+						  {else/}
+							<strong>${jQuery.substitute(label.InfantPassengerName, ['', cust.customerDetailsSurname])|escapeForHTML:false} {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</strong>
+						  {/if}
+						</p>
+						{if cust.productLevelBean[0].servicesBean}
+							{var item=cust.productLevelBean[0].servicesBean /}
+							{foreach service in item}
+								{var currSSRCode = item[service].specialRequirementsInfoBean.ssrCode /}
+								{if JSONData.parameters.SITE_MCI_SSR_CANT_CI_ALON.toUpperCase().search(currSSRCode) != "-1" }
+									<span class="checkindenained">${label.PaxSSRCantChkInAlone}</span>
+								{/if}
+								{if currSSRCode == "CBBG" || currSSRCode == "STCR" || currSSRCode == "EXST" || currSSRCode == "UMNR"}
+									<span class="checkindenained">${label.SSRNotNotAllowed}</span>
+								{/if}
+							{/foreach}
+						{/if}
+						{if !cust.paxEligible}
+							{if noOfPaxTPL != "SinglePax"}
+								<span class="checkindenained">${label.TicketNotAssociated}</span>
+							{/if}
+						{/if}
+						{if !cust.productLevelBean[0].psprtLstNameCheckWithCustLastName}
+							  {if tempObj && tempObj != ""}
+									{set tempObj.psprtMismatch = true /}
+							  {/if}
+							  <span class="checkindenained">${label.PaprttLstNmMismatch}</span>
+						{/if}
+					</li>
+                    <li style="display:none">
+                      /* Code used to chk or unchk the infant chkbox based on the adult selection */
+					  {if noOfPaxTPL != "SinglePax"}
+						<input name="${cust_index}" id="pax${infantToPax}-prod${productIndex}" type="checkbox" value="${cust_index}" class="checkbig"/>
+					  {/if}
+                    </li>
+                  /*{else/}
+
+				  {/if}*/
+                </ul>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro infantMacroForConfirmation(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg, paxPT, noOfPaxTPL)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                  {if paxCheckedin}
+                    <li class="infant infantpaxpaddingTL" id="cust_index_${cust_index}_prod_${productIndex}" style="margin-top: 8px;">
+                        {if cust.otherPaxDetailsBean}
+                        <h4 for="infantId${infantToPax}_prod_${productIndex}">${jQuery.substitute(label.InfantPassengerName, [cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}</h4>
+                        {else/}
+                        <h4 for="infantId${infantToPax}_prod_${productIndex}">${jQuery.substitute(label.InfantPassengerName, ['', cust.customerDetailsSurname])|escapeForHTML:false}</h4>
+                        {/if}
+                    </li>
+                {/if}
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro infantMacroForConfpaxCheckedinDetailsOfFlight(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg, paxPT, noOfPaxTPL)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                  {if paxCheckedin}
+                    <div class="pax infant">
+                        {if cust.otherPaxDetailsBean}
+                        <h3>${jQuery.substitute(label.InfantPassengerName, [cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}</h3>
+                        {else/}
+                        <h3>${jQuery.substitute(label.InfantPassengerName, ['', cust.customerDetailsSurname])|escapeForHTML:false}</h3>
+                        {/if}
+
+                    </div>
+                {/if}
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro infantMacroForTripList(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg, paxPT, noOfPaxTPL)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                /*<ul class="dependent">
+
+                  <li class="infant">
+                  <p>
+
+                  <strong>{if cust.otherPaxDetailsBean}
+                      {if cust.otherPaxDetailsBean[0].title}
+                      ${jQuery.substitute(label.PaxName, [cust.otherPaxDetailsBean[0].title,cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}
+                      {else /}
+                      ${jQuery.substitute(label.PaxName, ["",cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}
+                      {/if}
+                    {else /}
+                    ${jQuery.substitute(label.PaxName, ["","", cust.customerDetailsSurname])|escapeForHTML:false}
+                    {/if} <i class="textSmaller">(${label.Infant})</i> {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</strong>
+
+
+                  </p>
+
+
+                  </li>*/
+                  <li class="infant infantpaxpaddingTL">
+                    {if cust.otherPaxDetailsBean}
+                      {if cust.otherPaxDetailsBean[0].title}
+                      <h4>${jQuery.substitute(label.PaxName, [cust.otherPaxDetailsBean[0].title,cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false} <i class="textSmaller">(${label.Infant})</i> {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</h4>
+                      {else /}
+                      <h4>${jQuery.substitute(label.PaxName, ["",cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false} <i class="textSmaller">(${label.Infant})</i> {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</h4>
+                      {/if}
+                    {else /}
+                    <h4>${jQuery.substitute(label.PaxName, ["","", cust.customerDetailsSurname])|escapeForHTML:false} <i class="textSmaller">(${label.Infant})</i> {if paxCheckedin}<span class="checkedinTripsPage">${label.CheckedIn}</span>{/if}</h4>
+                    {/if}
+
+                  </li>
+
+                //</ul>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+   {macro infantMacroForAcceptanceOverview(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg, paxPT, currTplThis)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                  <li class="infant infantpaxpaddingTL">
+                    {if cust.otherPaxDetailsBean}
+                      {if cust.otherPaxDetailsBean[0].title}
+					  <h4>
+							${jQuery.substitute(label.PaxName, [cust.otherPaxDetailsBean[0].title,cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}
+							<i class="textSmaller">(${label.Infant})</i>
+							{if paxCheckedin}
+								<span class="checkedinTripsPage">${label.CheckedIn}</span>
+							{/if}
+							<button class="secondary edit" type="button" onclick="${handlerName}(event);"><span>${label.Edit}</span></button>
+					  </h4>
+                      {else /}
+                      <h4>
+							${jQuery.substitute(label.PaxName, ["",cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])|escapeForHTML:false}
+							<i class="textSmaller">(${label.Infant})</i>
+							{if paxCheckedin}
+								<span class="checkedinTripsPage">${label.CheckedIn}</span>
+							{/if}
+							<button class="secondary edit" type="button" onclick="${handlerName}(event);"><span>${label.Edit}</span></button>
+					  </h4>
+                      {/if}
+                    {else /}
+					  <h4>
+							${jQuery.substitute(label.PaxName, ["","", cust.customerDetailsSurname])|escapeForHTML:false}
+							<i class="textSmaller">(${label.Infant})</i>
+							{if paxCheckedin}
+								<span class="checkedinTripsPage">${label.CheckedIn}</span>
+							{/if}
+							<button class="secondary edit" type="button" onclick="${handlerName}(event);"><span>${label.Edit}</span></button>
+					  </h4>
+                    {/if}
+                  </li>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+   /* Code used to display NEW terminal details
+   if flag not undefined and noterm then display T(hardcoded, discussed) insted of terminal
+   */
+  {macro newTerminalMacro(legLevelList,arrDep,label,flag)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.additionalProductDetailsBean != null}
+          {if leg.legRoutingOrigin == arrDep}
+            {if leg.additionalProductDetailsBean && leg.additionalProductDetailsBean.departureStationInfoBean && leg.additionalProductDetailsBean.departureStationInfoBean.terminal != ""}
+              {if flag == "noterm"}T{else/}${label.Terminal} {/if}${leg.additionalProductDetailsBean.departureStationInfoBean.terminal}
+            {/if}
+          {elseif leg.legRoutingDestination == arrDep /}
+            {if leg.additionalProductDetailsBean && leg.additionalProductDetailsBean.arrivalStationInfoBean && leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal != ""}
+              {if flag == "noterm"}T{else/}${label.Terminal} {/if}${leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal}
+            {/if}
+          {/if}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+   /* Code used to display terminal details */
+  {macro terminalMacro(legLevelList,arrDep,label)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.additionalProductDetailsBean != null}
+          {if leg.legRoutingOrigin == arrDep}
+            {if leg.additionalProductDetailsBean.departureStationInfoBean.terminal != ""}
+              ${jQuery.substitute(label.Terminal,[leg.additionalProductDetailsBean.departureStationInfoBean.terminal])|escapeForHTML:false}
+            {/if}
+          {elseif leg.legRoutingDestination == arrDep /}
+            {if leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal != ""}
+              ${jQuery.substitute(label.Terminal,[leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal])|escapeForHTML:false}
+            {/if}
+          {/if}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  /* Code used to display difference between 2 dates */
+  {macro MealDetails(item,label)}
+
+    {var mealSSRList=["AVML","BBML","BLML","CHML","DBML","FPML","GFML","HFML","HNML","IVML","JPML","KSML","LCML","LFML","LPML","LSML","MOML","NFML","NLML","OBML","ORML","PRML","RVML","SFML","SPML","VGML","VLML"] /}
+
+    {var trackFirst = 0 /}
+
+    {foreach ssrInfo inArray item}
+
+      {if mealSSRList.indexOf(ssrInfo.specialRequirementsInfoBean.ssrCode) != "-1" && trackFirst == 0}
+
+        <dt> ${label.Meal}: </dt>
+        <dd> ${ssrInfo.specialRequirementsInfoBean.ssrDesc}</dd>
+
+        {set trackFirst = 1 /}
+
+      {/if}
+
+    {/foreach}
+
+  {/macro}
+
+
+  /* Code used to display difference between 2 dates */
+  {macro dateDiff(date1,date2,Label)}
+
+      {var arrivalDate = eval(date2) /}
+      {var deprtDate = eval(date1) /}
+
+      {var Milliseconds = arrivalDate-deprtDate /}
+      {var hours = Math.floor(Milliseconds/(1000*60*60)) /}
+
+      /*${hours} hr*/
+
+      {var minutes=Math.floor(((Milliseconds/(1000*60*60))-hours)*60) /}
+
+      /*${minutes} min*/
+
+      /*var seconds =(((Milliseconds/(1000*60*60))-hours)*60)-minutes;
+
+      seconds = Math.floor(seconds*60);
+
+      alert("seconds:  "+seconds);*/
+
+      ${jQuery.substitute(Label, [hours,minutes])|escapeForHTML:false}
+
+  {/macro}
+
+  /* Code used to display New date time formats */
+  {macro dateTimeMacro(legLevelList,departure,arrival,businessSemantic,pattern)}
+
+    {if pattern == "hh:mm"}
+      {set pattern="HH:mm" /}
+    {/if}
+
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+         {foreach legTime inArray leg.legTimeBean}
+
+            {if leg.legRoutingOrigin == departure && legTime.businessSemantic == businessSemantic}
+            //<h1> 1${leg_index} - ${leg.legRoutingOrigin} ${departure} ${leg.legRoutingDestination} ${arrival}</h1>
+              {var departureDate = eval(legTime.json) /}
+
+              ${departureDate|dateformat:pattern}
+            {/if}
+
+            {if leg.legRoutingDestination == arrival && legTime.businessSemantic == businessSemantic}
+            //<h1> 2${leg_index} - ${leg.legRoutingOrigin} ${departure} ${leg.legRoutingDestination} ${arrival}</h1>
+              {var arrivalDate = eval(legTime.json) /}
+
+              ${arrivalDate|dateformat:pattern}
+            {/if}
+         {/foreach}
+
+      {/foreach}
+    {/if}
+
+  {/macro}
+
+  /* Code used to display time details */
+  {macro timeMacro(legLevelList,departure,arrival,pattern,showDepOrArrivalTime)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STD"}
+              {var departureDate = eval(legTime.json) /}
+            {/if}
+          {/foreach}
+        {/if}
+        {if leg.legRoutingDestination == arrival}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STA"}
+              {var arrivalDate = eval(legTime.json) /}
+              {if showDepOrArrivalTime == "DEPARTURE_TIME"}
+                <time>${departureDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+              {if showDepOrArrivalTime == "ARRIVAL_TIME"}
+                 <time>${arrivalDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+              {if showDepOrArrivalTime == "BOTH"}
+                 <time>${departureDate|dateformat:"HH:mm"|capitalize} - ${arrivalDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+    /* Code used to display date details */
+  {macro dateMacro(legLevelList,departure,arrival,pattern)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTimes inArray leg.legTimeBean}
+            {if legTimes.businessSemantic == "STD"}
+              {var departureDate = eval(legTimes.json) /}
+              ${departureDate|dateformat:pattern.Date}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+    /* Code used to display stops details */
+  {macro stopsMacro(legLevelList , label)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {if (legLevelList.length - 1) > 1}
+        (${(legLevelList.length - 1)} ${label.Stops})
+      {elseif (legLevelList.length - 1) == 1 /}
+        (${(legLevelList.length - 1)} ${label.Stop})
+      {/if}
+    {/if}
+  {/macro}
+
+   /* Code used to creat input types */
+  {macro textfield(args)}
+    {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            {if !jQuery.isUndefined(args.id)}
+              {var clearButtonId = "c"+args.id /}
+            {/if}
+          {/if}
+    {/if}
+    <span class="posR">
+      {if args.type == 'textarea'}
+        <textarea
+      {else/}
+        <input type="${args.type}"
+      {/if}
+        {if !jQuery.isUndefined(args.dataCountrySel)}
+          dataCountrySel="${args.dataCountrySel}"
+        {/if}
+		{if !jQuery.isUndefined(args.id)}
+          id="${args.id}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.name)}
+          name="${args.name}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.autocomplete)}
+          autocomplete="${args.autocomplete}"
+        {/if}
+
+        /* Code used to create attribute value */
+        {if args.type != 'textarea'}
+          {if !jQuery.isUndefined(args.value)}
+            {if args.value != null || args.value != ""}
+              value = "${args.value}"
+            {else/}
+              value=""
+            {/if}
+          {/if}
+        {/if}
+
+        /* Code used to create attribute placeholder */
+        {if !jQuery.isUndefined(args.placeholder)}
+          {if !aria.core.Browser.isBlackberry}
+          placeholder="${args.placeholder}"
+        {/if}
+        {/if}
+
+        /* Code used to create attribute clearButton */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            onfocus="searchFieldOnFocus('${args.id}','${clearButtonId}');"
+            onblur="searchFieldOnBlur('${args.id}','${clearButtonId}');"
+          {/if}
+        {/if}
+
+       /* Code used to create attribute onclick */
+       {if !jQuery.isUndefined(args.options)}
+          {if args.options.onclick}
+            onclick="${args.options.onclick}"
+          {/if}
+        {/if}
+
+        /* Code used to create attribute textfieldcls */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.textfieldcls)}
+          class="${args.options.textfieldcls}"
+        {/if}
+
+        /* Code used to create attribute required */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.required)}
+          required="${args.options.required}"
+        {/if}
+
+        /* Code used to create attribute autocorrect */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocorrect)}
+          autocorrect = "${args.options.autocorrect}"
+        {else/}
+          autocorrect = "off"
+        {/if}
+
+        /* Code used to create attribute autocapitalize */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocapitalize)}
+          autocapitalize = "${args.options.autocapitalize}"
+        {else/}
+          autocapitalize="none"
+        {/if}
+
+        /* Code used to create attribute validators and errorNumbers */
+        {if !jQuery.isUndefined(args.options) &&
+              !jQuery.isUndefined(args.options.validators) &&
+              !jQuery.isUndefined(args.options.errorNumbers)}
+          validators="${args.options.validators}"
+          errornumbers="${args.options.errorNumbers}"
+        {/if}
+
+        /* Code used to create attribute disabled */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.disabled) &&
+            args.options.disabled}
+          disabled="disabled"
+        {/if}
+
+        /* Code used to create attribute readonly */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.readonly) &&
+            args.options.readonly}
+          readonly="readonly"
+        {/if}
+
+        /* Code used to create attribute size */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.size)}
+          size="${args.options.size}"
+        {/if}
+
+        /* Code used to create attribute maxlength */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.maxlength)}
+          maxlength="${args.options.maxlength}"
+        {/if}
+
+        /* Code used to create attribute value */
+        {if !jQuery.isUndefined(args.customAttributes)}
+          {foreach attribute inArray args.customAttributes}
+            ${attribute.name}="${attribute.value}"
+          {/foreach}
+        {/if}
+
+      {if args.type == 'textarea'}
+        >
+        {if !jQuery.isUndefined(args.value)}
+          ${args.value}
+        {/if}
+        </textarea>
+      {else/}
+        />
+      {/if}
+      {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            <span
+              onclick="cleara('${args.id}', this.id);"
+              id="${clearButtonId}"
+              class="clearIc displayNone">
+            </span>
+          {/if}
+      {/if}
+    </span>
+  {/macro}
+{/Library}

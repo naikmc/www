@@ -1,0 +1,90 @@
+{Library {
+    $classpath : 'modules.view.merci.common.utils.MerciMsgLib',
+		$hasScript: true
+}}
+	
+	{macro showAllMessages(messages)}
+		{if messages != null && messages.errors != null}
+			{call showError(messages.errors) /}
+		{/if}
+
+		{if messages != null && messages.warnings != null}
+			{call showWarning(messages.warnings) /}
+		{/if}
+
+		{if messages != null && messages.infos != null}
+			{call showInfo(messages.infos) /}
+		{/if}
+	{/macro}
+
+	{macro showError(message)}
+
+		// print error messages
+		{if message != null && message.list != null}
+			{call printMessage(message.list, message.title, 'warning')/}
+		{/if}
+	{/macro}
+
+	{macro showWarning(message)}
+
+		// print error messages
+		{if message != null && message.list != null}
+			{call printMessage(message.list, message.title, 'warning')/}
+		{/if}
+	{/macro}
+
+	{macro showInfo(message)}
+
+		// print information to UI
+		{if message != null && message.list != null}
+			
+			{var cls = 'info'/}		
+			{call printMessage(message.list, message.title, cls)/}
+		{/if}
+	{/macro}
+
+	{macro showQuestion(message)}
+
+		// print questions on UI
+		{if message != null && message.list != null}
+		
+			{var cls = 'question'/}		
+			{call printMessage(message.list, message.title, cls)/}
+		{/if}
+	{/macro}
+
+	{macro showMessage(message)}
+
+		// print success or validation message on UI
+		{if message != null && message.list != null}
+			
+			{var cls = 'validation'/}
+			{call printMessage(message.list, message.title, cls)/}
+		{/if}
+	{/macro}
+
+	{macro printMessage(list, title, clsName)}
+		{var msgList = this.getMessages(list)/}
+		{if msgList != null && msgList.length > 0}
+			<div class="msg ${clsName}">
+				<ul>
+					{if msgList.length == 1}
+						<li>${msgList[0]}</li>
+					{else/}
+						<li>
+							<ul class="lstErr">
+								<li>${title}</li>
+								{foreach message in msgList}
+									<li class="lstErrStyle">
+										${message}
+									</li>
+								{/foreach}
+							</ul>
+						</li>
+					{/if}
+				</ul>
+			</div>
+		{/if}
+	{/macro}
+
+{/Library}

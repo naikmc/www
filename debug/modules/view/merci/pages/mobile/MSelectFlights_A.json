@@ -1,0 +1,17 @@
+  {
+    data: {
+      checkIn: {
+        MSelectFlights_A: {
+          requestParam: {
+            bannerHtml: "bean.BANNER_CONTENT",
+            parameters: "bean.ParameterBean",
+            ProfileBean: "bean.ProfileBean",
+            EditcprBean: "bean.EditcprBean"
+          },
+          errorStrings: {
+            21300051: "error.21300051"
+          }
+        }
+      }
+    }
+  }

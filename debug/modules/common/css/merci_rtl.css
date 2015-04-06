@@ -1,0 +1,883 @@
+html, body {
+	direction: rtl;
+}
+.floatR {
+	float: left;
+}
+.floatL {
+	float: right;
+}
+body > section > header h1, article h1, article h2, div.accordion, .sum p, body > section > header h1, article h1, article h2, div.accordion, .sum p, body >section:first-of-type, article, header, aside, footer, div.list, a.navigation, a.navigation, a.button, .dialog, body.daof div.list > label, body.daof.list article.panel header div.tabs > div:last-child p {
+	text-align: right !important;
+}
+.priceInsurance, .map-point li:last-child, body.rebo.avai.list article.panel li p.price {
+	text-align: left;
+}
+p.location input[type="text"] {
+	float: right;
+	margin-right: 0;
+}
+.sear div.list ul.input, .tabs div.date ul {
+	margin-right: 0;
+}
+div.list ul.input li {
+	margin-right: 0;
+}
+.sear div.list.date ul.input li:first-child, .tabs div.list.date ul.input li:first-child {
+	margin-right: 0;
+}
+nav.breadcrumbs li.active span:after {
+	right: auto;
+	left: -10px;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+header.banner a.home {
+	left: auto;
+	right: .4em;
+}
+button.toggle, button.validation, .panel.breakdown footer a, div.services div.buttons a, body.list.daof .panel.list section li[role="option"] p:nth-of-type(2) {
+	float: left;
+}
+body.booking.fava article.panel li span.price, body.daof.fava article.panel li span.price, .panel.breakdown.price td:not(:first-child), .panel.breakdown.price th:not(:first-child) {
+	text-align: left;
+}
+button.validation.cancel, button.validation.back, div.services div.buttons li, button.decrease, button.increase, aside.panel section img, .timetable section .panel.list li p.schedule {
+	float: right;
+}
+a.secondary {
+	text-align: right;
+}
+nav.navigation a.navigation {
+	padding-right: 2.6em;
+}
+a.navigation:before, a.secondary:before {
+	left: auto;
+	right: 0.5em;
+}
+a.navigation:after {
+	right: auto;
+	left: 10px;
+	-webkit-transform: scaleX(-1);
+}
+nav.navigation a.navigation:before {
+	top: 0.5em;
+}
+a.navigation:after, nav.breadcrumbs li.active span:after, a.secondary.seat:before, .award-alert span.miles:before, body.fava .price.award-alert:before, ul[role='listbox'] li[role="option"]:after, button.validation:after,, button.search:after, div.seatmap table .exitrowright, div.seatmap table .exitrowleft {
+	/*-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);*/
+	direction:rtl;
+}
+.panel.sum .change, body.rebo.avai.list article.panel button.secondary {
+	right: auto !important;
+	left: 8px;
+}
+h1 button.toggle {
+	right: auto;
+	left: 13px;
+}
+body.fava article.sum section p > span {
+	margin-right: 0;
+}
+a.navigation, a.secondary, a.button, button {
+	padding: 0 1.2em;
+}
+div.services div.pax {
+	background: url(img/icon-pax.png) no-repeat 100% 0;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+ul[role='listbox'] li[role="option"]:after {
+	left: .7em;
+	right: auto;
+}
+div.message:before {
+	right: -0.3em;
+	top: -1.4em;
+}
+/*Start of 09072140*/
+div.accordion *[role="tab"]:after,button.toggle:after {
+    left:0;
+    right: auto
+}
+/* button.toggle {
+   padding-left: 3em;
+    padding-right: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;}*/
+/*End of 09072140*/
+div.accordion *[role="tab"]:after, button.toggle:after {
+	width: 2em;
+}
+body.purc ul.buttons li:last-child a.navigation {
+	right: auto;
+	padding-right: 0;
+	left: 0;
+}
+.popup button.toggle:after, .daof.fac button.toggle:after {
+	right: auto;
+}
+.copy-name {
+	left: 0;
+	right: auto;
+}
+.sear div.list ul.input, .tabs div.date ul, .panel.breakdown footer p, div.phoneMain, div.areaMain, div.countryMain {
+	float: right;
+}
+.pin a {
+	left: 0;
+	right: auto;
+}
+.popup article.panel h2 span:last-child, .popup article.panel section li span:last-child, .panel.price .data.price, .panel.price strike.price, .panel.price a, .data.miles {
+	float: left;
+}
+.popup article.panel.price section ul li span.label {
+	margin-left: 3.5em;
+	margin-right: auto;
+}
+.popup {
+	display: none;
+	text-align: right;
+	overflow: visible;
+	width: 90%;
+	position: absolute;
+	z-index: 101;
+	margin: 5%;
+	top: 50px;
+	left: 0px;
+}
+.services .buttons a.secondary {
+	padding-right: 2em;
+}
+.panel.breakdown header a {
+	left: .7em;
+	right: auto;
+}
+button.datepicker {
+	margin-right: 5px;
+}
+.panel.breakdown.price h1 {
+	padding-right: 0.4em;
+}
+/*deal offers DAOF_LIST0*/
+body.list.daof .panel.list section li[role="option"] p:nth-of-type(2) {
+	padding-right: 0;
+	padding-left: 2em;
+}
+/*flight status STAT*/
+
+/*My favourites MFV_SUMM1*/
+.panel.breakdown footer a.bag-charge, .panel.price footer a.bag-charge, .expiry ul.input, button.datepicker, ul[role='tablist'] li, .services li input {
+	float: right;
+}
+/*pnr retrieve TLIST_LIST1*/
+.pnr-retrieve footer p {
+	margin-right: none;
+}
+body.pnr-retrieve.list .panel.list footer a, body.rebo.list .panel.list footer a { /*left: .4em;*/
+}
+/*pnr retrieve XBAG_SLCT1*/
+.services.add-service span.price {
+	float: left;
+}
+/*rebooking REBO_AVAI1*/
+body.rebo.avai.list article.panel li p.price {
+	padding-left: 1.5em;
+	padding-right: 0;
+}
+/*rebooking TLIST_LIST1*/
+body.pnr-retrieve.list .panel.list footer a, body.rebo.list .panel.list footer a {
+	right: auto;
+}
+.panel.price.static dt {
+	width: 35%;
+	float: right;
+}
+.panel.price dd {
+	width: 2%;
+}
+button.validation:after, button.validation:before {
+	right: auto;
+	left: 0;
+	border-radius: .4em 0 0 .4em;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+nav.pagination li:last-child {
+	float: left;
+}
+nav.pagination li:first-child {
+	float: right;
+}
+div.cale h2 {
+	left: auto;
+}
+.award-alert span.miles:before, body.fava .price.award-alert:before {
+	right: .2em;
+}
+.popup button.close, .popup.facs button.close {
+	left: auto;
+	right: -0.7em;
+}
+.popup button.toggle, .daof.fac button.toggle {
+	padding: 0em .7em 2em 2.1em;
+}
+.panel.contact .list.phone li:first-child {
+	margin-left: 0.7em;  /*PTR 07245336 */
+	margin-right: auto;
+	width: 6em;    /*PTR 07245336 */
+}
+article.panel.price footer {
+	clear: left;
+}
+div.tabs li[role='tab'] {
+	border-radius: 0 .4em .4em 0;
+}
+div.tabs li[role='tab']:last-of-type, nav.tabs li:last-child a.navigation {
+	border-radius: .4em 0 0 .4em;
+}
+/*start of 09072140*/
+div.seatmap h2 button {
+	left: .4em;
+	right: auto;
+	margin-left:0;
+	text-align:center;
+}
+/*end of 09072140*/
+header.banner button.back:before, nav.tabs li:first-child a.navigation {
+	border-radius: 0 .4em .4em 0;
+}
+.panel.list li button.bookmark {
+	float: right;
+	left: auto;
+	right: -0.3em;
+}
+.panel.list .fare-deals {
+	right: .4em;
+	left: auto;
+}
+ul.legend li {
+	margin-right: 0;
+}
+div.list.flight-nr li:first-child {
+	width: 8%;
+}
+.data.price {
+	clear: left;
+}
+.data.price small {
+	margin-left: .4em;
+}
+.pnr-retrieve footer p {
+	margin-left: 40%;
+	margin-right: 60%;
+}
+.panel.trip section.trip p {
+	margin-left: auto;
+	margin-right: .4em;
+}
+p.last-updated {
+	text-align: left;
+}
+.panel.trip .pax {
+	padding-right: 35px;
+	background: url(img/icon_about.png) no-repeat 100% 0;
+}
+button.validation {
+	padding-right: 0.5em;
+	padding-left: 2.9em;
+}
+select {
+	background: url(../img/icon-arrow-down.png) no-repeat 10px 50%, -webkit-gradient(linear, 0 100%, 0 0, from(#b2b3b3), color-stop(50%, #fff));
+	padding-right: 5px;
+}
+.panel.cale p.route {
+	direction: rtl;
+}
+.panel.cale p.route span {
+	width: 90%;
+	font-weight: bold
+}
+header.banner button.back, header.banner button.home {
+	left: auto;
+	right: 5px;
+	-webkit-transform: scaleX(-1);
+}
+header.banner button.back:after {
+	-webkit-transform: rotate(-180deg);
+	left: -12px;
+	top: -5px
+}
+#section_itinerary .departure, #section_itinerary .return {
+	padding-left: 5px;
+	padding-right: 2.4em;
+}
+#section_itinerary {
+	text-align: right
+}
+body.booking.fava article.panel section li[role="option"] span.price {
+	right: auto;
+	left: 10px;
+}
+.panel.list li {
+	text-align: right
+}
+div.msg:before {
+	left: auto;
+	right: -.3em;
+}
+div.msg ul {
+	padding: 5px 35px 5px 5px;
+	text-align: right
+}
+.panel.contact label, .panel.pax label, section.deals {
+	text-align: right;
+}
+section:first-of-type{
+	text-align: right !important;
+}
+.location.departure span, .location.departure time, .location.departure abbr, .location.arrival, .location.arrival abbr, .location.arrival span, .panel.trip span {
+	display: inline-block
+}
+pre.conditions {
+	text-align: right
+}
+.expiry select {
+	padding: 0 0em 0 2em;
+}
+nav.breadcrumbs {
+	width: 95%;
+}
+button.validation.cancel, button.validation.disabled {
+	padding-left: 0.5em
+}
+.smartDropDwn.airportPicker {
+	padding-left: 32px;
+	padding-right: 0px
+}
+button.search {
+	right: auto;
+	left: -3px
+}
+.smartDropDwn input[type="text"] {
+	padding-right: 0.3em !important;
+	padding-left: 1.6em;
+}
+.delete {
+	float: left;
+	right: auto;
+	left: 14px;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-right: none
+}
+.deletefocus {
+	background: #221f72
+}
+.delete .x {
+	right: -9px;
+	top: -1px;
+}
+/*start of 09072140*/
+.delete .xrtl {
+    right: 9px
+}
+/*End of 09072140*/
+#section_newContactInfo {
+	text-align: right
+}
+div.services div.pax:before {
+	left: auto;
+	right: -6px;
+	height: 3em;
+}
+article.panel div.services div.buttons li:nth-of-type(2n) {
+	padding-right: 5px;
+	padding-left: 0px;
+}
+.panel.price dt {
+	float: right;
+	width: 65%;
+}
+.panel.price dd {
+	padding-left: 5px
+}
+.popup.cost article.panel.price dd {
+	width: 17%;
+	text-align: left
+}
+.rightTwo {
+	left: 2.2em !important;
+	right: auto!important;
+	top: 0.45em;
+}
+ul[role="listbox"] li[role="option"]::after {
+	background: url("../img/arrow-left-navigation.png") no-repeat scroll 100% 50% transparent;
+}
+ul.ui-autocomplete a {
+	text-align: right;
+}
+.panel.breakdown.price tfoot td:first-of-type {
+	text-align: right;
+}
+div.list ul.input li {
+	margin-left: 0.7em;
+}
+div.services {
+	padding-bottom: 0;
+}
+/*fix for the ptr 07414509*/
+#rightArrow {
+	left: 21px;
+	right: auto;
+}
+#leftArrow {
+	right: 22px;
+	left: auto;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	right: -45px;
+}
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal {
+	background-position-x: 4px;
+	background-position-y: -143px;
+	-webkit-background-size: 35px 185px;
+	background-size: 35px 185px;
+	-moz-background-size: 35px 185px;
+	border-left: 1px solid #5a5a5a;
+	border-right: none;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: -48px;
+}
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+	background-position-x: 4px;
+	background-position-y: 3px;
+	-webkit-background-size: 35px 185px;
+	background-size: 35px 185px;
+	-moz-background-size: 35px 185px;
+	border-right: 1px solid #5a5a5a;
+	border-left: none;
+}
+.m-sliding-content.is-seat:after {
+	left: 0;
+	right: auto;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	top: 3.5em;
+}
+.m-sliding-content span[data-seatInfo="seatnr"] {
+	right: -.2em;
+	left: auto;
+	background: url(../img/ribbon_seatmap_flip.png) no-repeat 0 0;
+	top: 1.9em;
+}
+.m-sliding-content a.expand-down, .m-sliding-content a.expand-up {
+	left: 0.5em;
+	right: auto;
+}
+.m-sliding-content > ul > li:first-child {
+	padding-right: 7.5em;
+	padding-left: inherit;
+	margin-left: 8em;
+	margin-right: auto;
+	border-left: 1px solid #D5D5D5;
+	border-right: none;
+}
+span[data-seatInfo="price"] {
+	text-align: right;
+}
+.m-sliding-content ul[data-seatInfo="charact"] {
+	text-align: right;
+}
+#mycarousel li span.seatNum {
+	right: auto;
+	left: -14px;
+}
+#mycarousel .paxName {
+	text-align: right;
+}
+#mycarousel li span.paxName {
+	padding: 0px 35px 10px 5px;
+}
+#mycarousel li span.pax {
+	left: auto;
+	right: 3px;
+}
+#mycarousel li span.paxName
+{
+float: right!important;
+}
+/*start of 09072140*/
+#mycarousel li {
+	background-position-x: 100%;
+	background-position-y: 50%;
+	margin-right: 5px;
+}
+/*End of start of 09072140*/
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+	background-position-x: 14px;
+	background-position-y: -73px;
+	border-left: 1px solid #5a5a5a;
+	border-right: none;
+}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:not(.jcarousel-prev-disabled-horizontal):not(.jcarousel-prev-disabled)
+{
+background-position-y: -69px;
+}
+.m-sliding-content > ul > li {
+	text-align: right;
+}
+/*End of fix for the ptr 07414509*/
+button.validation.cancel {
+	float: right;
+}
+button.validation {
+	float: left;
+}
+/* PTR 07385256 [Medium]: MeRCI R14 SVV:  mobile4SV: AR - RTL issues [START] */
+article.panel.sear section input[type="text"].ui-autocomplete-input {
+	padding-right: 0.3em !important;dds
+}
+/*ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+	right: 2em;
+}*/
+/* PTR 07385256 [Medium]: MeRCI R14 SVV:  mobile4SV: AR - RTL issues [ END ] */
+
+/*PTR 07797958 [Medium]: MeRCI R15 : IA : RTL : SeatMap : SeatMap in RTL is not displayed properly STARTS*/
+div.seatmap table .exitrowright {
+	background-position-x: 50%;
+	background-position-y: -55px;
+}
+
+div.seatmap table .exitrowleft {
+	background-position-x: 50%;
+	background-position-y: -7px;
+}
+/*PTR 07797958 [Medium]: MeRCI R15 : IA : RTL : SeatMap : SeatMap in RTL is not displayed properly ENDS*/
+
+/*PTR 08071860 [Medium]: MeRCI R15 : IA : RTL : SeatMap : SeatMap in RTL is not displayed properly STARTS*/
+.timetable .panel dl dd {
+	float: left;
+	clear: left;
+}
+.timetable .panel dl dt {
+	float: right;
+	clear: right;
+}
+body.booking.fava article.panel li span.price .data {
+	float: left;
+}
+/*PTR 08071860 [Medium]: MeRCI R15 : IA : RTL : SeatMap : SeatMap in RTL is not displayed properly ENDS*/
+
+.subTools {
+	right: auto;
+	left: 5px;
+	direction: ltr;
+}
+.onoffswitch.cConverter {
+	right: auto;
+	left: 2px;
+}
+nav.otherFeatures, .tools-box {
+	right: auto !important;
+	left: 5px !important;
+}
+#htmlPopup h1.posR {
+	padding: 0.7em 20px 0.7em 0.4em;
+	text-align: right;
+}
+div.seatmap table {
+	direction: ltr;
+}
+a.secondary.seat:before {
+	-webkit-transform: scaleX(-1);
+}
+body.fava .panel.list section li[role="option"]>span.seat-avail {
+	width: 37% !important;
+}
+article.panel header h1 {
+	padding-right: 0.5em;
+}
+div.cale div[role="grid"] {
+	margin-left: 0px;
+}
+article.panel.currencyConverter {
+	position: absolute;
+	top: 55px;
+	left: -4%;
+	width: 87%;
+	margin: 8% 1% 0 11%;
+	z-index: 100001;
+	overflow: hidden;
+	transition: all 1s ease-in;
+	-webkit-transition: all 1s ease-in;
+	display: none;
+}
+article.panel.currencyConverter.addHeight {
+	opacity: 1;
+	transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	left: -4%;
+	display: block;
+}
+section form article section .details dl dt {
+	float: right;
+	clear: right;
+}
+section form article section .details dl dd {
+	float: left;
+	clear: left;
+}
+button.validation.cancel.refresh {
+	float : right;
+}
+header.banner button.share, header.banner button.tools {
+	left: 5px;
+	right: auto;
+}
+body.pnr-retrieve.list .panel.list li[role="option"] p.route {
+	float: right;
+}
+delete .pnr-retrieve footer p {
+	margin-right: none;
+}
+body#balpi article.pax.panel div.pax div.searchInput p.smartDropDwn input[type="text"].ui-autocomplete-input {
+	padding-right: 0.3em !important;
+}
+p.card-number{
+    float:right !important;
+}
+/* 08588400*/
+
+.contact dd {
+margin-right:0;
+}
+.contact dt div {
+position: absolute;
+right: 0px;
+top: 42px;
+}
+dl.on font{
+margin-right:1em;
+}
+/*ends*/
+.contact dt{
+	padding-right::1em;
+}
+.shoppingCartNumber {
+background: #fff;
+border-radius: 35px;
+border: 2px solid #000;
+-webkit-border-radius: 35px;
+color: #000;
+font-size: .4em;
+text-indent: 0;
+font-weight: bolder;
+vertical-align: top;
+line-height: 1.1em;
+position: absolute;
+top: 0px !important;
+right: 0px !important;
+text-align: center;
+display: inline-block;
+width: 12px;
+height: 12px;
+margin: 0;
+}
+div.toolbox li {
+position: relative;
+}
+.shoppingCartContainer{
+overflow: hidden;
+}
+.sliderClose{
+	float:left !important;
+	margin-top:0em;
+}
+header.blueBanner span.icon-cart {
+position: absolute;
+font-size: 25px;
+left: 1.6em;
+top: -0.07em;
+}
+.cartCount{
+	margin-right:43%;
+	margin-left:0em !important;
+}
+/*Menu Bar - START*/
+ul.menu-list li {
+	text-align: right;
+}
+/*Menu Bar - END*/
+.delete.flightDelete {
+	top: 4em;
+}
+div.list.dob {
+	overflow: visible;
+}
+.tools-box-important{
+	left: 40px !important;
+}
+
+/*start of 09072140*/
+.checkin-list li button{left: 0.5em; right:auto; padding:0;}
+.checkin-list[data-info="pax-list"] li:before{right:0; left:auto;}
+#flightSelsectionForPax .checkin-list[data-info="pax-list"] li p {
+padding-left: 0;
+padding-right:0.8rem;
+}
+.sectionDefaultstyle .onoffswitch {
+float: left;
+}
+h2.subheader button {
+right: auto;
+left:11px;
+}
+ul.services-pax>li h4{background-position:19.6rem -0.1rem}
+.services-pax li>h4 button{left:0.6em; right:auto}
+
+
+.checkin-list[data-info="pax-list"] li label, .checkin-list[data-info="pax-list"] li p {
+padding-right:1.6rem;
+}
+.panel.list section>ul li.infant {
+padding: 0 33px 8 20px!important;
+}
+.checkin-list[data-info="pax-list"] li label.paxtInfantmargin{
+    padding-right:2.8em;
+}
+.checkin-list.is-selectable[data-info="pax-list"] li:before {
+right: 2.5rem;
+left:auto;
+}
+.sectionDefaultstyle .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+margin-right: -66px !Important;
+}
+.onoffswitch-inner .onoffswitch-active {
+text-align: center;
+}
+div.message p {
+padding:0.4em 2.8em 0 1em;
+text-align:right;
+}
+.trip.large-display p:first-child {
+border-left: 1px dashed #ddd;
+padding-left: .7em;
+}
+.trip.large-display p:last-child {
+border-left: none;
+padding-left: 0;
+}
+ul.services-pax>li h4:before{
+	content: "";
+background: url(../img/sprite_paxTypes_checkin.png) no-repeat -0.4rem -0.1rem;
+background-size: 25px 139px;
+display: inline-block;
+width: 20px;
+height: 28px;
+	}
+	ul.services-pax>li.infant h4:before{
+	content: "";
+background:url(../img/sprite_paxTypes_checkin.png) no-repeat -0.4rem -6.4rem;
+background-size: 25px 139px;
+display: inline-block;
+width: 20px;
+height: 28px;
+	}
+	ul.services-pax>li.child h4:before{
+	content: "";
+background:url(../img/sprite_paxTypes_checkin.png) no-repeat -0.4rem -2.7rem;
+background-size: 25px 139px;
+display: inline-block;
+width: 20px;
+height: 28px;
+	}
+	ul.services-pax>li h4 {
+background: none;
+background-size:0;
+padding: .7em 0em .3em 3.5rem;
+	}
+
+ul.services-pax>li dl {
+padding-right: 1.5rem;
+padding-left:0;
+}
+.sectionDefaultstyle .panel.list.flightsOpen .trip li>input[type="checkbox"] {
+float: right;
+margin-right:0.5em;
+}
+.sectionconfirmationspecific .panel.list section .checkin-list li>div>ul>li {
+padding:0;
+}
+.sectionconfirmationspecific .panel.list.flightsOpen .getPassbook li {
+padding: 5px 5px 5px 0px;
+}
+.sectionconfirmationspecific .getPassbook a.secondary {
+padding: .5rem 0.5rem 2rem .5rem;
+}
+ul.services-pax>li.infant>label {
+margin-left: 0;
+margin-right:3em;
+}
+.sectionDefaultstyle h1 button.toggle {
+right: auto;
+left:0;
+}
+div.arrowIcon {
+left: .1em;
+right:auto;
+}
+.sectionDefaultstyle select {
+background-position: 2% 50%;
+}
+.panel div.message p, .panel div.message ul li {
+padding: .5em 3em .5em 5rem;
+}
+button.secondary {
+float: left;
+
+}
+div.arrowIcon:before {
+width: 0.7rem;
+}
+ul.input-group.contact>li:first-child {
+padding-right: 0;
+padding-left:.5rem;
+}
+.carrousel-full ul li.boardingindex {
+margin: 0 6.5rem;
+}
+.sectionDefaultstyle .panel section header h2.subheader>button {
+width: 30px;
+}
+ul.services-pax li span.infant h4:before{
+	background-position: -0.4rem -8.5em;
+	}
+.sectionDefaultstyle .panel section header h2.subheader>button.toggle:after {
+width: 2.4em;
+	}
+	.boardingPassCont span.icon-envelope, .boardingPassCont span.icon-ticket {
+margin-right: 0;
+margin-left:1em;
+}
+.boardingPass {
+margin-right: 0;
+margin-left:1em;
+}
+div.arrowIcon.up:before {
+width: 0.8rem;
+}
+.sectionDefaultstyleSsci div.list ul.input li:first-child:not(.ui-menu-item) {
+margin-right: 0em!important;
+}
+.sectionDefaultstyleSsci .panel.contact .list.phone li:last-child {
+width: 70%;
+margin-right: 0;
+vertical-align: top;
+margin-left: 0;
+}
+/*End of 09072140*/

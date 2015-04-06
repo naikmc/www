@@ -1,0 +1,177 @@
+{Library {
+   $classpath : 'modules.view.merci.common.utils.home.MDynamicHomeTripBox',
+   $hasScript: true,
+   $macrolibs: {
+    message: 'modules.view.merci.common.utils.MerciMsgLib',
+    common: 'modules.view.merci.common.utils.MerciCommonLib'
+   },
+   $dependencies: [
+        'modules.view.merci.common.utils.MCommonScript',
+   ],
+}}
+  {var merciFunc = modules.view.merci.common.utils.MCommonScript/}
+  {var showweather = false /}
+  {macro tripBox(_this)}
+    <div class="wMin on" id="triplist">
+      <hgroup>
+        <h1>${_this.labels.tx_merciapps_my_trips}</h1>
+      </hgroup>
+      <h2>Click on trip to add to trip box</h2>
+      {var totalListCounter=-1 /}
+      {foreach recLoc in _this.sortedPNRs}
+        {var pnr = _this.data.pnrList[recLoc] /}
+        {set totalListCounter+=1 /}
+        <div class="trip" id="trip-trip${totalListCounter}" {on click {fn: this.addTripToTripBox, args: {totalListCounter:totalListCounter, _this:_this }, scope: this} /}>
+        <h2>${pnr.BCityName} ${_this.labels.tx_merci_text_booking_shopdep_small_to_string} ${pnr.ECityName}</h2>
+          <p>${this.formatDate(pnr.BDateParams, _this.labels.tx_merci_pattern_DayDateFullMonthYear)} - ${this.formatDate(pnr.EDateParams, _this.labels.tx_merci_pattern_DayDateFullMonthYear)}</p>
+        <p>${this.getTripListString(_this,pnr)}</p>
+        </div>
+      {/foreach}
+    </div>
+
+    {var pnrToDisplay = _this.data.pnrToDisplay/}
+    ${this.setPNRInfo(_this, pnrToDisplay)}
+    <div id="mytrips" class="swipeholder">
+      <div class="carrousel-header">
+        <div {id 'tripBox_dynaScroller' /} class="carrousel-content Dynamic">
+          <ol id="tripBox_olScroll">
+            {if this.isBoardingPassGenerated(_this,pnrToDisplay) && !this.merciFunc.isEmptyObject(this.boardingPass)}
+              {var upcomingSegment = this.getUpcomingSegment(_this,pnrToDisplay)/}
+              <li class="last wMin" id="tripBox_liScroll_${_this.scrollCount}">
+                <hgroup class="boardingpass">
+                  <h1>${this.boardingPass.customerName}</h1>
+                  <p>${this.formatDate(upcomingSegment.depDateParams, _this.labels.tx_merci_pattern_DayDateFullMonthYear)} : ${upcomingSegment.departureCityName} ${_this.labels.tx_merci_text_booking_shopdep_small_to_string} ${upcomingSegment.arrivalCityName}</p>
+                </hgroup>
+                <div>
+                  <figure class="boarding"></figure>
+
+
+		  <figcaption>${this.cabinClass} - ${this.boardingPass.seat}</figcaption>
+                </div>
+                <div class="actions">
+                  {var ver = this.findIOSVersion()/}
+                  {var isIOS = aria.core.Browser.isIOS /}
+                  {var versionTrue = false /}
+                  {var safariTrue = false /}
+                  {var appTrue = false/}
+                  {if aria.core.Browser.name.toLowerCase().indexOf("safari")!= -1}
+                    {set appTrue = true/}
+                  {/if}
+                  {if typeof ver !== "undefined" && ver[0]>=6}
+                    {set versionTrue = true/}
+                  {/if}
+                  {if aria.core.Browser.browserType.toLowerCase().indexOf("safari")!= -1}
+                    {set safariTrue = true/}
+                  {/if}
+                  {if this.merciFunc.booleanValue(isIOS) && versionTrue && (safariTrue || appTrue)}
+                  //parameters.SITE_SSCI_PSSBK_FRMT_CD && parameters.SITE_SSCI_PSSBK_FRMT_CD.trim() != ""}
+                    <button id="btn-passbook" {on click {fn : this.onPassBookButtonClick, args:{_this:_this, pnrToDisplay:pnrToDisplay}} /}>Add to Passbook</button>
+                  {/if}
+                  <button {on click {fn: this.onCheckinClick, scope: this, args:{_this:_this, pnrToDisplay:pnrToDisplay}} /}>${_this.labels.tx_merci_checkIn_manage}</button>
+                </div>
+                ${incrementScrollCount(_this)}
+              </li>
+              {call displayWeatherPanel(_this,pnrToDisplay)/}
+              {set weatherDisplayed = true /}
+            {elseif this.isCheckinEnabled(_this,pnrToDisplay)/}
+              <li class="on first wMin" id="tripBox_liScroll_${_this.scrollCount}">
+                {call pnrDetails(_this,pnrToDisplay,_this.labels.tx_merci_flight_open)/}
+              <div class="actions">
+                  <button class="btn-mytrips" {on click {fn: this.viewTrips, scope: this, args:{_this:_this}} /}>${_this.labels.tx_merci_view_othertrips}</button>
+                  <button {on click {fn: this.onCheckinClick, scope: this, args:{_this:_this, pnrToDisplay:pnrToDisplay}} /}>${_this.labels.tx_merci_text_air_check_in}</button>
+              </div>
+                ${incrementScrollCount(_this)}
+            </li>
+
+               {call displayWeatherPanel(_this,pnrToDisplay)/}
+               {set weatherDisplayed = true /}
+            {/if}
+
+            {if this.merciFunc.booleanValue(pnrToDisplay.isPNRPayLaterEligible)}
+            <li class="wMin" id="tripBox_liScroll_${_this.scrollCount}">
+                {call pnrDetails(_this,pnrToDisplay,_this.labels.tx_merci_services_topay)/}
+              <div class="actions">
+                  <button class="btn-mytrips" {on click {fn: this.viewTrips, scope: this, args:{_this:_this}} /}>${_this.labels.tx_merci_view_othertrips}</button>
+                  <button {on click {fn: this.payLaterPymntAction, scope: this, args:{_this:_this, pnrToDisplay:pnrToDisplay}} /}>${_this.labels.tx_merci_services_paynow}</button>
+              </div>
+              ${incrementScrollCount(_this)}
+            </li>
+              {if !this.merciFunc.booleanValue(this.weatherDisplayed)}
+                {call displayWeatherPanel(_this,pnrToDisplay)/}
+                {set weatherDisplayed = true /}
+              {/if}
+            {else/}
+            <li class="wMin" id="tripBox_liScroll_${_this.scrollCount}">
+                {var displayMessage = _this.labels.tx_merci_text_booking_bookingconfirmed /}
+                {if this.merciFunc.booleanValue(pnrToDisplay.isPNRWaitListed)}
+                  {set displayMessage = _this.labels.tx_merci_text_booking +" "+ _this.labels.tx_merci_text_WaitlistedStatus /}
+                {/if}
+                {call pnrDetails(_this,pnrToDisplay,displayMessage)/}
+              <div class="actions">
+                  <button class="btn-mytrips" {on click {fn: this.viewTrips, scope: this, args:{_this:_this}} /}>${_this.labels.tx_merci_view_othertrips}</button>
+                  <button {on click {fn: this.viewBooking, scope: this, args:{_this:_this, pnrToDisplay:pnrToDisplay}} /}>${_this.labels.tx_merci_view_booking}</button>
+              </div>
+              ${incrementScrollCount(_this)}
+            </li>
+              {if !this.merciFunc.booleanValue(this.weatherDisplayed)}
+                {call displayWeatherPanel(_this,pnrToDisplay)/}
+                {set weatherDisplayed = true /}
+              {/if}
+            {/if}
+          </ol>
+        </div>
+      </div>
+	{call common.createDynaCrumbs('tripBox',_this.scrollCount)/}
+    </div>
+  {/macro}
+
+  {macro pnrDetails(_this,pnrToDisplay,displayMessage)}
+    {var upcomingSegment = this.getUpcomingSegment(_this,pnrToDisplay)/}
+    <hgroup>
+        <h1>${displayMessage}</h1>
+        <h2>${upcomingSegment.departureCityName} ${_this.labels.tx_merci_text_booking_shopdep_small_to_string} ${upcomingSegment.arrivalCityName}</h2>
+    </hgroup>
+    <p>${this.formatDate(upcomingSegment.depDateParams, _this.labels.tx_merci_pattern_DayDateFullMonthYear)} - ${this.formatDate(upcomingSegment.arrDateParams, _this.labels.tx_merci_pattern_DayDateFullMonthYear)}</p>
+    <p class="dispEllipsis">${this.cabinClass} - ${_this.labels.tx_merci_text_booking_srch_adults} ${this.noOfAdults}{if this.noOfChildren > 0}, ${_this.labels.tx_merci_text_booking_srch_children} ${this.noOfChildren}{/if}{if this.noOfInfants >0}, ${_this.labels.tx_merci_text_booking_srch_infants} ${this.noOfInfants}{/if}</p>
+  {/macro}
+  {macro displayWeatherPanel(_this,pnrToDisplay)}
+    {if this.merciFunc.booleanValue(_this.config.siteEnableWeatherForecast) && this._chkDateReq(_this,pnrToDisplay)}
+      <li class="wMin weather" id="tripBox_liScroll_${_this.scrollCount}">
+      {section {
+        type: 'div',
+        bindRefreshTo: [{inside: this.weather, to: "showweather"}],
+        macro: {name: "weatherMacro", scope: this, args:[_this]}
+      }/}
+      ${__getWeather(_this,pnrToDisplay)}
+      ${incrementScrollCount(_this)}
+    </li>
+    {/if}
+  {/macro}
+
+  {macro weatherMacro(cxt)}
+    {var dateR = parseInt(cxt.config.siteWeatherDateRange) || 5 /}
+      {if this.showweather}
+          <hgroup>
+            <h1>${cxt.labels.tx_merci_local_weather}</h1>
+            <h2 class="weather_city">${this.weather.city_name}</h2>
+          </hgroup>
+
+          <section class="weather_section">
+            {for var i=0; i < dateR; i++}
+            {var dayWeather = this.weather.forecast[i] /}
+              <div>
+                  <figure class="img-${dayWeather["daytime"].weathericon}-s"></figure>
+                  <figcaption><span style="max-width:150%;text-overflow:ellipsis">${dayWeather.daycode}<br>
+                  ${dayWeather["daytime"].txtshort}<br/>
+                  ${dayWeather["daytime"].hightemperature}&deg;F | <span class="lowtext">${dayWeather["daytime"].lowtemperature}&deg;F</span></span>
+                  </figcaption>
+                </div>
+            {/for}
+          </section>
+          {else /}
+          <hgroup>
+            <h2 class="weather_city">Weather Data Unavailable</h2>
+          </hgroup>
+      {/if}
+  {/macro}
+{/Library}

@@ -1,0 +1,20 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.form.SelectStyle",
+    $extends : "aria.widgets.form.InputStyle"
+}}
+    {var skinnableClassName="Select"/}
+    {var useFrame=true/}
+    
+    {macro main()}
+        .xSelect {
+            display:inline-block;
+            white-space:nowrap;
+        }
+        {call startLooping()/}
+    {/macro}
+    
+{/CSSTemplate}

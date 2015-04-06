@@ -1,0 +1,146 @@
+{Library {
+    $classpath : 'modules.view.merci.common.utils.MerciCommonLib',
+   $dependencies: [
+        'modules.view.merci.common.utils.MCommonScript'
+    ],
+}}
+  {var merciFunc = modules.view.merci.common.utils.MCommonScript/}
+  {var isBreadCrumbTextEnabled = this.merciFunc.booleanValue(jsonResponse.data.breadCrumbsParams.ENABLE_BREADCRUMB_TEXT)/}
+  {macro showBreadcrumbs(step)}
+    {if isBreadCrumbTextEnabled}
+      <nav class="breadcrumbs">
+        <ul>
+          {for var i=1; i<step; i++}
+            <li><span class="invisible">${jsonResponse.data.breadCrumbsParams["STEP"+i]}</span><span>${i}</span></li>
+          {/for}
+          <li class="active"><span>${jsonResponse.data.breadCrumbsParams["STEP"+step]}</span><span>${step}</span><span class="bread"></span></li>
+          {for var i=step+1; i<6; i++}
+            <li><span class="invisible">${jsonResponse.data.breadCrumbsParams["STEP"+i]}</span><span>${i}</span></li>
+          {/for}
+        </ul>
+      </nav>
+    {else/}
+    <nav class="breadcrumbs">
+      <ul>
+        {for var i=1; i<step; i++}
+          <li><span>${i}</span></li>
+        {/for}
+        <li class="active"><span>${step}</span><span class="bread"></span></li>
+        {for var i=step+1; i<6; i++}
+          <li><span>${i}</span></li>
+        {/for}
+      </ul>
+    </nav>
+    {/if}
+  {/macro}
+
+  {macro locationDetails(classList, dateBean, location, terminal, labels, daysBwDepArr)}
+    <p class="${classList}">
+      {var strDate = dateBean.year + '-' + dateBean.month + '-' + dateBean.day /}
+      {var h = (dateBean.hour<10 ? '0'+dateBean.hour : dateBean.hour) /}
+      {var m = (dateBean.minute<10 ? '0'+dateBean.minute : dateBean.minute) /}
+      {var strTime = h + ':' + m /}
+      <time class="hour" datetime="${strDate} ${strTime}">${strTime}</time>
+    {if (daysBwDepArr != null && !merciFunc.isEmptyObject(daysBwDepArr) && daysBwDepArr > 0)}
+    <span>+${daysBwDepArr} ${labels.tx_merci_text_delay_days}</span>
+    {/if}
+      <span class="city">${location.cityName}</span>
+      <span class="dash">,</span>
+      <span class="airport">${location.locationName}</span>
+      {if terminal}
+        <span class="terminal">${labels.tx_merci_text_terminal} ${terminal}</span>
+      {/if}
+      <abbr class="city">(${location.locationCode})</abbr>
+    </p>
+  {/macro}
+
+  {macro flightNumber(segment, showStops, stopsCounter, labels, config, _this)}
+    <p class="flight-number">
+      <strong>
+      {if (config != null && config.showFlightStatusLink != null && config.showFlightStatusLink.toLowerCase() == 'true')}
+        <a href="javascript:void(0);" {on click {fn: 'onFlightStatusClick', scope: _this, args:{flightNo:segment.airline.code+segment.flightNumber, segment:segment}} /} >
+          ${segment.airline.code}${segment.flightNumber}
+        </a>
+      {else/}
+        ${segment.airline.code}${segment.flightNumber}
+      {/if}
+    </strong>
+        <span>
+        {if segment.nbrOfStops === 0}
+            ${labels.tx_merci_text_direct}
+        {elseif segment.nbrOfStops === 1/}
+           ${segment.nbrOfStops} ${labels.tx_merci_text_pnr_stop}
+          {else/}
+           ${segment.nbrOfStops} ${labels.tx_merci_text_pnr_stops}
+          {/if}
+        </span>
+
+    </p>
+  <p>
+  {if (config != null && config.siteDisplayOperatedBy != null && config.siteDisplayOperatedBy.toLowerCase() == 'true')}
+    {if (!merciFunc.isEmptyObject(segment.opAirline) && !merciFunc.isEmptyObject(segment.opAirline.name))}
+      <span>${labels.tx_merci_text_booking_operatedbycolon} ${segment.opAirline.name}</span>
+    {/if}
+  {/if}
+  {if (config != null && config.siteOpInfoAllFlights != null && config.siteOpInfoAllFlights.toLowerCase() == 'true')}
+    {if (merciFunc.isEmptyObject(segment.opAirline) )}
+      {if (config.sitePreferredCarrier.indexOf(segment.airline.code) == -1)}
+        <span>${labels.tx_merci_text_booking_operatedbycolon} ${segment.airline.name}</span>
+      {/if}
+    {/if}
+  {/if}
+  </p>
+  {/macro}
+
+   {macro currencyConverter(labels,name,code,pgTkt,_this)}
+         <article class="panel currencyConverter">
+          <header>
+            <h1>${labels.tx_merci_currency_converter}</h1>
+          </header>
+           <div class="msg warning messageB error" id="convErrDiv" style="display: none;">
+            <ul><li id="errMsg"></li></ul>
+           </div>
+          <section class="formConverter">
+            <span class="originalCurrency"><span class="title">${labels.tx_merci_org_currency}</span>${name} (${code})</span>
+              <div class="onoffswitch cConverter">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <div class="onoffswitch-inner">
+                <div id="orgCurrency" class="onoffswitch-active">&nbsp;${code}</div><div id="currCurrency" class="onoffswitch-inactive">&nbsp;${code}</div>
+              </div>
+              <div class="onoffswitch-switch"></div>
+            </label>
+           </div>
+          <p class="location">
+          <label for="newCurrency">${labels.tx_merci_sel_currency}</label>
+
+           <p class="smartDropDwn">
+              <input id="newCurrency" type="text" value="" autocomplete="off"  autocorrect="off" {on keyup {fn: merciFunc.showCross ,args : {name : "newCurrency" ,id: "newCurrency"}} /}>
+              <span class="delete hidden" {on tap {fn: merciFunc.clearField, args: {id: "newCurrency"}}/} id="delnewCurrency"><span class="x">x</span></span>
+           </p></p>
+        </section>
+
+        <footer class="buttons">
+          <button type="submit" {on click {fn: 'applyCurrency',args: {pgTkt: pgTkt,org:code}, scope: _this} /} class="validation">${labels.tx_merci_booking_avail_filter_apply}</button>
+          <button type="submit" class="validation cancel">${labels.tx_merci_cancel}</button>
+        </footer>
+     </article>
+   {/macro}
+   {macro createHTMLDom(ffNumber)}
+	<div class="popup" id="htmlContainer_${ffNumber}" style="display: none;">
+		<div id="htmlPopup_${ffNumber}">
+		</div>
+		<button type="button" class="close" {on click {fn:'closePopup'}/}><span>Close</span></button>
+	</div>
+  {/macro}
+  {macro createDynaCrumbs(id,count)}
+  <nav id="${id}_dynaScrollerCrumb" class="dynaNav">
+   <ol class="progress">
+      <li class="on"> </li>
+     {for var i=1; i<count;i++}
+       <li> </li>
+     {/for}
+   </ol>
+  </nav>
+  {/macro}
+{/Library}

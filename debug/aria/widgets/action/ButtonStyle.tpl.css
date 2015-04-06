@@ -1,0 +1,57 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.action.ButtonStyle",
+    $extends : "aria.widgets.WidgetStyle"
+}}
+    {var skinnableClassName="Button"/}
+    {var useFrame=true/}
+
+    {macro main()}
+        .xButton {
+            background:none repeat scroll 0 0 transparent;
+            border:0 none;
+            cursor:pointer;
+            {if aria.core.Browser.isFirefox}
+              margin: -1px -3px -1px -3px;
+            {else/}
+              margin: -1px 0px -1px 0px;
+            {/if}
+            padding:0;
+            vertical-align:top;
+            tabindex:10;
+        }
+
+        {if aria.core.Browser.isIE7}
+            .xButton .xFrameContent {
+                text-align: center;
+            }
+        {/if}
+
+        button.xButton::-moz-focus-inner {
+             border: 0;
+        }
+
+        .xButtonDisabled {
+            cursor:default;
+        }
+
+        {call startLooping()/}
+    {/macro}
+
+    {macro writeSkinClass(info)}
+        .xBTNbkg_${info.skinClassName} {
+            /* old type of button (to remove) */
+            {call background("transparent",info.spriteURL,"no-repeat")/}
+        }
+    {/macro}
+
+    {macro writeState(info)}
+        .${cssPrefix(info)}c {
+            font-weight: ${info.skinClass.label.fontWeight}
+        }
+    {/macro}
+
+{/CSSTemplate}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="mobile-application">
+	<head>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title id="title">MeRCI</title>
+
+		<!----- INCLUDING SCRIPTS FOR CORDOVA [START] ----->
+		<script type="text/javascript" src="../cordova/cordova.js"></script>
+		<!----- INCLUDING SCRIPTS FOR CORDOVA [END] ----->
+		
+		<!----- INCLUDING MeRCI Community App Static Variables [START] ---->
+		<script type="text/javascript" src="merci_variables.js"></script>
+		<!----- INCLUDING MeRCI Community App Static Variables [END] ----->
+
+	  	<link rel="stylesheet" type="text/css" href="modules/common/css/merci.css">   
+	 	<link rel="stylesheet" type="text/css" href="modules/custom/css/custom_merci.css">
+		<style type="text/css">
+
+			nav.navigation {
+				margin-bottom: 10%;
+				margin-top: 10%;
+			}
+
+			.nav {
+				margin-bottom: -47px;
+				padding-top: 4em;
+			}
+
+			#getTrip div.msg {
+				margin: 4.5em 0 1.5em 0 !important;
+			}
+
+			#timetable div.msg {
+				margin: 4.5em 0 1.5em 0 !important;
+			}
+
+			.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+				margin-top: 3.5em;
+			}
+
+			div#stmp_wrapper_main {
+				margin-bottom: 5.5em!important;
+			}
+
+			.stmpHeader.animate {
+				top: -80px!important;
+			}
+
+			.stmpFooter {
+				bottom: 4.5em!important;
+			}
+			
+			nav.helpIcon,nav.filterIcon {
+				z-index: 10000;
+			}
+		</style>
+
+	</head>
+
+	<body class="bodyWrapper">
+		
+		<div id="sb-site">
+			<div id="top"></div>
+			<div id="layout"></div>
+			<div class="msk loading" style="display:block">&nbsp;</div>
+		</div>
+		
+		<div class="msk splash loading" style="display:block;">&nbsp;</div>
+		<input type="hidden" name="json_resp" id="json_resp" value="" />
+		<input type="hidden" value="" name="app_json_data" id="app_json_data" />
+
+		<script type="text/javascript">
+			appLaunch.initialize();
+		</script>
+		
+		<!----- INCLUDING ARIA PACKAGED SCRIPTS [START] ----->
+		<script type="text/javascript" src="atbootstrap.js"></script>
+		<script type="text/javascript" src="core/merci-other.js"></script>
+		<script type="text/javascript" src="custom_variables.js"></script>
+		<script type="text/javascript" src="core/community-app.js"></script>
+		
+		<script>
+			if (typeof merciAppData != 'undefined' 
+					&& merciAppData["settings"] 
+					&& merciAppData["settings"]["custom"] != null
+					&& merciAppData["settings"]["custom"].allowCustomPackages) {
+				var customBootstrap = document.createElement('script');
+				customBootstrap.setAttribute('type','text/javascript');
+				customBootstrap.setAttribute('src', 'custom_bootstrap.js');
+				document.getElementsByTagName('body')[0].appendChild(customBootstrap);
+			}
+			
+			communityapp.initApp();
+				
+		</script>
+	</body>
+</html>

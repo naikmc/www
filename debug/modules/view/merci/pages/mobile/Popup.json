@@ -1,0 +1,24 @@
+{
+	contents: {
+		placeholderContents: {
+
+		}
+	},
+	pageComposition: {
+		template: 'modules.view.merci.common.templates.MCommonContainer',
+		placeholders: {
+			"body": {
+				template: 'modules.view.merci.common.templates.MDisplayPopup',
+				module:'popUpCtrl' 
+			}
+		},
+		modules: {
+			'popUpCtrl': {
+				classpath: 'modules.view.merci.common.controller.MerciPopupCtrl'
+			}
+		}	
+	},
+	pageId: 'Popup',
+	url: 'Popup',
+	title: 'MeRCI'
+}

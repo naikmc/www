@@ -1,0 +1,12 @@
+{Library {
+    $classpath : 'modules.view.merci.common.utils.MerciTabletLib',
+		$hasScript: true
+}}
+	
+	{macro showCrossButton(label,className,id)}
+		<header>
+	      <h1 class="${className}">${label}<span class="tabletPanelClose" {on tap {fn:"closePopUpTpl", args:{ID:id}}/}>close</span></h1>
+	    </header>
+	{/macro}
+/*{on click {fn:"closePopUpTpl", args:{ID:id} }  /}*/
+{/Library}

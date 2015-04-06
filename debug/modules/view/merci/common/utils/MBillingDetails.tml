@@ -1,0 +1,217 @@
+{Library {
+    $classpath : 'modules.view.merci.common.utils.MBillingDetails',
+    $macrolibs: {
+		autocomplete: 'modules.view.merci.common.widgets.autocomplete.AutoCompleteLibrary'
+  	},
+		$hasScript: true
+}}
+
+	{macro billingDetails(labels,siteParams,rqstParams,utils,globallist,fromPage)}
+		{if fromPage == 'alpi'}
+			<header class="pi_alpicinfo">
+				<h1>
+					${labels.tx_merci_ts_paymentpage_Billingaddress}
+					<button type="button" class="toggle" aria-expanded="true" data-aria-controls="section22 footer22 p222" id ="billingDetails"
+						{on tap {fn:'toggle', scope: this, args : {ID1 : 'billingDetails'} }/}><span>Toggle</span></button>
+				</h1>
+			</header>
+			<section id="section_billingDetails">
+		{/if}
+
+		<footer class="ccAddress">
+			{if fromPage == 'purc'}
+				<h2>${labels.tx_merci_text_booking_purc_creditcardbill}</h2>
+			{/if}
+			{if siteParams.sitePrefillBillData.toLowerCase() == 'true' && !utils.isEmptyObject(rqstParams.listAddressInformationLine1)}
+				<p class="copy-card">
+					<input id="cb-card-detail" type="checkbox" {on click {fn: 'prefillProfileInfo', scope: this, args:{globalList: globallist,rqstParams: rqstParams}}/}>
+					<label for="cb-card-detail">${labels.tx_merci_text_booking_purc_prefill_address}</label>
+				</p>
+			{/if}
+			<p>${labels.tx_merci_text_booking_purc_insurance_allowedtext}</p>
+             <p class="name  alpi_pltgfn">
+					<label for="input1">${labels.tx_merci_text_booking_purc_insurance_address1}<span class="mandatory"> * </span></label>
+			</p>
+			{call autocomplete.createAutoComplete({
+					name: "AIR_CC_ADDRESS_FIRSTLINE",
+					id: "AIR_CC_ADDRESS_FIRSTLINE",
+					autocorrect:"off",
+					autocapitalize:"none",
+					autocomplete:"off",
+					retainSrch: siteParams.siteRetainSearch,
+					selectFn: {fn:"setAddressDetails" , scope: this},
+					placeholder: labels.tx_merci_text_booking_purc_insurance_address1,
+					type: 'text',
+              		source: this.getAddressList(siteParams.siteRetainSearch)
+				})/}
+
+			<p class="address smartDropDwn">
+				<label for="AIR_CC_ADDRESS_SECONDLINE">${labels.tx_merci_text_booking_purc_insurance_address2}</label>
+				<input id="AIR_CC_ADDRESS_SECONDLINE" name="AIR_CC_ADDRESS_SECONDLINE" type="text" autocorrect="off" placeholder="${labels.tx_merci_text_booking_purc_insurance_address2}" .
+					{on keyup {fn:"clrSelected" ,args : {name : 'AIR_CC_ADDRESS_SECONDLINE',id:'AIR_CC_ADDRESS_SECONDLINE'}} /} />
+				<span class="delete hidden" {on click {fn: 'clearField', args: {id: 'AIR_CC_ADDRESS_SECONDLINE', mandatory: true}}/} id="delAIR_CC_ADDRESS_SECONDLINE"><span class="x xrtl">x</span></span>
+			</p>
+			{if siteParams.siteCountryOrdr.toLowerCase() == 'true'}
+				<p class="zipCode smartDropDwn">
+					{call zipCode(labels,siteParams,rqstParams,utils,globallist) /}
+				</p>
+			{/if}
+			<div class="row">
+				<div class="{if siteParams.siteCountryOrdr.toLowerCase() == 'true'}field-6{else/}field-4{/if}">
+					<div class="padding-right">
+					 <p class="smartDropDwn">
+						<label for="AIR_CC_ADDRESS_CITY">${labels.tx_merci_text_booking_purc_creditcardcity} <span class="mandatory">*</span></label>
+						<input autocorrect="off" id="AIR_CC_ADDRESS_CITY" name="AIR_CC_ADDRESS_CITY" type="text" {on blur {fn:"toggleMandatoryBorder" ,args :{id: "AIR_CC_ADDRESS_CITY", mandatory: true}} /}
+							{on keyup {fn:"clrSelected" ,args : {name : 'AIR_CC_ADDRESS_CITY',id:'AIR_CC_ADDRESS_CITY'}} /} placeholder="${labels.tx_merci_text_booking_purc_creditcardcity}" />
+						<span class="delete hidden" {on click {fn: 'clearField', args: {id: 'AIR_CC_ADDRESS_CITY', mandatory: true}}/} id="delAIR_CC_ADDRESS_CITY"><span class="x xrtl">x</span></span>
+					 </p>
+					</div>
+				</div>
+				{if siteParams.siteCountryOrdr.toLowerCase() == 'true'}
+					<div class="field-6">
+						{call purcCountry(labels,siteParams,rqstParams,utils,globallist) /}
+					</div>
+				{else/}
+					<div class="field-4">
+						<div class="padding-right">
+							{call purcProvince(labels,siteParams,rqstParams,utils,globallist) /}
+						</div>
+					</div>
+					<div class="field-4">
+						{call zipCode(labels,siteParams,rqstParams,utils,globallist) /}
+					</div>
+				{/if}
+			</div>
+			<div class="row">
+				<div class="field-12">
+					{if siteParams.siteCountryOrdr.toLowerCase() == 'true'}
+						<p class="smartDropDwn">{call purcProvince(labels,siteParams,rqstParams,utils,globallist) /}</p>
+						<select id="province" name="province" style="display:none" {on change {fn: '_onProvinceSelection', scope: this}/}></select>
+					{else/}
+						{call purcCountry(labels,siteParams,rqstParams,utils,globallist) /}
+					{/if}
+				</div>
+			</div>
+		</footer>
+		{if fromPage == 'alpi'}
+			</section>
+		{/if}
+	{/macro}
+
+	{macro zipCode(labels,siteParams,rqstParams,utils,globallist)}
+		<label  for="AIR_CC_ADDRESS_ZIPCODE">
+			{var mandatory = rqstParams.profileFieldsAccessor && rqstParams.profileFieldsAccessor.siteAirCCAddrZip && rqstParams.profileFieldsAccessor.siteAirCCAddrZip.mandatory/}
+			${labels.tx_merci_text_booking_purc_creditcardpostcode}&nbsp;
+			{if mandatory == true}
+				<span class="mandatory">*</span>
+				<input type="hidden" name="validatePostalCode" value="true" />
+			{else/}
+				<input type="hidden" name="validatePostalCode" value="false" />
+			{/if}
+		</label>
+		<input autocorrect="off" id="AIR_CC_ADDRESS_ZIPCODE" name="AIR_CC_ADDRESS_ZIPCODE" type="text" {on keyup {fn:"clrSelected" ,args : {name : 'AIR_CC_ADDRESS_ZIPCODE',id:'AIR_CC_ADDRESS_ZIPCODE'}} /}
+			placeholder="${labels.tx_merci_text_booking_purc_creditcardpostcode}" />
+		<span class="delete hidden" {on click {fn: 'clearField', args: {id: 'AIR_CC_ADDRESS_ZIPCODE', mandatory: true}}/} id="delAIR_CC_ADDRESS_ZIPCODE"><span class="x xrtl">x</span></span>
+	{/macro}
+
+	{macro purcProvince(labels,siteParams,rqstParams,utils,globallist)}
+		<label for="AIR_CC_ADDRESS_STATE">
+			${labels.tx_merci_text_booking_purc_creditcardstate}&nbsp;
+			{if rqstParams.profileFieldsAccessor && rqstParams.profileFieldsAccessor.siteAirCCAddrState && rqstParams.profileFieldsAccessor.siteAirCCAddrState.mandatory == true}
+				<span class="mandatory">*</span>
+			{/if}
+		</label>
+		<input autocorrect="off" id="AIR_CC_ADDRESS_STATE" name="AIR_CC_ADDRESS_STATE" type="text" {on keyup {fn:"clrSelected" ,args : {name : 'AIR_CC_ADDRESS_STATE',id:'AIR_CC_ADDRESS_STATE'}} /}
+			placeholder="${labels.tx_merci_text_booking_purc_creditcardstate}"  />
+		<span class="delete hidden" {on click {fn: 'clearField', args: {id: 'AIR_CC_ADDRESS_STATE', mandatory: true}}/} id="delAIR_CC_ADDRESS_STATE"><span class="x xrtl">x</span></span>
+	{/macro}
+
+	{macro purcCountry(labels,siteParams,rqstParams,utils,globallist)}
+		<div class="country">
+			{var countryCookie = 'merci.countryCode'/}
+			{var countrySiteCode = rqstParams.param.COUNTRY_SITE/}
+			{var countryCookieValue = ''/}
+			{if rqstParams.cookies != null && rqstParams.cookies[countryCookie] != null}
+				{set countryCookieValue = rqstParams.cookies[countryCookie]/}
+			{/if}
+
+			{var countryCode = ''/}
+			{var countryName = ''/}
+			{if globallist.slLangCountryList != null}
+				{foreach country in globallist.slLangCountryList}
+					{if countrySiteCode == country[0] || countryCookieValue == country[0]}
+						{set countryCode = country[0]/}
+						{set countryName = country[1]/}
+					{/if}
+					{if !utils.isEmptyObject(rqstParams.airCCAddressCountry)}
+						{if (country[0] == rqstParams.airCCAddressCountry)}
+							{set countryCode = country[0]/}
+							{set countryName = country[1]/}
+						{/if}
+					{/if}
+				{/foreach}
+			{/if}
+
+			{if siteParams.sitePredTxtCountry.toLowerCase() == 'true'}
+				{var provinceFn = null /}
+				{if (siteParams.siteCountryOrdr == 'TRUE')}
+					{set provinceFn = {fn:"provinceDisplay", scope: this, args:{globalList: globallist,siteParams:siteParams,_this:this}} /}
+				{/if}
+
+				{call autocomplete.createAutoComplete({
+					name: "AIR_CC_ADDRESS_COUNTRY_TXT",
+					id: "AIR_CC_ADDRESS_COUNTRY_TXT",
+					autocorrect:"off",
+					autocapitalize:"none",
+					autocomplete:"off",
+					placeholder: labels.tx_merci_text_booking_alpi_country,
+					type: 'text',
+					labelText: labels.tx_merci_text_purcui_country_label,
+					isMandatory: true,
+					value: countryName,
+              		source: this.getCountryList(globallist),
+              		onblur:provinceFn,
+              		selectFn:provinceFn
+				})/}
+				<input type="hidden" id="AIR_CC_ADDRESS_COUNTRY" name="AIR_CC_ADDRESS_COUNTRY" value="${countryCode}" />
+			{else/}
+				{set prefillVar = ''/}
+				{var countryValue = ''/}
+				{if !utils.isEmptyObject(rqstParams.airCCAddressCountry)}
+					{set prefillVar = rqstParams.airCCAddressCountry/}
+				{/if}
+				{if rqstParams.param.selFFAirline != null}
+					{set countryValue = rqstParams.param.selFFAirline/}
+				{/if}
+				<label for="AIR_CC_ADDRESS_COUNTRY">
+					${labels.tx_merci_text_purcui_country_label}&nbsp;
+					<span class="mandatory">*</span>
+				</label>
+                {var alphabetStr = labels.tx_pltg_pattern_AlphabetLetters/}
+                {var alphabetStrArr = alphabetStr.split(";")/}
+
+				<select  name="AIR_CC_ADDRESS_COUNTRY" id="AIR_CC_ADDRESS_COUNTRY">
+					<option value="">${labels.tx_merci_text_booking_select}</option>
+					{if (!utils.isEmptyObject(rqstParams.countryFilteredMap))}
+						{foreach alpha in alphabetStrArr}
+							{var firstLetterMap = rqstParams.countryFilteredMap[alpha]/}
+							{if (firstLetterMap)}
+								{foreach country in firstLetterMap}
+									{if (country[0] != "ZZ")}
+										<option value="${country[0]}">${country[1]}</option>
+									{/if}
+								{/foreach}
+							{/if}
+						{/foreach}
+					{else/}
+						{foreach country in globallist.slLangCountryList}
+							{if (country[0] != "ZZ")}
+								<option value="${country[0]}">${country[1]}</option>
+							{/if}
+						{/foreach}
+					{/if}
+				</select>
+			{/if}
+		</div>
+	{/macro}
+{/Library}

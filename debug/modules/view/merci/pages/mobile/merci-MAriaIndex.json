@@ -1,0 +1,47 @@
+{
+	contents: {
+		placeholderContents: {
+
+		}
+	},
+	pageComposition: {
+		template: 'modules.view.merci.common.templates.MCommonContainer',
+		placeholders: {
+			headerPanel: {
+				template: 'modules.view.merci.common.templates.MPageHeaderPanel',
+				module: 'common:booking'
+			},
+			topPanel: {
+				template: 'modules.view.merci.common.templates.MPageTopPanel',
+				module: 'common:booking'
+			},
+			body: {
+				template: 'modules.view.merci.common.templates.MIndexPage',
+				module: 'common:booking'
+			},
+			leftPanel: {
+				template: 'modules.view.merci.common.templates.MPageLeftPanel',
+				module: 'common:booking'
+			},
+			rightPanel: {
+				template: 'modules.view.merci.common.templates.MPageRightPanel',
+				module: 'common:booking'
+			},
+			footer: {
+				template: 'modules.view.merci.common.templates.MPageFooter',
+				module: 'common:booking'
+			},
+			bottomPanel: {
+				template: 'modules.view.merci.common.templates.MPageBottomPanel',
+				module: 'common:booking'
+			},
+			footerPanel: {
+				template: 'modules.view.merci.common.templates.MPageFooterPanel',
+				module: 'common:booking'
+			}
+		}
+	},
+	pageId: 'merci-MAriaIndex',
+	url: 'merci-MAriaIndex',
+	title: 'MeRCI - Home'
+}

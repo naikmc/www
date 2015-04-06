@@ -1,0 +1,105 @@
+{Library {
+    $classpath: "modules.view.merci.common.widgets.autocomplete.AutoCompleteLibrary",
+	$hasScript: true
+}}
+	
+	{macro createAutoComplete(input)}
+		
+		// setting data
+		${this.data = input|eat}
+		
+		// create suggestion controller for each autocomplete
+		{var controller = this.createSuggestionController(input)/}
+		
+		<div class="searchInput" {on tap {fn: 'focusSearch', args: {input: input, suggestionsController: controller.suggestionsController}}/}>
+
+		  {if input.labelText != null && input.labelText.trim() != ''}
+			<label for="${input.id}">
+				${input.labelText}{if input.isMandatory==true}<span class="mandatory">*</span>{/if}
+			</label>
+		  {/if}
+		  
+		  // read in variable, if "input.class" is directly used
+		  // then it wont work on safari browser, works fine in iPhone but not in APP
+		  {var className = input['class']/}
+		<p class="smartDropDwn">				
+		  <input 
+			id="${input.id}" 
+			name="${input.name}" 
+			type="${input.type}" 
+			{if input.maxlength && input.maxlength != ""}maxlength="${input.maxlength}"{/if}
+			{if input.validators && input.validators != ""}validators="${input.validators}"{/if}
+			{if input.errornumbers && input.errornumbers != ""}errornumbers="${input.errornumbers}"{/if}
+			{if input.autocomplete && input.autocomplete != ""}
+				autocomplete="${input.autocomplete}"
+			{else/}
+				autocomplete="off"
+			{/if}
+			{if input.autocorrect && input.autocorrect != ""}autocorrect="${input.autocorrect}"{/if}
+			{if input.autocapitalize && input.autocapitalize != ""}autocapitalize="${input.autocapitalize}"{/if}
+			{if input.readonly && input.readonly != ""}readonly="${input.readonly}"{/if}
+			{if input.dataCountrySel && input.dataCountrySel != ""}dataCountrySel="${input.dataCountrySel}"{/if}
+			{if input.rel!=null} rel= "${input.rel}" {/if}
+			{if input.datacountrysel!=null} datacountrysel= "${input.datacountrysel}" {/if}
+			{if input.datastatesel!=null} datastatesel= "${input.datastatesel}" {/if}
+			role="textbox"
+			placeholder="${input.placeholder}"
+			  {if input.rel != null} rel="${input.rel}"{/if}
+			  {if input.size != null} size="${input.size}"{/if}
+			  {if input.value != null} value="${input.value}"{/if}
+			  {if input.maxlength != null} maxlength="${input.maxlength}"{/if}
+			  {if input.onclick != null}onclick="${input.onclick}"{/if}
+			{on keyup {fn: 'reactOnType', args: {input: input, suggestionsController: controller.suggestionsController}}/}
+			{on blur {fn: 'onInputBlur', args: {input: input, suggestionsController: controller.suggestionsController}}/}
+			{on focus {fn: 'onInputFocus', args: {input: input, suggestionsController: controller.suggestionsController}}/}
+			{on input {fn: 'reactOnType', args: {input: input, suggestionsController: controller.suggestionsController}}/}
+			  class="ui-autocomplete-input{if className != null && className != ''} ${className}{/if}">
+		  </input>
+		  {if input.reqclearFieldImg == undefined || input.reqclearFieldImg}
+		  <span class="delete hidden" id="del${input.id}"><span class="x xrtl" {on click {fn: 'clearField', args: {input: input, suggestionsController: controller.suggestionsController}}/} >x</span></span>
+		  {/if}
+		</p>
+
+		  {section {
+			id : input.id + "results",
+			macro : {
+				name : 'displayResults',
+				args : [{suggestionsController: controller.suggestionsController, input: input}],
+				scope: this
+			},
+			bindRefreshTo : [
+				{inside : controller.suggestionsController.data, to : "suggestions"}
+			]
+		  }/}
+
+		</div>
+	{/macro}
+
+	{macro displayResults(params)}
+		{if params.suggestionsController.data.suggestions.length > 0}
+			<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="${params.input.id}ul" style="display:block;width:99.2%;z-index:999;list-style:none;margin:0;display:block;white-space:normal">
+				{foreach suggestion inArray params.suggestionsController.data.suggestions}
+				  <li
+					class="ui-menu-item{if suggestion.image && suggestion.image.show} ${suggestion.image.css}{/if}"
+					{on tap {
+						fn: 'select',
+						scope: this,
+						args: {
+							input: params.input,
+							suggestion: suggestion,
+							suggestionsController: params.suggestionsController
+						}
+					}/}>
+					<a
+						style="text-decoration:none"
+						href="javascript:void(0);"
+						class="ui-corner-all">
+								${suggestion.label}
+					</a>
+				  </li>
+				{/foreach}
+			</ul>
+		{/if}
+	{/macro}
+
+{/Library}

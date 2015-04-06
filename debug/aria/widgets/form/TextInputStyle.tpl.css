@@ -1,0 +1,19 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.form.TextInputStyle",
+    $extends : "aria.widgets.form.InputStyle"
+}}
+    {var skinnableClassName="TextInput"/}
+    {var useFrame=true/}
+
+    {macro writeState(info)}
+        {call $InputStyle.writeState(info) /}
+        .${cssPrefix(info)}label {
+            font-weight: ${info.skinClass.label.fontWeight}
+        }
+    {/macro}
+
+{/CSSTemplate}

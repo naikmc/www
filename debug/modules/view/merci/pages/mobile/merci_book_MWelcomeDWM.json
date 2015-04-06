@@ -1,0 +1,19 @@
+{
+	contents: {
+		placeholderContents: {
+
+		}
+	},
+	pageComposition: {
+		template: 'modules.view.merci.common.templates.MCommonContainer',
+		placeholders: {
+			body: {
+				template: 'modules.view.merci.segments.booking.templates.home.MWelcomeDWM',
+				module: 'common:booking'
+			}
+		}
+	},
+	pageId: 'merci_book_MWelcomeDWM',
+	url: 'merci_book_MWelcomeDWM',
+	title: 'MeRCI - Home'
+}

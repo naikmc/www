@@ -1,0 +1,60 @@
+{Library {
+   $classpath : 'modules.view.merci.common.utils.MerciConfRetrieve',
+   $hasScript: true,
+   $dependencies: [
+        'modules.view.merci.common.utils.MCommonScript',		
+    ],
+}}
+  {var merciFunc = modules.view.merci.common.utils.MCommonScript/}  
+  
+  {macro tabsList(_this)}
+    <nav class="tabs" id="mobileTabs">
+      <ul>
+        <li><a href="javascript:void(0)" class="navigation active">${_this.labels.tx_merci_text_trip}</a></li>
+        {if this.isServicesCatalogEnbld(_this)}
+          <li><a href="javascript:void(0)" class="navigation" {on tap {fn: this.showServicesDetails, args: {_this:_this}, scope: this} /}>${_this.labels.tx_merci_services_tab}</a></li>
+        {/if}
+        <li><a href="javascript:void(0)" class="navigation" {on tap {fn: this.showPaxDetails, args: {_this:_this}, scope: this} /}>
+          ${_this.labels.tx_merci_text_passenger_info}
+        </a></li>
+      </ul>
+    </nav>
+  {/macro}
+
+  {macro tabletTabsList(_this)}
+    <nav class="tabs baselineText" id="tabletTabs">
+      <ul>
+    {if merciFunc.booleanValue(_this.config.merciServiceCatalog) && !merciFunc.isEmptyObject(_this.reply.serviceCategories)}
+      <li><a id="servicesTab" href="javascript:void(0)" class="navigation active" {on tap {fn: _this.showServiceDetailsTab, scope: _this} /}>${_this.labels.tx_merci_services_tab}</a></li>
+    <li><a id="paxTabletTab" href="javascript:void(0)" class="navigation" {on tap {fn: _this.showTabPaxDetails, scope: _this} /}>
+      ${_this.labels.tx_merci_text_passenger_info}
+    </a></li>
+    {/if}
+      </ul>
+    </nav>
+  {/macro}
+
+  {macro schdChangeSection(segment, bound, _this)}
+    {var segScheduleChange = "" /}
+    {if (merciFunc.booleanValue(_this.data.siteParams.siteflightChangeAck) && (merciFunc.booleanValue(_this.data.siteParams.siteAllowPnrAck) || _this.data.siteParams.siteAllowPnrAck.toUpperCase() == 'YES') && !merciFunc.isEmptyObject(segment.afterSellRbdStatus) && (segment.afterSellRbdStatus.code == 'TK' || segment.afterSellRbdStatus.code == 'TL' || segment.afterSellRbdStatus.code == 'TN') && (!merciFunc.isEmptyObject(bound.boolCompletelyFlown) && !bound.boolCompletelyFlown))}
+		{var strtDateBean = segment.beginDateBean /}
+		{var sh = (strtDateBean.hour<10 ? '0'+strtDateBean.hour : strtDateBean.hour) /}
+		{var sm = (strtDateBean.minute<10 ? '0'+strtDateBean.minute : strtDateBean.minute) /}
+		{var strTime = sh + ':' + sm /}
+		{var endDateBean = segment.endDateBean /}
+		{var eh = (endDateBean.hour<10 ? '0'+endDateBean.hour : endDateBean.hour) /}
+		{var em = (endDateBean.minute<10 ? '0'+endDateBean.minute : endDateBean.minute) /}
+		{var endTime = eh + ':' + em /}
+		<header><h2 class="schdChng">${_this.data.labels.tx_merci_text_schedule_to} ${this.formatDate(segment.beginDateBean, _this.data.labels.tx_merci_pattern_DayDateFullMonthYear, true)} ${strTime} - ${endTime}</h2></header>
+    {/if}
+  {/macro}
+  {macro apisText(_this)}
+    <div id="apisText" class="apisText displayNone">${_this.labels.tx_merci_text_complete_details_overlay}
+      <nav class="buttons">
+      <ul>
+        <li><a href="javascript:void(0)" class="navigation {if (_this.sadad != 'undefined') && (_this.sadad==true)}disabled{/if}" id="alpiLightBox" {on tap {fn: this.showPaxDetails, args: {_this:_this}, scope: this} /}> ${_this.tripplan.REC_LOC} </a></li>
+      </ul>
+      </nav>
+    </div>  
+  {/macro}
+{/Library}

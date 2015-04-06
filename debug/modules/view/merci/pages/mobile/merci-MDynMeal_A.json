@@ -1,0 +1,47 @@
+{
+	contents: {
+		placeholderContents: {
+
+		}
+	},
+	pageComposition: {
+		template: 'modules.view.merci.common.templates.MCommonContainer',
+		placeholders: {
+			headerPanel: {
+				template: 'modules.view.merci.common.templates.MPageHeaderPanel',
+				module: 'common:servicing'
+			},
+			topPanel: {
+				template: 'modules.view.merci.common.templates.MPageTopPanel',
+				module: 'common:servicing'
+			},
+			body: {
+				template: 'modules.view.merci.segments.servicing.templates.services.MDynamicMeal',
+				module: 'common:ancillaryservices'
+			},
+			leftPanel: {
+				template: 'modules.view.merci.common.templates.MPageLeftPanel',
+				module: 'common:servicing'
+			},
+			rightPanel: {
+				template: 'modules.view.merci.common.templates.MPageRightPanel',
+				module: 'common:servicing'
+			},
+			footer: {
+				template: 'modules.view.merci.common.templates.MPageFooter',
+				module: 'common:servicing'
+			},
+			bottomPanel: {
+				template: 'modules.view.merci.common.templates.MPageBottomPanel',
+				module: 'common:servicing'
+			},
+			footerPanel: {
+				template: 'modules.view.merci.common.templates.MPageFooterPanel',
+				module: 'common:servicing'
+			}
+		}
+	},
+	pageId: 'merci-MDynMeal_A',
+	url: 'merci-MDynMeal_A',
+	title: 'MeRCI - Meal Selection'
+}

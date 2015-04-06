@@ -1,0 +1,19 @@
+/*
+ * Aria Templates
+ * Copyright Amadeus s.a.s.
+ */
+{CSSTemplate {
+    $classpath : "aria.widgets.form.InputStyle",
+    $extends : "aria.widgets.WidgetStyle"
+}}
+
+    {macro writeState(info)}
+        {var label = info.state.label || {} /}
+        {if label.color}
+            .${cssPrefix(info)}label {
+                color: ${label.color};
+            }
+        {/if}
+    {/macro}
+
+{/CSSTemplate}

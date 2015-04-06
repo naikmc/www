@@ -1,0 +1,349 @@
+/*
+.mobile-app, .mobile-app body, .viewport, .page {
+  width: 100%;
+  height: 99%;
+  background: url("../img/client/background.png") repeat-x scroll 50% 0 #9DBDE3;
+}
+
+#splashScreenContainer {
+      background-color: #393C39;
+       background-image: url("../img/ajax-loader.gif");
+       background-repeat:no-repeat;
+        background-position:10px center;
+        height: 50px;
+        width: 200px;
+        position: absolute;
+        vertical-align: middle;
+        text-align:right;
+        z-index: 10000;
+      	display:none;
+      	top:35%;
+      	left:50%;
+      	margin-left:-100px;
+      	padding:10px;
+		display:none;
+    }
+  #splashScreenContainer .invisible {
+        opacity : 0;
+    }
+ #splashScreenContainer span {
+
+     	display: inline-block;
+        color: #FFF;
+        font-size: 25px;
+        margin-top: 10px;
+
+    }
+*/
+
+ #loginError,#loginError2,#mileserror,#splashScreenContainer{
+	display:none;
+}
+
+
+#errorClient,#errorClient2{
+display:none;
+color:red;
+}
+.errorClientHide {
+	display:none;
+}
+.errorClientShow {
+	/*padding:5px 10px 0 10px;*/
+	display:block;
+	list-style-type: disc inside none;
+}
+.messageDetails {
+	color: #5F5F5F;
+    list-style: disc inside none;
+    padding: 5px 0 0 10px;
+}
+.cursorPointer{
+cursor: pointer;
+}
+.page {
+  top: 0;
+  left: 0;
+  /*position: absolute;*/
+  display: none;
+  border: 0;
+  text-align : left;
+  margin : 0;
+  width:100%;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+ /* background-image: url("../img/client/banner_background.png"); */
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 8px 62px;
+  /*border-top: 2px solid #FF9B00;*/
+}
+.noHeader .page {
+  top: 60px;
+  border:0;
+}
+
+.content > span > div {
+    padding: 0 5px;
+}
+.xLDI {
+	background:no-repeat scroll center 20% #393C39 !important;
+	opacity:.8;
+	background-image:url("../img/ajax-loader.gif") !important;
+	text-align:center;
+	height: 99%;
+}
+.xLDI-text{
+	color:#FFF;
+	font-size:200%;
+	font-weight:bold;
+	top:5% !important;
+}
+.xWidget{display:block!important;}
+#wrap{
+height:60px;
+}
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+	 width: 99%;
+}
+/*
+.content > div  {
+    margin: 0 5px;
+}
+*/
+/*
+.boundsTitle {
+    margin: 0 5px;
+	border: 1px solid #999999;
+}
+.panelWrapper1{
+	border-top: 0;
+	-webkit-border-radius:0px 0px 5px 5px;
+}
+.panelBrdTop{
+	border-top: 1px solid #999999;
+}
+*/
+#overlaybg {
+    background: none repeat scroll 0 0 #000000;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+}
+#overlaybgKF {
+    background: none repeat scroll 0 0 #000000;
+    height: 100%;
+    left: -5px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: -150px;
+    width: 100%;
+    z-index: 500;
+}
+.out,.in {
+-webkit-animation-duration:450ms;
+-moz-animation-duration:450ms;
+}
+
+.slow {
+-webkit-transition-delay:10s;
+-moz-transition-delay:10s;
+}
+
+.slide.in {
+-webkit-animation-name:slidfromright;
+-moz-animation-name:slidfromright;
+}
+
+.slide.out {
+-webkit-animation-name:slidefromleft;
+-moz-animation-name:slidefromleft;
+}
+
+.fade.in {
+-webkit-animation-name:fadein;
+-moz-animation-name:fadein;
+opacity:1;
+}
+
+.fade.out {
+-webkit-animation-name:fadeout;
+-moz-animation-name:fadeout;
+}
+
+.transitioning {
+width:100%;
+height:100%;
+overflow:hidden;
+}
+.page.active.in {
+ overflow:hidden;
+ }
+
+.page.active {
+display:block;
+overflow:visible;
+}
+
+.page.future {
+left:100%;
+}
+
+.page.past {
+left:-100%;
+}
+
+.page.alwaysOnTop {
+z-index:10;
+}
+
+@-webkit-keyframes slidfromright
+{
+	from
+	{
+		-webkit-transform: translate3d(0,0,0);
+	}
+	to
+	{
+		-webkit-transform: translate3d(-100%,0,0);
+	}
+}
+@-moz-keyframes slidfromright
+{
+	from
+	{
+		-moz-transform: translate(0,0);
+	}
+	to
+	{
+		-moz-transform: translate(-100%,0);
+	}
+}
+@-webkit-keyframes slidefromleft
+{
+	from
+	{
+		-webkit-transform: translate3d(0,0,0);
+	}
+	to
+	{
+		-webkit-transform: translate3d(100%,0,0);
+	}
+}
+@-moz-keyframes slidefromleft
+{
+	from
+	{
+		-moz-transform: translate(0,0);
+	}
+	to
+	{
+		-moz-transform: translate(100%,0);
+	}
+}
+@-webkit-keyframes fadein,@-moz-keyframes fadein
+{
+	from
+	{
+		opacity: 0;
+	}
+	to
+	{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeout,@-moz-keyframes fadeout
+{
+	from
+	{
+		opacity: 1;
+	}
+	to
+	{
+		opacity: 0;
+	}
+}
+.milesExt  .content > span > div {
+    padding: 0 2px;
+}
+.listStyleDots{
+	display: list-item;
+	margin: 0 0 3px 16px;
+}
+.errMsgHdrAT{
+	padding-bottom:5px;
+}
+.disabled input{
+	color: #BFBFBF;
+}
+ul.inputForm{
+	padding-top:0px;
+}
+/*
+.wrapper.form{
+	padding-bottom:8px;
+	padding-top:5px;
+}*/
+.inputForm label {
+	padding: 5px 0;
+	margin:0px;
+}
+.milesExt .content {
+    padding: 0px 5px;
+}
+.banner {
+    margin: 0 5px;
+}
+/* PTR 06072762 [Medium]: SQ Mobile D3A - CR 5318984 - List page moves in and out
+.kfPanelOuter{
+    margin-left: -7px;
+    margin-right: -7px;
+}
+*/
+.milesExt .messageB{margin-top:15px;}
+
+.ui-state-disabled .ui-state-default {
+   background-color: #F2F2F2 !important;
+}
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+    opacity: 1 !important;
+}
+
+/* PTR 06904310 STARTS */
+.buttonRow4.seatMapButtonRow4{
+	-webkit-border-radius: 4px;
+	margin-bottom: 5px;
+	-webkit-box-shadow: 1px 2px 1px #666;
+	width:31%;
+}
+
+.buttonRow4.seatMapButtonRow4 a {
+	font-size: 150%;
+	padding: 7px 13px 6px;/* PTR 07010739 15px to 13px */
+}
+.buttonRow4.seatMapButtonRow4 a input{ 
+font-family: Arial; 
+font-size: 80%;
+text-align: center;
+padding: 0 5px 0 3px;
+}
+
+.buttonRow4.seatMapButtonRow4 input {
+color: #fff;
+border: none;
+background: none;
+width: 100%;
+padding: 8px 10px;
+text-align: center;
+font-size: 135%;
+
+}
+/* PTR 06904310 ENDS */

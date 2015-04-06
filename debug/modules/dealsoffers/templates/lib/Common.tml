@@ -1,0 +1,315 @@
+{Library {
+    $classpath:'modules.checkin.templates.lib.Common'
+}}
+
+  {macro FlightDetails(product,label,pattern,classlabel,segmentDisabled)}
+    {if jQuery.isUndefined(segmentDisabled)}
+      {set segmentDisabled = false /}
+    {/if}
+    <ul id="flightDep" class="fontBig
+      {if segmentDisabled}
+        flightRecapCheckin disabled
+      {else/}
+        flightRecap
+      {/if}">
+        <li class="displayBlock">
+          {if product.marketingFlightInfoBean}
+            ${jQuery.substitute(label.FltOptBy, [product.marketingFlightInfoBean.codeshareDetailsAirlineDesignator,product.marketingFlightInfoBean.codeshareDetailsFlightNumber,product.operatingFlightDetailsMarketingCarrier, product.operatingFlightDetailsFlightNumber])}
+          {else/}
+            ${jQuery.substitute(label.Flight, [product.operatingFlightDetailsMarketingCarrier, product.operatingFlightDetailsFlightNumber])}
+          {/if}
+          <span>{call dateMacro(product.legLevelBean,product.operatingFlightDetailsBoardPoint,product.operatingFlightDetailsOffPoint,pattern) /}
+            <span class="strong">
+              {call timeMacro(product.legLevelBean,product.operatingFlightDetailsBoardPoint,product.operatingFlightDetailsOffPoint,pattern) /}
+              {call stopsMacro(product.legLevelBean , label) /}
+            </span>
+          </span>
+        </li>
+        <li class="displayBlock">
+          ${jQuery.substitute(label.Location, [product.operatingFlightDetailsBoardPointInfo.city, product.operatingFlightDetailsBoardPointInfo.airport])}
+          <i>{call terminalMacro(product.legLevelBean , product.operatingFlightDetailsBoardPoint , label) /}</i>
+        </li>
+        <li class="displayBlock">
+          ${jQuery.substitute(label.Location, [product.operatingFlightDetailsOffPointInfo.city, product.operatingFlightDetailsOffPointInfo.airport])}
+          <i>{call terminalMacro(product.legLevelBean , product.operatingFlightDetailsOffPoint, label) /}</i>
+        </li>
+        <li class="displayBlock">
+          {call classMacro(label.Class , product.bookedCabinCodeBean.cabinDetailsBookingClass , classlabel) /}
+        </li>
+    </ul>
+  {/macro}
+
+  {macro classMacro(label , code , classlabel)}
+    {if code != null && code != "" }
+      {var statusValue = "" /}
+      {if code == "A"}{set statusValue = classlabel.FirstDisc /}{/if}
+      {if code == "B"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "BN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "C"}{set statusValue = classlabel.Business /}{/if}
+      {if code == "D"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      {if code == "E"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "F"}{set statusValue = classlabel.First /}{/if}
+      {if code == "FN"}{set statusValue = classlabel.NightFirst /}{/if}
+      {if code == "G"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "H"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "I"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      {if code == "J"}{set statusValue = classlabel.BusinessPrem /}{/if}
+      {if code == "K"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "KN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "L"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "M"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "N"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "NC"}{set statusValue = classlabel.BusinessUp /}{/if}
+      {if code == "NF"}{set statusValue = classlabel.FirstUp /}{/if}
+      {if code == "O"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "P"}{set statusValue = classlabel.FirstPrem /}{/if}
+      {if code == "Q"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "QN"}{set statusValue = classlabel.NightEcoRes /}{/if}
+      {if code == "R"}{set statusValue = classlabel.Supersonic /}{/if}
+      {if code == "S"}{set statusValue = classlabel.Economy /}{/if}
+      {if code == "T"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "U"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "V"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "W"}{set statusValue = classlabel.EconomyPrem /}{/if}
+      {if code == "X"}{set statusValue = classlabel.EconomyDisc /}{/if}
+      {if code == "Y"}{set statusValue = classlabel.Economy /}{/if}
+      {if code == "YN"}{set statusValue = classlabel.NightEconomy /}{/if}
+      {if code == "Z"}{set statusValue = classlabel.BusinessDisc /}{/if}
+      ${jQuery.substitute(label,statusValue)}
+    {/if}
+  {/macro}
+
+  {macro infantMacro(customer , infantToPax , productIndex , paxCheckedin , infantPrimeId , checkedIn , label , enableNextLeg)}
+    {if customer != null && customer.length>0}
+      {foreach cust in customer}
+        {if cust.customerDetailsType == "IN"}
+          {foreach identifier in cust.productLevelBean[productIndex].productIdentifiersBean}
+            {if identifier.referenceQualifier == "DID"}
+              {if identifier.primeId == infantPrimeId}
+                {if !paxCheckedin}
+                  <li class="displayNone">
+                    <input name="${productIndex}" id="pax${infantToPax}-prod${productIndex}" type="checkbox" value="${cust_index}" class="checkbig" {if !jQuery.isUndefined(enableNextLeg)}
+                      {if enableNextLeg}checked="checked"{/if}
+                    {/if}/>
+                  </li>
+                {/if}
+                <li class="pax {if checkedIn}childchkdin{/if} child strong" id="pax${cust_index}">
+                  <label for="prod${productIndex}-pax${infantToPax}">
+                    ${jQuery.substitute(label.InfantPassengerName, [cust.otherPaxDetailsBean[0].givenName, cust.customerDetailsSurname])}
+                  </label>
+                </li>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro terminalMacro(legLevelList,arrDep,label)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.additionalProductDetailsBean != null}
+          {if leg.legRoutingOrigin == arrDep}
+            {if leg.additionalProductDetailsBean.departureStationInfoBean.terminal != ""}
+              ${jQuery.substitute(label.Terminal,[leg.additionalProductDetailsBean.departureStationInfoBean.terminal])}
+            {/if}
+          {elseif leg.legRoutingDestination == arrDep /}
+            {if leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal != ""}
+              ${jQuery.substitute(label.Terminal,[leg.additionalProductDetailsBean.arrivalStationInfoBean.terminal])}
+            {/if}
+          {/if}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro timeMacro(legLevelList,departure,arrival,pattern)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STD"}
+              {var departureDate = eval(legTime.json) /}
+            {/if}
+          {/foreach}
+        {/if}
+        {if leg.legRoutingDestination == arrival}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STA"}
+              {var arrivalDate = eval(legTime.json) /}
+              ${departureDate|dateformat:pattern.Time|capitalize} - ${arrivalDate|dateformat:pattern.Time|capitalize}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro dateMacro(legLevelList,departure,arrival,pattern)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTimes inArray leg.legTimeBean}
+            {if legTimes.businessSemantic == "STD"}
+              {var departureDate = eval(legTimes.json) /}
+              ${departureDate|dateformat:pattern.Date}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+  {macro stopsMacro(legLevelList , label)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {if (legLevelList.length - 1) > 1}
+        (${(legLevelList.length - 1)} ${label.Stops})
+      {elseif (legLevelList.length - 1) == 1 /}
+        (${(legLevelList.length - 1)} ${label.Stop})
+      {/if}
+    {/if}
+  {/macro}
+
+  {macro textfield(args)}
+    {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            {if !jQuery.isUndefined(args.id)}
+              {var clearButtonId = "c"+args.id /}
+            {/if}
+          {/if}
+    {/if}
+    <span class="posR">
+      {if args.type == 'textarea'}
+        <textarea
+      {else/}
+        <input type="${args.type}"
+      {/if}
+        {if !jQuery.isUndefined(args.id)}
+          id="${args.id}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.name)}
+          name="${args.name}"
+        {/if}
+
+        {if args.type != 'textarea'}
+          {if !jQuery.isUndefined(args.value)}
+            {if args.value != null || args.value != ""}
+              value = "${args.value}"
+            {else/}
+              value=""
+            {/if}
+          {/if}
+        {/if}
+
+        {if !jQuery.isUndefined(args.placeholder)}
+          {if operatingSystem.blackberry == null}
+          placeholder="${args.placeholder}"
+        {/if}
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            onfocus="searchFieldOnFocus('${args.id}','${clearButtonId}');"
+            onblur="searchFieldOnBlur('${args.id}','${clearButtonId}');"
+          {/if}
+        {/if}
+
+       {if !jQuery.isUndefined(args.options)}
+          {if args.options.onclick}
+            onclick="${args.options.onclick}"
+          {/if}
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.textfieldcls)}
+          class="${args.options.textfieldcls}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.required)}
+          required="${args.options.required}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocorrect)}
+          autocorrect = "${args.options.autocorrect}"
+        {else/}
+          autocorrect = "off"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocapitalize)}
+          autocapitalize = "${args.options.autocapitalize}"
+        {else/}
+          autocapitalize="none"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+              !jQuery.isUndefined(args.options.validators) &&
+              !jQuery.isUndefined(args.options.errorNumbers)}
+          validators="${args.options.validators}"
+          errornumbers="${args.options.errorNumbers}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.disabled) &&
+            args.options.disabled}
+          disabled="disabled"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.readonly) &&
+            args.options.readonly}
+          readonly="readonly"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.size)}
+          size="${args.options.size}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.maxlength)}
+          maxlength="${args.options.maxlength}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.customAttributes)}
+          {foreach attribute inArray args.customAttributes}
+            ${attribute.name}="${attribute.value}"
+          {/foreach}
+        {/if}
+
+      {if args.type == 'textarea'}
+        >
+        {if !jQuery.isUndefined(args.value)}
+          ${args.value}
+        {/if}
+        </textarea>
+      {else/}
+        />
+      {/if}
+      {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            <span
+              onclick="cleara('${args.id}', this.id);"
+              id="${clearButtonId}"
+              class="clearIc displayNone">
+            </span>
+          {/if}
+      {/if}
+      {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.namePicker)}
+              {if args.options.namePicker}
+                {if JSONData.embeded}
+                  <a href="namePicker://search?target=lastName" class="nameLookUp">${label.PickText}</a>
+                {/if}
+              {/if}
+      {/if}
+    </span>
+  {/macro}
+{/Library}

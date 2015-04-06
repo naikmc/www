@@ -1,0 +1,264 @@
+{Library {
+    $classpath:'modules.view.merci.segments.servicing.subModules.checkin.ssci.templates.lib.Common'
+}}
+
+  /* Code used to display infant details */
+  {macro infantMacro(journey, infantToPax, paxCheckedin , infantPrimeId ,label,infantPaxPT)}
+    {if journey != null}
+        {if journey[infantPrimeId].passengerTypeCode == "INF"}
+                <ul class="dependent">
+					<li class="infant" id="pax${infantPrimeId}" style="margin-top: 8px;">
+						<label for="cust_${infantToPax}" class="paxtInfantmargin">
+							<strong>${jQuery.substitute(label.InfantPassengerName, [journey[infantPrimeId].personNames[0].givenNames[0], journey[infantPrimeId].personNames[0].surname])|escapeForHTML:false}</strong>
+							{if paxCheckedin}
+								<span class = "greenHighlightIcon">${label.CheckedIn}</span>
+						    {/if}
+						</label>
+						/* Check for the SSR NOT Allowed Check */
+						{if journey.customerDetailsBeans[infantToPax].custRestrictedSSR}
+							<span class="checkindenained">${label.PaxSSRCantChkInAlone}</span>
+						{/if}
+//						{foreach service in journey.service}
+//	            				{if service_index.indexOf(infantPrimeId) != '-1'}
+//	            					{var currSSRCode = service.services[0].SSRCode/}
+////									{if JSONData.parameters.SITE_MCI_SSR_CANT_CI_ALON.toUpperCase().search(currSSRCode) != "-1" }
+////										<span class="checkindenained">PaxSSRCantChkInAlone</span>
+////									{/if}
+//									{if currSSRCode == "CBBG" || currSSRCode == "STCR" || currSSRCode == "EXST" || currSSRCode == "UMNR"}
+//										<span class="checkindenained">${label.SSRNotNotAllowed}</span>
+//									{/if}
+//								{/if}
+//	            	    {/foreach}
+						{if infantPaxPT != null && !infantPaxPT}
+								<span class="checkindenained">${label.TicketNotAssociated}</span>
+						{/if}
+//						{if !cust.productLevelBean[0].psprtLstNameCheckWithCustLastName}
+//							  {if tempObj && tempObj != ""}
+//									{set tempObj.psprtMismatch = true /}
+//							  {/if}
+//							  <span class="checkindenained">${label.PaprttLstNmMismatch}</span>
+//						{/if}
+					</li>
+                    <li style="display:none">
+                      /* Code used to chk or unchk the infant chkbox based on the adult selection */
+						<input name="${infantPrimeId}" class="custSelCheckBox" id="inf_${infantToPax}" type="checkbox" value="${infantPrimeId}"/*class="checkbig"*/ />
+                    </li>
+                </ul>
+        {/if}
+    {/if}
+  {/macro}
+
+	{macro PaxDetilsFlightPage(label,ffnumber,email,phone)}
+		<dl>
+		<dt>${label.FFNumber}</dt>
+		<dd> {if ffnumber && ffnumber != ""}${ffnumber}{else /}-{/if} </dd>
+		</dl>
+		<dl>
+		<dt>${label.Email}: </dt>
+		<dd> {if email && email != ""}${email}{else /}-{/if} </dd>
+		</dl>
+		<dl>
+		<dt>${label.Phone}: </dt>
+		<dd> {if phone && phone != ""}${phone}{else /}-{/if} </dd>
+		</dl>
+  	{/macro}
+
+  /* Code used to display time details */
+  {macro timeMacro(legLevelList,departure,arrival,pattern,showDepOrArrivalTime)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STD"}
+              {var departureDate = eval(legTime.json) /}
+            {/if}
+          {/foreach}
+        {/if}
+        {if leg.legRoutingDestination == arrival}
+          {foreach legTime inArray leg.legTimeBean}
+            {if legTime.businessSemantic == "STA"}
+              {var arrivalDate = eval(legTime.json) /}
+              {if showDepOrArrivalTime == "DEPARTURE_TIME"}
+                <time>${departureDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+              {if showDepOrArrivalTime == "ARRIVAL_TIME"}
+                 <time>${arrivalDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+              {if showDepOrArrivalTime == "BOTH"}
+                 <time>${departureDate|dateformat:"HH:mm"|capitalize} - ${arrivalDate|dateformat:"HH:mm"|capitalize}</time>
+              {/if}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+    /* Code used to display date details */
+  {macro dateMacro(legLevelList,departure,arrival,pattern)}
+    {if legLevelList !=null && legLevelList.length>0}
+      {foreach leg inArray legLevelList}
+        {if leg.legRoutingOrigin == departure}
+          {foreach legTimes inArray leg.legTimeBean}
+            {if legTimes.businessSemantic == "STD"}
+              {var departureDate = eval(legTimes.json) /}
+              ${departureDate|dateformat:pattern.Date}
+            {/if}
+          {/foreach}
+        {/if}
+      {/foreach}
+    {/if}
+  {/macro}
+
+   /* Code used to creat input types */
+  {macro textfield(args)}
+    {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            {if !jQuery.isUndefined(args.id)}
+              {var clearButtonId = "c"+args.id /}
+            {/if}
+          {/if}
+    {/if}
+    <span class="posR">
+      {if args.type == 'textarea'}
+        <textarea
+      {else/}
+        <input type="${args.type}"
+      {/if}
+        {if !jQuery.isUndefined(args.dataCountrySel)}
+          dataCountrySel="${args.dataCountrySel}"
+        {/if}
+		{if !jQuery.isUndefined(args.id)}
+          id="${args.id}"
+        {/if}
+
+        {if !jQuery.isUndefined(args.name)}
+          name="${args.name}"
+        {/if}
+
+        /* Code used to create attribute value */
+        {if args.type != 'textarea'}
+          {if !jQuery.isUndefined(args.value)}
+            {if args.value != null || args.value != ""}
+              value = "${args.value}"
+            {else/}
+              value=""
+            {/if}
+          {/if}
+        {/if}
+
+        /* Code used to create attribute placeholder */
+        {if !jQuery.isUndefined(args.placeholder)}
+          {if !aria.core.Browser.isBlackberry}
+          placeholder="${args.placeholder}"
+        {/if}
+        {/if}
+
+        /* Code used to create attribute clearButton */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            onfocus="searchFieldOnFocus('${args.id}','${clearButtonId}');"
+            onblur="searchFieldOnBlur('${args.id}','${clearButtonId}');"
+          {/if}
+        {/if}
+
+       /* Code used to create attribute onclick */
+       {if !jQuery.isUndefined(args.options)}
+          {if args.options.onclick}
+            onclick="${args.options.onclick}"
+          {/if}
+        {/if}
+
+        /* Code used to create attribute textfieldcls */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.textfieldcls)}
+          class="${args.options.textfieldcls}"
+        {/if}
+
+        /* Code used to create attribute required */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.required)}
+          required="${args.options.required}"
+        {/if}
+
+        /* Code used to create attribute autocorrect */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocorrect)}
+          autocorrect = "${args.options.autocorrect}"
+        {else/}
+          autocorrect = "off"
+        {/if}
+
+        /* Code used to create attribute autocapitalize */
+        {if !jQuery.isUndefined(args.options) &&
+             !jQuery.isUndefined(args.options.autocapitalize)}
+          autocapitalize = "${args.options.autocapitalize}"
+        {else/}
+          autocapitalize="none"
+        {/if}
+
+        /* Code used to create attribute validators and errorNumbers */
+        {if !jQuery.isUndefined(args.options) &&
+              !jQuery.isUndefined(args.options.validators) &&
+              !jQuery.isUndefined(args.options.errorNumbers)}
+          validators="${args.options.validators}"
+          errornumbers="${args.options.errorNumbers}"
+        {/if}
+
+        /* Code used to create attribute disabled */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.disabled) &&
+            args.options.disabled}
+          disabled="disabled"
+        {/if}
+
+        /* Code used to create attribute readonly */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.readonly) &&
+            args.options.readonly}
+          readonly="readonly"
+        {/if}
+
+        /* Code used to create attribute size */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.size)}
+          size="${args.options.size}"
+        {/if}
+
+        /* Code used to create attribute maxlength */
+        {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.maxlength)}
+          maxlength="${args.options.maxlength}"
+        {/if}
+
+        /* Code used to create attribute value */
+        {if !jQuery.isUndefined(args.customAttributes)}
+          {foreach attribute inArray args.customAttributes}
+            ${attribute.name}="${attribute.value}"
+          {/foreach}
+        {/if}
+
+      {if args.type == 'textarea'}
+        >
+        {if !jQuery.isUndefined(args.value)}
+          ${args.value}
+        {/if}
+        </textarea>
+      {else/}
+        />
+      {/if}
+      {if !jQuery.isUndefined(args.options) &&
+            !jQuery.isUndefined(args.options.clearButton)}
+          {if args.options.clearButton}
+            <span
+              onclick="cleara('${args.id}', this.id);"
+              id="${clearButtonId}"
+              class="clearIc displayNone">
+            </span>
+          {/if}
+      {/if}
+    </span>
+  {/macro}
+{/Library}

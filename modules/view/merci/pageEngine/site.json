@@ -1,0 +1,41 @@
+{
+  containerId: 'layout',
+  appData: {
+    navigation: {}
+  },
+  navigation: 'hash',
+  commonModules: {
+    booking: {
+      classpath: 'modules.view.merci.segments.booking.controller.MerciBookingCtrl',
+      priority: 2
+    },
+    servicing: {
+      classpath: 'modules.view.merci.segments.servicing.controller.MerciServicingCtrl',
+      priority: 2
+    },
+    ancillaryservices: {
+      classpath: 'modules.view.merci.segments.servicing.controller.AncillaryServicesCtrl',
+      priority: 2
+    },
+    checkin: {
+      classpath: 'modules.view.merci.segments.servicing.subModules.checkin.controller.CheckinModuleCtrl',
+      priority: 2
+    },
+    sscicheckin: {
+      classpath: 'modules.view.merci.segments.servicing.subModules.checkin.ssci.controller.CheckinModuleCtrl',
+      priority: 2
+    },
+    contactus: {
+      classpath: 'modules.view.merci.segments.servicing.subModules.contactus.controller.ContactUsCtrl',
+      priority: 2
+    },
+    flightstatus: {
+      classpath: 'modules.view.merci.segments.servicing.subModules.flightstatus.controller.FlightStatusCtrl',
+      priority: 2
+    },
+    staticlocalstorage: {
+      classpath: 'modules.view.merci.segments.servicing.controller.StaticLocalStorageCtrl',
+      priority: 2
+    }
+  }
+}

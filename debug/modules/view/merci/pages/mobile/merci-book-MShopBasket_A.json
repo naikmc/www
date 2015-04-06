@@ -1,0 +1,20 @@
+{
+	contents: {
+		placeholderContents: {
+
+		}
+	},
+	pageComposition: {
+		template: 'modules.view.merci.common.templates.MCommonContainer',
+		placeholders: {
+			"body": {
+				template: 'modules.view.merci.common.templates.MShoppingCart',
+				module: 'common:booking'
+			}
+		}
+	},
+	pageId: 'merci-book-MShopBasket_A',
+	url: 'merci-book-MShopBasket_A',
+	title: 'MeRCI - ShoppingBasket'
+
+}

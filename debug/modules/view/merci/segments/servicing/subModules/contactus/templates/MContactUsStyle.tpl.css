@@ -1,0 +1,304 @@
+{CSSTemplate {
+    $classpath : "modules.view.merci.segments.servicing.subModules.contactus.templates.MContactUsStyle"
+}}
+
+    {macro main()}
+      
+      .flagAD, .flagAE, .flagAF, .flagAG, .flagAI, 
+      .flagAL, .flagAM, .flagAN, .flagAO, .flagAR, 
+      .flagAS, .flagAT, .flagAU, .flagAW, .flagAX, 
+      .flagAZ, .flagBA, .flagBB, .flagBD, .flagBE, 
+      .flagBF, .flagBG, .flagBH, .flagBI, .flagBJ, 
+      .flagBM, .flagBN, .flagBO, .flagBR, .flagBS, 
+      .flagBT, .flagBV, .flagBW, .flagBY, .flagBZ, 
+      .flagCA, .flagCC, .flagCD, .flagCF, .flagCG, 
+      .flagCI, .flagCK, .flagCL, .flagCM, .flagCN, 
+      .flagCO, .flagCR, .flagCS, .flagCU, .flagCV, 
+      .flagCX, .flagCY, .flagCZ, .flagDE, .flagDJ, 
+      .flagDK, .flagDM, .flagDO, .flagDZ, .flagEC, 
+      .flagEE, .flagEG, .flagEH, .flagER, .flagES, 
+      .flagET, .flagEU, .flagFI, .flagFJ, .flagFK, 
+      .flagFM, .flagFO, .flagFR, .flagGA, .flagGB, 
+      .flagGD, .flagGE, .flagGF, .flagGH, .flagGI, 
+      .flagGL, .flagGM, .flagGN, .flagGP, .flagGQ, 
+      .flagGR, .flagGS, .flagGT, .flagGU, .flagGW, 
+      .flagGY, .flagHK, .flagHM, .flagHN, .flagHR, 
+      .flagHT, .flagHU, .flagID, .flagIE, .flagIL, 
+      .flagIN, .flagIO, .flagIQ, .flagIR, .flagIS, 
+      .flagIT, .flagJM, .flagJO, .flagJP, .flagKE, 
+      .flagKG, .flagKH, .flagKI, .flagKM, .flagKN, 
+      .flagKP, .flagKR, .flagKW, .flagKY, .flagKZ, 
+      .flagLA, .flagLB, .flagLC, .flagLI, .flagLK, 
+      .flagLR, .flagLS, .flagLT, .flagLU, .flagLV, 
+      .flagLY, .flagMA, .flagMC, .flagMD, .flagME, 
+      .flagMG, .flagMH, .flagMK, .flagML, .flagMM, 
+      .flagMN, .flagMO, .flagMP, .flagMQ, .flagMR, 
+      .flagMS, .flagMT, .flagMU, .flagMV, .flagMW, 
+      .flagMX, .flagMY, .flagMZ, .flagNA, .flagNC, 
+      .flagNE, .flagNF, .flagNG, .flagNI, .flagNL, 
+      .flagNO, .flagNR, .flagNU, .flagNZ, .flagOM, 
+      .flagPA, .flagPE, .flagPF, .flagPG, .flagPH, 
+      .flagPK, .flagPL, .flagPM, .flagPN, .flagPR, 
+      .flagPS, .flagPT, .flagPW, .flagPY, .flagQA, 
+      .flagRE, .flagRO, .flagRS, .flagRU, .flagRW, 
+      .flagSA, .flagSB, .flagSC, .flagSD, .flagSE, 
+      .flagSG, .flagSH, .flagSI, .flagSJ, .flagSK, 
+      .flagSL, .flagSM, .flagSN, .flagSO, .flagSR, 
+      .flagST, .flagSV, .flagSY, .flagSZ, .flagTC, 
+      .flagTD, .flagTF, .flagTG, .flagTH, .flagTJ, 
+      .flagTK, .flagTL, .flagTM, .flagTN, .flagTO, 
+      .flagTR, .flagTT, .flagTV, .flagTW, .flagTZ, 
+      .flagUA, .flagUG, .flagUK, .flagUM, .flagUS, 
+      .flagUY, .flagUZ, .flagVA, .flagVC, .flagVE, 
+      .flagVG, .flagVI, .flagVN, .flagVU, .flagWF, 
+      .flagWS, .flagYE, .flagYT, .flagZA, .flagZM, 
+      .flagZW, .flagCH, .flagNP
+      { display: block; background: url(${cssFolderPath}/../../../../../../../common/img/flags.gif) no-repeat; }
+       
+      .flagAD { background-position: -1px -0px; width: 16px; height: 11px; }
+      .flagAE { background-position: -1px -12px; width: 16px; height: 11px; }
+      .flagAF { background-position: -1px -24px; width: 16px; height: 11px; }
+      .flagAG { background-position: -1px -36px; width: 16px; height: 11px; }
+      .flagAI { background-position: -1px -48px; width: 16px; height: 11px; }
+      .flagAL { background-position: -1px -60px; width: 16px; height: 11px; }
+      .flagAM { background-position: -1px -72px; width: 16px; height: 11px; }
+      .flagAN { background-position: -1px -84px; width: 16px; height: 11px; }
+      .flagAO { background-position: -1px -96px; width: 16px; height: 11px; }
+      .flagAR { background-position: -1px -108px; width: 16px; height: 11px; }
+      .flagAS { background-position: -1px -120px; width: 16px; height: 11px; }
+      .flagAT { background-position: -1px -132px; width: 16px; height: 11px; }
+      .flagAU { background-position: -1px -144px; width: 16px; height: 11px; }
+      .flagAW { background-position: -1px -156px; width: 16px; height: 11px; }
+      .flagAX { background-position: -1px -168px; width: 16px; height: 11px; }
+      .flagAZ { background-position: -1px -180px; width: 16px; height: 11px; }
+      .flagBA { background-position: -1px -192px; width: 16px; height: 11px; }
+      .flagBB { background-position: -1px -204px; width: 16px; height: 11px; }
+      .flagBD { background-position: -1px -216px; width: 16px; height: 11px; }
+      .flagBE { background-position: -1px -228px; width: 16px; height: 11px; }
+      .flagBF { background-position: -1px -240px; width: 16px; height: 11px; }
+      .flagBG { background-position: -1px -252px; width: 16px; height: 11px; }
+      .flagBH { background-position: -1px -264px; width: 16px; height: 11px; }
+      .flagBI { background-position: -1px -276px; width: 16px; height: 11px; }
+      .flagBJ { background-position: -1px -288px; width: 16px; height: 11px; }
+      .flagBM { background-position: -1px -300px; width: 16px; height: 11px; }
+      .flagBN { background-position: -1px -312px; width: 16px; height: 11px; }
+      .flagBO { background-position: -1px -324px; width: 16px; height: 11px; }
+      .flagBR { background-position: -1px -336px; width: 16px; height: 11px; }
+      .flagBS { background-position: -1px -348px; width: 16px; height: 11px; }
+      .flagBT { background-position: -1px -360px; width: 16px; height: 11px; }
+      .flagBV { background-position: -1px -372px; width: 16px; height: 11px; }
+      .flagBW { background-position: -1px -384px; width: 16px; height: 11px; }
+      .flagBY { background-position: -1px -396px; width: 16px; height: 11px; }
+      .flagBZ { background-position: -1px -408px; width: 16px; height: 11px; }
+      .flagCA { background-position: -1px -420px; width: 16px; height: 11px; }
+      .flagCC { background-position: -1px -432px; width: 16px; height: 11px; }
+      .flagCD { background-position: -1px -444px; width: 16px; height: 11px; }
+      .flagCF { background-position: -1px -456px; width: 16px; height: 11px; }
+      .flagCG { background-position: -1px -468px; width: 16px; height: 11px; }
+      .flagCI { background-position: -1px -480px; width: 16px; height: 11px; }
+      .flagCK { background-position: -1px -492px; width: 16px; height: 11px; }
+      .flagCL { background-position: -1px -504px; width: 16px; height: 11px; }
+      .flagCM { background-position: -1px -516px; width: 16px; height: 11px; }
+      .flagCN { background-position: -1px -528px; width: 16px; height: 11px; }
+      .flagCO { background-position: -1px -540px; width: 16px; height: 11px; }
+      .flagCR { background-position: -1px -552px; width: 16px; height: 11px; }
+      .flagCS { background-position: -1px -564px; width: 16px; height: 11px; }
+      .flagCU { background-position: -1px -576px; width: 16px; height: 11px; }
+      .flagCV { background-position: -1px -588px; width: 16px; height: 11px; }
+      .flagCX { background-position: -1px -600px; width: 16px; height: 11px; }
+      .flagCY { background-position: -1px -612px; width: 16px; height: 11px; }
+      .flagCZ { background-position: -1px -624px; width: 16px; height: 11px; }
+      .flagDE { background-position: -1px -636px; width: 16px; height: 11px; }
+      .flagDJ { background-position: -1px -648px; width: 16px; height: 11px; }
+      .flagDK { background-position: -1px -660px; width: 16px; height: 11px; }
+      .flagDM { background-position: -1px -672px; width: 16px; height: 11px; }
+      .flagDO { background-position: -1px -684px; width: 16px; height: 11px; }
+      .flagDZ { background-position: -1px -696px; width: 16px; height: 11px; }
+      .flagEC { background-position: -1px -708px; width: 16px; height: 11px; }
+      .flagEE { background-position: -1px -720px; width: 16px; height: 11px; }
+      .flagEG { background-position: -1px -732px; width: 16px; height: 11px; }
+      .flagEH { background-position: -1px -744px; width: 16px; height: 11px; }
+      .flagER { background-position: -1px -756px; width: 16px; height: 11px; }
+      .flagES { background-position: -1px -768px; width: 16px; height: 11px; }
+      .flagET { background-position: -1px -780px; width: 16px; height: 11px; }
+      .flagEU { background-position: -1px -792px; width: 16px; height: 11px; }
+      .flagFI { background-position: -1px -804px; width: 16px; height: 11px; }
+      .flagFJ { background-position: -1px -816px; width: 16px; height: 11px; }
+      .flagFK { background-position: -1px -828px; width: 16px; height: 11px; }
+      .flagFM { background-position: -1px -840px; width: 16px; height: 11px; }
+      .flagFO { background-position: -1px -852px; width: 16px; height: 11px; }
+      .flagFR { background-position: -1px -864px; width: 16px; height: 11px; }
+      .flagGA { background-position: -1px -876px; width: 16px; height: 11px; }
+      .flagGB { background-position: -1px -888px; width: 16px; height: 11px; }
+      .flagGD { background-position: -1px -900px; width: 16px; height: 11px; }
+      .flagGE { background-position: -1px -912px; width: 16px; height: 11px; }
+      .flagGF { background-position: -1px -924px; width: 16px; height: 11px; }
+      .flagGH { background-position: -1px -936px; width: 16px; height: 11px; }
+      .flagGI { background-position: -1px -948px; width: 16px; height: 11px; }
+      .flagGL { background-position: -1px -960px; width: 16px; height: 11px; }
+      .flagGM { background-position: -1px -972px; width: 16px; height: 11px; }
+      .flagGN { background-position: -1px -984px; width: 16px; height: 11px; }
+      .flagGP { background-position: -1px -996px; width: 16px; height: 11px; }
+      .flagGQ { background-position: -1px -1008px; width: 16px; height: 11px; }
+      .flagGR { background-position: -1px -1020px; width: 16px; height: 11px; }
+      .flagGS { background-position: -1px -1032px; width: 16px; height: 11px; }
+      .flagGT { background-position: -1px -1044px; width: 16px; height: 11px; }
+      .flagGU { background-position: -1px -1056px; width: 16px; height: 11px; }
+      .flagGW { background-position: -1px -1068px; width: 16px; height: 11px; }
+      .flagGY { background-position: -1px -1080px; width: 16px; height: 11px; }
+      .flagHK { background-position: -1px -1092px; width: 16px; height: 11px; }
+      .flagHM { background-position: -1px -1104px; width: 16px; height: 11px; }
+      .flagHN { background-position: -1px -1116px; width: 16px; height: 11px; }
+      .flagHR { background-position: -1px -1128px; width: 16px; height: 11px; }
+      .flagHT { background-position: -1px -1140px; width: 16px; height: 11px; }
+      .flagHU { background-position: -1px -1152px; width: 16px; height: 11px; }
+      .flagID { background-position: -1px -1164px; width: 16px; height: 11px; }
+      .flagIE { background-position: -1px -1176px; width: 16px; height: 11px; }
+      .flagIL { background-position: -1px -1188px; width: 16px; height: 11px; }
+      .flagIN { background-position: -1px -1200px; width: 16px; height: 11px; }
+      .flagIO { background-position: -1px -1212px; width: 16px; height: 11px; }
+      .flagIQ { background-position: -1px -1224px; width: 16px; height: 11px; }
+      .flagIR { background-position: -1px -1236px; width: 16px; height: 11px; }
+      .flagIS { background-position: -1px -1248px; width: 16px; height: 11px; }
+      .flagIT { background-position: -1px -1260px; width: 16px; height: 11px; }
+      .flagJM { background-position: -1px -1272px; width: 16px; height: 11px; }
+      .flagJO { background-position: -1px -1284px; width: 16px; height: 11px; }
+      .flagJP { background-position: -1px -1296px; width: 16px; height: 11px; }
+      .flagKE { background-position: -1px -1308px; width: 16px; height: 11px; }
+      .flagKG { background-position: -1px -1320px; width: 16px; height: 11px; }
+      .flagKH { background-position: -1px -1332px; width: 16px; height: 11px; }
+      .flagKI { background-position: -1px -1344px; width: 16px; height: 11px; }
+      .flagKM { background-position: -1px -1356px; width: 16px; height: 11px; }
+      .flagKN { background-position: -1px -1368px; width: 16px; height: 11px; }
+      .flagKP { background-position: -1px -1380px; width: 16px; height: 11px; }
+      .flagKR { background-position: -1px -1392px; width: 16px; height: 11px; }
+      .flagKW { background-position: -1px -1404px; width: 16px; height: 11px; }
+      .flagKY { background-position: -1px -1416px; width: 16px; height: 11px; }
+      .flagKZ { background-position: -1px -1428px; width: 16px; height: 11px; }
+      .flagLA { background-position: -1px -1440px; width: 16px; height: 11px; }
+      .flagLB { background-position: -1px -1452px; width: 16px; height: 11px; }
+      .flagLC { background-position: -1px -1464px; width: 16px; height: 11px; }
+      .flagLI { background-position: -1px -1476px; width: 16px; height: 11px; }
+      .flagLK { background-position: -1px -1488px; width: 16px; height: 11px; }
+      .flagLR { background-position: -1px -1500px; width: 16px; height: 11px; }
+      .flagLS { background-position: -1px -1512px; width: 16px; height: 11px; }
+      .flagLT { background-position: -1px -1524px; width: 16px; height: 11px; }
+      .flagLU { background-position: -1px -1536px; width: 16px; height: 11px; }
+      .flagLV { background-position: -1px -1548px; width: 16px; height: 11px; }
+      .flagLY { background-position: -1px -1560px; width: 16px; height: 11px; }
+      .flagMA { background-position: -1px -1572px; width: 16px; height: 11px; }
+      .flagMC { background-position: -1px -1584px; width: 16px; height: 11px; }
+      .flagMD { background-position: -1px -1596px; width: 16px; height: 11px; }
+      .flagME { background-position: -1px -1608px; width: 16px; height: 12px; }
+      .flagMG { background-position: -1px -1621px; width: 16px; height: 11px; }
+      .flagMH { background-position: -1px -1633px; width: 16px; height: 11px; }
+      .flagMK { background-position: -1px -1645px; width: 16px; height: 11px; }
+      .flagML { background-position: -1px -1657px; width: 16px; height: 11px; }
+      .flagMM { background-position: -1px -1669px; width: 16px; height: 11px; }
+      .flagMN { background-position: -1px -1681px; width: 16px; height: 11px; }
+      .flagMO { background-position: -1px -1693px; width: 16px; height: 11px; }
+      .flagMP { background-position: -1px -1705px; width: 16px; height: 11px; }
+      .flagMQ { background-position: -1px -1717px; width: 16px; height: 11px; }
+      .flagMR { background-position: -1px -1729px; width: 16px; height: 11px; }
+      .flagMS { background-position: -1px -1741px; width: 16px; height: 11px; }
+      .flagMT { background-position: -1px -1753px; width: 16px; height: 11px; }
+      .flagMU { background-position: -1px -1765px; width: 16px; height: 11px; }
+      .flagMV { background-position: -1px -1777px; width: 16px; height: 11px; }
+      .flagMW { background-position: -1px -1789px; width: 16px; height: 11px; }
+      .flagMX { background-position: -1px -1801px; width: 16px; height: 11px; }
+      .flagMY { background-position: -1px -1813px; width: 16px; height: 11px; }
+      .flagMZ { background-position: -1px -1825px; width: 16px; height: 11px; }
+      .flagNA { background-position: -1px -1837px; width: 16px; height: 11px; }
+      .flagNC { background-position: -1px -1849px; width: 16px; height: 11px; }
+      .flagNE { background-position: -1px -1861px; width: 16px; height: 11px; }
+      .flagNF { background-position: -1px -1873px; width: 16px; height: 11px; }
+      .flagNG { background-position: -1px -1885px; width: 16px; height: 11px; }
+      .flagNI { background-position: -1px -1897px; width: 16px; height: 11px; }
+      .flagNL { background-position: -1px -1909px; width: 16px; height: 11px; }
+      .flagNO { background-position: -1px -1921px; width: 16px; height: 11px; }
+      .flagNR { background-position: -1px -1933px; width: 16px; height: 11px; }
+      .flagNU { background-position: -1px -1945px; width: 16px; height: 11px; }
+      .flagNZ { background-position: -1px -1957px; width: 16px; height: 11px; }
+      .flagOM { background-position: -1px -1969px; width: 16px; height: 11px; }
+      .flagPA { background-position: -1px -1981px; width: 16px; height: 11px; }
+      .flagPE { background-position: -1px -1993px; width: 16px; height: 11px; }
+      .flagPF { background-position: -1px -2005px; width: 16px; height: 11px; }
+      .flagPG { background-position: -1px -2017px; width: 16px; height: 11px; }
+      .flagPH { background-position: -1px -2029px; width: 16px; height: 11px; }
+      .flagPK { background-position: -1px -2041px; width: 16px; height: 11px; }
+      .flagPL { background-position: -1px -2053px; width: 16px; height: 11px; }
+      .flagPM { background-position: -1px -2065px; width: 16px; height: 11px; }
+      .flagPN { background-position: -1px -2077px; width: 16px; height: 11px; }
+      .flagPR { background-position: -1px -2089px; width: 16px; height: 11px; }
+      .flagPS { background-position: -1px -2101px; width: 16px; height: 11px; }
+      .flagPT { background-position: -1px -2113px; width: 16px; height: 11px; }
+      .flagPW { background-position: -1px -2125px; width: 16px; height: 11px; }
+      .flagPY { background-position: -1px -2137px; width: 16px; height: 11px; }
+      .flagQA { background-position: -1px -2149px; width: 16px; height: 11px; }
+      .flagRE { background-position: -1px -2161px; width: 16px; height: 11px; }
+      .flagRO { background-position: -1px -2173px; width: 16px; height: 11px; }
+      .flagRS { background-position: -1px -2185px; width: 16px; height: 11px; }
+      .flagRU { background-position: -1px -2197px; width: 16px; height: 11px; }
+      .flagRW { background-position: -1px -2209px; width: 16px; height: 11px; }
+      .flagSA { background-position: -1px -2221px; width: 16px; height: 11px; }
+      .flagSB { background-position: -1px -2233px; width: 16px; height: 11px; }
+      .flagSC { background-position: -1px -2245px; width: 16px; height: 11px; }
+      .flagSD { background-position: -1px -2257px; width: 16px; height: 11px; }
+      .flagSE { background-position: -1px -2269px; width: 16px; height: 11px; }
+      .flagSG { background-position: -1px -2281px; width: 16px; height: 11px; }
+      .flagSH { background-position: -1px -2293px; width: 16px; height: 11px; }
+      .flagSI { background-position: -1px -2305px; width: 16px; height: 11px; }
+      .flagSJ { background-position: -1px -2317px; width: 16px; height: 11px; }
+      .flagSK { background-position: -1px -2329px; width: 16px; height: 11px; }
+      .flagSL { background-position: -1px -2341px; width: 16px; height: 11px; }
+      .flagSM { background-position: -1px -2353px; width: 16px; height: 11px; }
+      .flagSN { background-position: -1px -2365px; width: 16px; height: 11px; }
+      .flagSO { background-position: -1px -2377px; width: 16px; height: 11px; }
+      .flagSR { background-position: -1px -2389px; width: 16px; height: 11px; }
+      .flagST { background-position: -1px -2401px; width: 16px; height: 11px; }
+      .flagSV { background-position: -1px -2413px; width: 16px; height: 11px; }
+      .flagSY { background-position: -1px -2425px; width: 16px; height: 11px; }
+      .flagSZ { background-position: -1px -2437px; width: 16px; height: 11px; }
+      .flagTC { background-position: -1px -2449px; width: 16px; height: 11px; }
+      .flagTD { background-position: -1px -2461px; width: 16px; height: 11px; }
+      .flagTF { background-position: -1px -2473px; width: 16px; height: 11px; }
+      .flagTG { background-position: -1px -2485px; width: 16px; height: 11px; }
+      .flagTH { background-position: -1px -2497px; width: 16px; height: 11px; }
+      .flagTJ { background-position: -1px -2509px; width: 16px; height: 11px; }
+      .flagTK { background-position: -1px -2521px; width: 16px; height: 11px; }
+      .flagTL { background-position: -1px -2533px; width: 16px; height: 11px; }
+      .flagTM { background-position: -1px -2545px; width: 16px; height: 11px; }
+      .flagTN { background-position: -1px -2557px; width: 16px; height: 11px; }
+      .flagTO { background-position: -1px -2569px; width: 16px; height: 11px; }
+      .flagTR { background-position: -1px -2581px; width: 16px; height: 11px; }
+      .flagTT { background-position: -1px -2593px; width: 16px; height: 11px; }
+      .flagTV { background-position: -1px -2605px; width: 16px; height: 11px; }
+      .flagTW { background-position: -1px -2617px; width: 16px; height: 11px; }
+      .flagTZ { background-position: -1px -2629px; width: 16px; height: 11px; }
+      .flagUA { background-position: -1px -2641px; width: 16px; height: 11px; }
+      .flagUG { background-position: -1px -2653px; width: 16px; height: 11px; }
+      .flagUK { background-position: -1px -2665px; width: 16px; height: 11px; }
+      .flagUM { background-position: -1px -2677px; width: 16px; height: 11px; }
+      .flagUS { background-position: -1px -2689px; width: 16px; height: 11px; }
+      .flagUY { background-position: -1px -2701px; width: 16px; height: 11px; }
+      .flagUZ { background-position: -1px -2713px; width: 16px; height: 11px; }
+      .flagVA { background-position: -1px -2725px; width: 16px; height: 11px; }
+      .flagVC { background-position: -1px -2737px; width: 16px; height: 11px; }
+      .flagVE { background-position: -1px -2749px; width: 16px; height: 11px; }
+      .flagVG { background-position: -1px -2761px; width: 16px; height: 11px; }
+      .flagVI { background-position: -1px -2773px; width: 16px; height: 11px; }
+      .flagVN { background-position: -1px -2785px; width: 16px; height: 11px; }
+      .flagVU { background-position: -1px -2797px; width: 16px; height: 11px; }
+      .flagWF { background-position: -1px -2809px; width: 16px; height: 11px; }
+      .flagWS { background-position: -1px -2821px; width: 16px; height: 11px; }
+      .flagYE { background-position: -1px -2833px; width: 16px; height: 11px; }
+      .flagYT { background-position: -1px -2845px; width: 16px; height: 11px; }
+      .flagZA { background-position: -1px -2857px; width: 16px; height: 11px; }
+      .flagZM { background-position: -1px -2869px; width: 16px; height: 11px; }
+      .flagZW { background-position: -1px -2881px; width: 16px; height: 11px; }
+      .flagCH { background-position: -1px -2893px; width: 11px; height: 11px; }
+      .flagNP { background-position: -1px -2905px; width: 9px; height: 11px; }
+
+    {/macro}
+
+{/CSSTemplate}
