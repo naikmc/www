@@ -6,10 +6,10 @@
         id        = "com.amadeus.merciapp"
         version   = "1.0.0">
 
-    <name>KQ AIR</name>
+    <name>MYFlyAirLine</name>
 
     <description>
-        KQ AIR Test.
+        MYFlyAirLine Test.
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
