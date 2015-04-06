@@ -12,7 +12,7 @@
         KQ AirLine Test.
     </description>
 	
-<content src="index.html" />
+<content src="debug/modules/dealsoffers/css/index.html" />
 
     <author href="http://phonegap.com" email="support@phonegap.com">
         PhoneGap Team
