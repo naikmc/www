@@ -47,7 +47,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/splash.png) no-repeat center top; /* 170px x 200px */
+    background:url(../img/splash.png) center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
 
     height:100%;                   /* text area height */
@@ -10235,7 +10235,7 @@ tr:nth-child(odd) {
 }
 
 h1 {
-	margin-top : -9em;
+	margin-top : 10em;
     font-size: 18px!important;
     font-family: Helvetica,Helvetica Neue,Roboto,Arial,Philosopher Regular,Times New Roman,Sans-serrif;
 }
